@@ -17,7 +17,10 @@
 - [docs/design-philosophy.md](docs/design-philosophy.md)：产品气质、设计哲学和体验原则。
 - [docs/interaction-principles.md](docs/interaction-principles.md)：推荐、留存、阅读流和反馈机制。
 - [docs/component-system.md](docs/component-system.md)：核心组件规范。
+- [docs/auth-onboarding.md](docs/auth-onboarding.md)：登录、注册、兴趣初始化和首次推荐体验。
+- [docs/ai-native-research-copilot.md](docs/ai-native-research-copilot.md)：论文对话、检索更多论文、证据链和分析队列规范。
 - [docs/platform-adaptation.md](docs/platform-adaptation.md)：mac / iOS / Android / Web 四端适配。
+- [docs/internationalization-accessibility.md](docs/internationalization-accessibility.md)：暗黑模式、多语言、RTL 和可访问性。
 - [docs/content-model.md](docs/content-model.md)：论文内容卡片、摘要、标签和可信度结构。
 - [docs/visual-language.md](docs/visual-language.md)：色彩、字体、动效、留白和品牌感。
 - [cases/toutiao.md](cases/toutiao.md)：今日头条式信息流借鉴。
@@ -29,6 +32,26 @@
 ## 当前 Figma 草稿
 
 Figma 文件：<https://www.figma.com/design/6kWePIR4gW1ZsKBhfAfBTh>
+
+## GitHub Pages
+
+入口文件：[index.html](index.html)
+
+发布方式：
+
+1. 推送到 GitHub。
+2. 在仓库 `Settings -> Pages` 中选择 `Deploy from a branch`。
+3. Branch 选择 `main` 或当前默认分支，目录选择 `/root`。
+4. 保存后等待 GitHub Pages 构建完成。
+
+页面能力：
+
+- 设计哲学说明。
+- 常用前端组件 demo。
+- AI-native 论文对话工作台 demo。
+- 暗黑模式切换。
+- 中文 / 英文 / 阿拉伯语切换。
+- RTL 布局演示。
 
 ## 使用方式
 

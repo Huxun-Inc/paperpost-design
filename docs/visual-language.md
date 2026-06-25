@@ -21,14 +21,17 @@
 
 ## 字体
 
-- 英文标题：Newsreader、Libre Baskerville、Cormorant 或类似 serif。
-- 中文标题：Noto Serif SC。
+字体方向要避开“论文期刊”和“学校数据库”的感受。不要使用 Times New Roman、新罗马、传统宋体式大标题，也不要为了显得专业而让界面变得疏离。
+
+- 品牌标题：Noto Sans SC Black / Bold，或同类现代、饱满、干净的无衬线。
+- 英文标题：使用现代 sans，不使用传统学术 serif。
+- 中文标题：Noto Sans SC Bold / Black。
 - 正文和 UI：SF Pro、Inter、Noto Sans SC。
 - 数字：使用 UI 字体，保证 dashboard 清楚。
 
 原则：
 
-- 大标题可以有杂志感。
+- 大标题可以有内容 App 的冲击力，但不要有期刊封面的距离感。
 - 列表正文必须高可读。
 - 按钮和导航不使用 serif。
 - 不使用负字距。

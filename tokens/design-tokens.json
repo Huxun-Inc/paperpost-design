@@ -30,8 +30,8 @@
     "2xl": 48
   },
   "font": {
-    "displayLatin": "Newsreader",
-    "displayChinese": "Noto Serif SC",
+    "displayLatin": "Noto Sans SC",
+    "displayChinese": "Noto Sans SC",
     "uiLatin": "SF Pro",
     "uiFallback": "Inter",
     "uiChinese": "Noto Sans SC"
