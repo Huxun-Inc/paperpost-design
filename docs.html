@@ -285,142 +285,404 @@
           </div>
         </section>
 
-        <section class="doc-section" id="pages-feed">
+        <section class="doc-section" id="pages-section">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.pagesEyebrow">页面案例</p>
-            <h2 data-i18n="docs.pagesFeedTitle">Feed Page</h2>
-            <p data-i18n="docs.pagesFeedCopy">首页默认是一屏可刷的信息流，不是筛选器后台。</p>
+            <h2 data-i18n="docs.pagesTitle">完整页面模板</h2>
+            <p data-i18n="docs.pagesSubtitle">点击卡片查看完整页面模拟。覆盖信息流、阅读器、数据面板、注册引导等核心场景。</p>
           </div>
 
-          <div class="page-demo-tabs">
-            <button class="page-tab is-active" type="button" data-page-demo="feed-mobile">
-              <i class="ph ph-device-mobile"></i>
-              Mobile
-            </button>
-            <button class="page-tab" type="button" data-page-demo="feed-web">
-              <i class="ph ph-desktop"></i>
-              Web
-            </button>
-          </div>
-
-          <div class="page-demo-frame is-active" data-page-panel="feed-mobile">
-            <div class="mobile-mock">
-              <div class="mock-header">
-                <strong>Daily Papers</strong>
-                <span>12 papers</span>
-              </div>
-              <article class="paper-card-demo compact">
-                <div class="paper-card-rank">01</div>
-                <div class="paper-card-body">
-                  <p class="paper-card-source">ArXiv AI</p>
-                  <h3>Scaling law for reasoning</h3>
-                  <p class="paper-card-summary">先给判断，再给展开入口。</p>
-                </div>
-              </article>
-              <article class="paper-card-demo compact muted">
-                <div class="paper-card-rank">02</div>
-                <div class="paper-card-body">
-                  <p class="paper-card-source">Nature</p>
-                  <h3>Safer cell therapies</h3>
-                  <p class="paper-card-summary">已读后降低对比，但保留入口。</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <div class="page-demo-frame" data-page-panel="feed-web">
-            <div class="desktop-mock">
-              <aside class="desktop-left-rail">
-                <strong>Topics</strong>
-                <span>Reasoning</span>
-                <span>Physics</span>
-                <span>Biomed</span>
-              </aside>
-              <section class="desktop-feed">
-                <article class="paper-card-demo compact is-featured">
-                  <div class="paper-card-rank">01</div>
-                  <div class="paper-card-body">
-                    <p class="paper-card-source">因为你收藏了 scaling law</p>
-                    <h3>Reasoning law update</h3>
-                    <p class="paper-card-summary">桌面端保持列表效率，不牺牲推荐解释。</p>
+          <div class="page-gallery-section">
+            <h3 class="page-gallery-title"><i class="ph ph-device-mobile"></i> <span data-i18n="docs.pagesMobileGroup">移动端</span></h3>
+            <div class="page-gallery-grid">
+              <button class="page-card" type="button" data-page-preview="mobile-feed">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-app-header">
+                      <div>
+                        <h4>今日简报</h4>
+                        <div class="date-text">Oct 24, 2026</div>
+                      </div>
+                      <div class="mini-app-header-actions">
+                        <div class="mini-icon-btn"><i class="ph ph-sliders"></i></div>
+                        <div class="mini-icon-btn"><i class="ph ph-dots-three-circle"></i></div>
+                      </div>
+                    </div>
+                    <div class="mini-paper-card">
+                      <div class="mini-rank">01</div>
+                      <div class="mini-paper-body">
+                        <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature</div>
+                        <div class="mini-paper-title">A safer gene switch for cell therapies</div>
+                        <div class="mini-paper-desc">精确控制治疗开关，提升临床安全性。</div>
+                      </div>
+                      <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
+                    </div>
+                    <div class="mini-paper-card">
+                      <div class="mini-rank">02</div>
+                      <div class="mini-paper-body">
+                        <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
+                        <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
+                        <div class="mini-paper-desc">模型推理能力的提升规律变得可估。</div>
+                      </div>
+                      <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
+                    </div>
                   </div>
-                </article>
-              </section>
-              <aside class="desktop-right-panel">
-                <strong>Why this matters</strong>
-                <p>关键发现、相关论文、下一步动作都在右栏。</p>
-              </aside>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageFeedTitle">Daily Papers</div>
+                  <div class="page-card-desc" data-i18n="docs.pageFeedDesc">首页信息流</div>
+                </div>
+              </button>
+
+              <button class="page-card" type="button" data-page-preview="mobile-reader">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-app-header">
+                      <div class="mini-app-header-actions">
+                        <div class="mini-icon-btn"><i class="ph ph-caret-left"></i></div>
+                      </div>
+                      <div class="mini-app-header-actions">
+                        <div class="mini-icon-btn"><i class="ph ph-star"></i></div>
+                        <div class="mini-icon-btn"><i class="ph ph-dots-three-circle"></i></div>
+                      </div>
+                    </div>
+                    <div class="mini-key-finding">
+                      <div class="mini-key-finding-label"><i class="ph-fill ph-key"></i> Key Finding</div>
+                      <p>The reasoning ability of models improves predictably with more compute and better data.</p>
+                    </div>
+                    <div class="mini-plain-english">
+                      <strong>In Plain English</strong>
+                      <ul>
+                        <li>Bigger models reason better.</li>
+                        <li>The relationship is predictable.</li>
+                        <li>Data quality matters.</li>
+                      </ul>
+                    </div>
+                    <div class="mini-cta-row">
+                      <div class="mini-btn-outline">Read Original</div>
+                      <div class="mini-btn-primary">Next Paper →</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageReaderTitle">Paper Reader</div>
+                  <div class="page-card-desc" data-i18n="docs.pageReaderDesc">论文详情页</div>
+                </div>
+              </button>
+
+              <button class="page-card" type="button" data-page-preview="mobile-dashboard">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-app-header">
+                      <div>
+                        <h4>数据面板</h4>
+                        <div class="date-text">总览</div>
+                      </div>
+                      <div class="mini-app-header-actions">
+                        <div class="mini-icon-btn"><i class="ph ph-arrows-clockwise"></i></div>
+                      </div>
+                    </div>
+                    <div class="mini-dashboard-stats">
+                      <div class="mini-stat-card">
+                        <div class="stat-icon"><i class="ph ph-file-text"></i></div>
+                        <div class="stat-value">78</div>
+                        <div class="stat-label">论文数量</div>
+                      </div>
+                      <div class="mini-stat-card">
+                        <div class="stat-icon"><i class="ph ph-calendar"></i></div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">日期范围</div>
+                      </div>
+                    </div>
+                    <div class="mini-topics-list">
+                      <h5>关键词统计</h5>
+                      <div class="mini-topic-item">
+                        <span>physics.optics</span>
+                        <span class="topic-count">78 次</span>
+                      </div>
+                      <div class="mini-topic-item">
+                        <span>optical</span>
+                        <span class="topic-count">17 次</span>
+                      </div>
+                      <div class="mini-topic-item">
+                        <span>physics.app-ph</span>
+                        <span class="topic-count">8 次</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageDashboardTitle">Data Dashboard</div>
+                  <div class="page-card-desc" data-i18n="docs.pageDashboardDesc">数据概览</div>
+                </div>
+              </button>
+
+              <button class="page-card" type="button" data-page-preview="mobile-saved">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-app-header">
+                      <div>
+                        <h4>收藏</h4>
+                      </div>
+                      <div class="mini-app-header-actions">
+                        <div class="mini-icon-btn"><i class="ph ph-funnel"></i></div>
+                      </div>
+                    </div>
+                    <div class="mini-paper-card">
+                      <div class="mini-rank">★</div>
+                      <div class="mini-paper-body">
+                        <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Physical Review</div>
+                        <div class="mini-paper-title">A Langevin model-based magneto-optic response</div>
+                        <div class="mini-paper-desc">本文为溶液中超顺磁性纳米颗粒的磁光表征提供了理论框架。</div>
+                      </div>
+                      <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
+                    </div>
+                    <div class="mini-paper-card">
+                      <div class="mini-rank">★</div>
+                      <div class="mini-paper-body">
+                        <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature</div>
+                        <div class="mini-paper-title">A laser with instability reaching $4×10^-17$</div>
+                        <div class="mini-paper-desc">实现了10厘米长的超稳硅腔，在5K温度下达到极低频率不稳定度。</div>
+                      </div>
+                      <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageSavedTitle">Saved Papers</div>
+                  <div class="page-card-desc" data-i18n="docs.pageSavedDesc">收藏夹</div>
+                </div>
+              </button>
             </div>
           </div>
-        </section>
 
-        <section class="doc-section" id="pages-detail">
-          <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.pagesEyebrow">页面案例</p>
-            <h2 data-i18n="docs.pagesDetailTitle">Detail Page</h2>
-            <p data-i18n="docs.pagesDetailCopy">详情页前半屏只回答四件事：讲什么、发现、为什么重要、下一步做什么。</p>
-          </div>
+          <div class="page-gallery-section">
+            <h3 class="page-gallery-title"><i class="ph ph-desktop"></i> <span data-i18n="docs.pagesDesktopGroup">桌面端</span></h3>
+            <div class="page-gallery-grid">
+              <button class="page-card" type="button" data-page-preview="desktop-feed">
+                <div class="page-card-thumb is-desktop">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-desktop-shell">
+                      <div class="mini-desktop-sidebar">
+                        <h5>Library</h5>
+                        <div class="mini-desktop-nav-item is-active">今日简报</div>
+                        <div class="mini-desktop-nav-item">AI / LLM</div>
+                        <div class="mini-desktop-nav-item">Physics</div>
+                        <div class="mini-desktop-nav-item">Bio Medicine</div>
+                      </div>
+                      <div class="mini-desktop-feed">
+                        <div class="mini-paper-card">
+                          <div class="mini-rank">★</div>
+                          <div class="mini-paper-body">
+                            <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
+                            <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
+                            <div class="mini-paper-desc">模型推理能力提升规律变得可预测，改变训练预算规划方式。</div>
+                          </div>
+                          <div class="mini-bookmark"><i class="ph ph-star"></i></div>
+                        </div>
+                      </div>
+                      <div class="mini-desktop-detail">
+                        <h5>Why this matters</h5>
+                        <p>关键发现、相关论文、下一步动作都在右栏。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageDesktopFeedTitle">Desktop Feed</div>
+                  <div class="page-card-desc" data-i18n="docs.pageDesktopFeedDesc">三栏信息流</div>
+                </div>
+              </button>
 
-          <div class="detail-page-demo">
-            <h3>A new scaling law for reasoning in large language models</h3>
-            <div class="summary-block">
-              <strong>Key Finding</strong>
-              <p>推理表现的上升趋势变得可估计，这会改变训练预算和评估计划。</p>
+              <button class="page-card" type="button" data-page-preview="desktop-auth">
+                <div class="page-card-thumb is-desktop">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-split-auth">
+                      <div class="mini-split-left">
+                        <h3>把论文推荐系统，调成你的研究口味。</h3>
+                        <p>登录后同步收藏、阅读进度、关键词偏好和推荐反馈。桌面端高效整理，移动端轻松刷。</p>
+                        <div class="mini-split-card">
+                          <div class="mini-split-card-icon"><i class="ph ph-newspaper"></i></div>
+                          <div class="mini-split-card-text">
+                            <strong>Today Briefing</strong>
+                            <span>5 top papers, summarized for your taste.</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mini-split-right">
+                        <h4>登录 ScholarDaily</h4>
+                        <p>继续你的收藏、推荐画像和阅读进度。</p>
+                        <div class="mini-input-group">
+                          <label>邮箱</label>
+                          <div class="mini-input"></div>
+                        </div>
+                        <div class="mini-input-group">
+                          <label>密码</label>
+                          <div class="mini-input"></div>
+                        </div>
+                        <div class="mini-auth-btn">登录</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageWebAuthTitle">Split Auth</div>
+                  <div class="page-card-desc" data-i18n="docs.pageWebAuthDesc">Web 登录页</div>
+                </div>
+              </button>
             </div>
-            <div class="bullet-stack">
-              <p><strong>Plain English.</strong> 更大的模型加上更好的数据，推理能力会稳步提升。</p>
-              <p><strong>Why it matters.</strong> 团队可以更准确地规划算力预算，减少盲目试错。</p>
-              <p><strong>Next step.</strong> 与你收藏的 benchmark 论文做对比。</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="doc-section" id="pages-copilot">
-          <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.pagesEyebrow">页面案例</p>
-            <h2 data-i18n="docs.pagesCopilotTitle">Research Copilot</h2>
-            <p data-i18n="docs.pagesCopilotCopy">AI 工作台要像生产力工具，不像普通聊天页。</p>
           </div>
 
-          <div class="copilot-mini">
-            <aside class="copilot-column">
-              <strong data-i18n="docs.copilotContext">上下文</strong>
-              <span>Scaling law</span>
-              <span>Compute law</span>
-              <span>Data quality</span>
-            </aside>
-            <section class="copilot-column is-main">
-              <strong data-i18n="docs.copilotAnswer">回答</strong>
-              <p data-i18n="docs.copilotAnswerCopy">主区域负责对话和分析，不把引用、相关论文、动作全塞进聊天气泡。</p>
-            </section>
-            <aside class="copilot-column">
-              <strong data-i18n="docs.copilotEvidence">证据</strong>
-              <span>[1] Scaling law</span>
-              <span>[2] Chinchilla</span>
-              <span data-i18n="docs.copilotAction">生成对比表</span>
-            </aside>
-          </div>
-        </section>
+          <div class="page-gallery-section">
+            <h3 class="page-gallery-title"><i class="ph ph-user-plus"></i> <span data-i18n="docs.pagesOnboardingGroup">注册与引导</span></h3>
+            <div class="page-gallery-grid">
+              <button class="page-card" type="button" data-page-preview="onboarding-welcome">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-auth-container" style="text-align: left;">
+                      <div class="mini-auth-logo" style="margin: 0 0 var(--space-md);">S</div>
+                      <div class="mini-onboarding-title">让论文像信息流一样好刷，但仍然可靠</div>
+                      <div class="mini-onboarding-desc">每天 5 到 12 篇高质量论文，先给你白话关键结论，再给原文、作者和可验证来源。</div>
+                      <div class="mini-paper-card" style="border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-sm); margin-bottom: var(--space-md);">
+                        <div class="mini-paper-body">
+                          <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>今日简报</div>
+                          <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
+                          <div class="mini-paper-desc">More → reasoning. agent 和摘要的质量也在提升。</div>
+                        </div>
+                      </div>
+                      <div class="mini-auth-btn">开始个性化推荐</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageWelcomeTitle">Welcome</div>
+                  <div class="page-card-desc" data-i18n="docs.pageWelcomeDesc">欢迎页</div>
+                </div>
+              </button>
 
-        <section class="doc-section" id="pages-onboarding">
-          <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.pagesEyebrow">页面案例</p>
-            <h2 data-i18n="docs.pagesOnboardingTitle">Onboarding</h2>
-            <p data-i18n="docs.pagesOnboardingCopy">注册页和兴趣初始化只收集必要信息，画像不要一次问完。</p>
-          </div>
+              <button class="page-card" type="button" data-page-preview="onboarding-login">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-auth-container">
+                      <div class="mini-auth-logo">S</div>
+                      <div class="mini-auth-title">欢迎回来</div>
+                      <div class="mini-auth-subtitle">继续你的今日论文简报、收藏夹和研读队列。</div>
+                      <div class="mini-input-group">
+                        <label>邮箱</label>
+                        <div class="mini-input"></div>
+                      </div>
+                      <div class="mini-input-group">
+                        <label>密码</label>
+                        <div class="mini-input"></div>
+                      </div>
+                      <div class="mini-auth-btn">登录</div>
+                      <div class="mini-auth-divider"><span>或</span></div>
+                      <div class="mini-social-btn"><i class="ph ph-apple-logo"></i> 使用 Apple 继续</div>
+                      <div class="mini-social-btn"><i class="ph ph-google-logo"></i> 使用 Google 继续</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageLoginTitle">Login</div>
+                  <div class="page-card-desc" data-i18n="docs.pageLoginDesc">登录页</div>
+                </div>
+              </button>
 
-          <div class="onboarding-demo">
-            <div class="onboarding-step is-active">1. Email</div>
-            <div class="onboarding-step">2. Interests</div>
-            <div class="onboarding-step">3. Briefing</div>
-            <div class="onboarding-panel">
-              <h3 data-i18n="docs.onboardingPanelTitle">先建立进入感，再建立画像</h3>
-              <div class="interest-cloud">
-                <button class="chip-button is-active" type="button">AI</button>
-                <button class="chip-button" type="button">Agents</button>
-                <button class="chip-button" type="button">Biomed</button>
-                <button class="chip-button is-active" type="button">Physics</button>
-              </div>
+              <button class="page-card" type="button" data-page-preview="onboarding-interests">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-auth-container" style="text-align: left;">
+                      <div class="mini-step-indicator">1 / 3</div>
+                      <div class="mini-onboarding-title">先选几个你关心的方向</div>
+                      <div class="mini-onboarding-desc">不用选很细，后续系统会继续调整。保留"不感兴趣"继续调整。</div>
+                      <div class="mini-interest-tags">
+                        <div class="mini-interest-tag is-active">LLM</div>
+                        <div class="mini-interest-tag is-active">Agents</div>
+                        <div class="mini-interest-tag">AI Safety</div>
+                        <div class="mini-interest-tag">Multimodal</div>
+                        <div class="mini-interest-tag is-active">Robotics</div>
+                        <div class="mini-interest-tag is-active">Biomedicine</div>
+                        <div class="mini-interest-tag">Physics</div>
+                        <div class="mini-interest-tag">Climate</div>
+                      </div>
+                      <div class="mini-auth-btn">继续</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageInterestsTitle">Pick Interests</div>
+                  <div class="page-card-desc" data-i18n="docs.pageInterestsDesc">兴趣选择</div>
+                </div>
+              </button>
+
+              <button class="page-card" type="button" data-page-preview="onboarding-notifications">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-auth-container" style="text-align: left;">
+                      <div class="mini-step-indicator">2 / 3</div>
+                      <div class="mini-onboarding-title">让提醒像助手，不是打扰。</div>
+                      <div class="mini-onboarding-desc">只在真正有价值时提醒：今日简报、关注作者更新、关键突破推送。关掉得很容易。</div>
+                      <div class="mini-toggle-row">
+                        <div class="mini-toggle-info">
+                          <strong>每日简报</strong>
+                          <span>每天早 8 点，当日 5 篇精选 + 摘要。</span>
+                        </div>
+                        <div class="mini-toggle is-on"></div>
+                      </div>
+                      <div class="mini-toggle-row">
+                        <div class="mini-toggle-info">
+                          <strong>趋势提醒</strong>
+                          <span>当某方向出现重要突破时提醒。</span>
+                        </div>
+                        <div class="mini-toggle is-on"></div>
+                      </div>
+                      <div class="mini-toggle-row">
+                        <div class="mini-toggle-info">
+                          <strong>作者动态</strong>
+                          <span>关注的作者发新论文时提醒。</span>
+                        </div>
+                        <div class="mini-toggle"></div>
+                      </div>
+                      <div class="mini-auth-btn">保存提醒偏好</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageNotificationsTitle">Notifications</div>
+                  <div class="page-card-desc" data-i18n="docs.pageNotificationsDesc">通知设置</div>
+                </div>
+              </button>
+
+              <button class="page-card" type="button" data-page-preview="onboarding-briefing">
+                <div class="page-card-thumb">
+                  <div class="page-card-thumb-inner">
+                    <div class="mini-auth-container" style="text-align: left;">
+                      <div class="mini-step-indicator">3 / 3</div>
+                      <div class="mini-onboarding-title">为你生成的第一版日报</div>
+                      <div class="mini-onboarding-desc">基于 4 个兴趣方向和 3 次投票校准，先给你一个可感受的基础。</div>
+                      <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
+                        <div class="mini-paper-body">
+                          <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
+                          <div class="mini-paper-title">Training language agents to browse papers with persistent memory</div>
+                          <div class="mini-paper-desc">像研究员一样持续阅读文献，不是每次都从头来。</div>
+                        </div>
+                      </div>
+                      <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
+                        <div class="mini-paper-body">
+                          <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
+                          <div class="mini-paper-title">Tool-using agents improve scientific literature review</div>
+                          <div class="mini-paper-desc">工具调用型 agent 显著提升综述质量。</div>
+                        </div>
+                      </div>
+                      <div class="mini-auth-btn">开始刷今日论文</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-card-info">
+                  <div class="page-card-name" data-i18n="docs.pageFirstBriefingTitle">First Briefing</div>
+                  <div class="page-card-desc" data-i18n="docs.pageFirstBriefingDesc">首版日报</div>
+                </div>
+              </button>
             </div>
           </div>
         </section>
