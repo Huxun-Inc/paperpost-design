@@ -385,6 +385,575 @@
     }
   }
 
+  function initPagePreview() {
+    const overlay = document.getElementById('pagePreviewOverlay');
+    const panel = document.getElementById('pagePreviewPanel');
+    const closeBtn = document.getElementById('pagePreviewClose');
+    const titleEl = document.getElementById('pagePreviewTitle');
+    const subtitleEl = document.getElementById('pagePreviewSubtitle');
+    const bodyEl = document.getElementById('pagePreviewBody');
+
+    if (!overlay || !panel) return;
+
+    const pageTemplates = {
+      'mobile-feed': {
+        title: 'Daily Papers',
+        subtitle: '首页信息流 · iOS',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: true,
+        activeNav: 'home',
+        content: `
+          <div class="mini-app-header">
+            <div>
+              <h4>今日简报</h4>
+              <div class="date-text">October 24, 2026</div>
+            </div>
+            <div class="mini-app-header-actions">
+              <div class="mini-icon-btn"><i class="ph ph-sliders"></i></div>
+              <div class="mini-icon-btn"><i class="ph ph-dots-three-circle"></i></div>
+            </div>
+          </div>
+          <div class="mini-paper-card">
+            <div class="mini-rank">01</div>
+            <div class="mini-paper-body">
+              <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature · Medicine</div>
+              <div class="mini-paper-title">A safer gene switch for cell therapies</div>
+              <div class="mini-paper-desc">精确控制治疗开关，提升临床安全性。</div>
+            </div>
+            <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
+          </div>
+          <div class="mini-paper-card">
+            <div class="mini-rank">02</div>
+            <div class="mini-paper-body">
+              <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
+              <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
+              <div class="mini-paper-desc">模型推理能力的提升规律变得可估。</div>
+            </div>
+            <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
+          </div>
+          <div class="mini-paper-card">
+            <div class="mini-rank">03</div>
+            <div class="mini-paper-body">
+              <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Science · Earth</div>
+              <div class="mini-paper-title">Global methane emissions are higher and rising faster</div>
+              <div class="mini-paper-desc">卫星观测揭示甲烷排放增长超预期。</div>
+            </div>
+            <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
+          </div>
+          <div class="mini-paper-card">
+            <div class="mini-rank">04</div>
+            <div class="mini-paper-body">
+              <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Cell</div>
+              <div class="mini-paper-title">Reversing epigenetic aging in human cells</div>
+              <div class="mini-paper-desc">重编程里程碑：逆转衰老时钟。</div>
+            </div>
+            <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
+          </div>
+        `
+      },
+      'mobile-reader': {
+        title: 'Paper Reader',
+        subtitle: '论文详情页 · iOS',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: false,
+        content: `
+          <div class="mini-app-header">
+            <div class="mini-app-header-actions">
+              <div class="mini-icon-btn"><i class="ph ph-caret-left"></i></div>
+            </div>
+            <div class="mini-app-header-actions">
+              <div class="mini-icon-btn"><i class="ph ph-star"></i></div>
+              <div class="mini-icon-btn"><i class="ph ph-dots-three-circle"></i></div>
+            </div>
+          </div>
+          <div style="padding: 0 var(--space-md);">
+            <div class="mini-paper-source" style="margin-bottom: var(--space-xs);">ArXiv AI · June 25, 2026 · 12 min read</div>
+            <h4 style="font-size: 16px; font-weight: 700; line-height: 1.35; margin-bottom: var(--space-sm); color: var(--ink);">A new scaling law for reasoning in large language models</h4>
+          </div>
+          <div class="mini-key-finding">
+            <div class="mini-key-finding-label"><i class="ph-fill ph-key"></i> Key Finding</div>
+            <p>大型语言模型的推理能力会随着更多计算和更高质量数据增长，增强规律是可预测的。</p>
+          </div>
+          <div class="mini-plain-english">
+            <strong>In Plain English</strong>
+            <ul>
+              <li>更大的模型推理能力更好。</li>
+              <li>关系是可预测的。</li>
+              <li>数据质量很重要。高质量数据推理提升更多。</li>
+              <li>对规划训练预算和评估里程碑有实际意义。</li>
+            </ul>
+          </div>
+          <div class="mini-cta-row">
+            <div class="mini-btn-outline">Read Original</div>
+            <div class="mini-btn-primary">Next Paper →</div>
+          </div>
+        `
+      },
+      'mobile-dashboard': {
+        title: 'Data Dashboard',
+        subtitle: '数据面板 · iOS',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: true,
+        activeNav: 'stats',
+        content: `
+          <div class="mini-app-header">
+            <div>
+              <h4>数据面板</h4>
+              <div class="date-text">总览</div>
+            </div>
+            <div class="mini-app-header-actions">
+              <div class="mini-icon-btn"><i class="ph ph-arrows-clockwise"></i></div>
+            </div>
+          </div>
+          <div style="padding: 0 var(--space-md); margin-bottom: var(--space-xs);">
+            <select style="width: 100%; height: 32px; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); font-size: 11px; padding: 0 var(--space-sm); color: var(--ink-soft);">
+              <option>2026-06-25（周四）</option>
+            </select>
+          </div>
+          <div class="mini-dashboard-stats">
+            <div class="mini-stat-card">
+              <div class="stat-icon"><i class="ph ph-file-text"></i></div>
+              <div class="stat-value">78</div>
+              <div class="stat-label">论文数量</div>
+            </div>
+            <div class="mini-stat-card">
+              <div class="stat-icon"><i class="ph ph-calendar"></i></div>
+              <div class="stat-value">12</div>
+              <div class="stat-label">日期范围</div>
+            </div>
+            <div class="mini-stat-card">
+              <div class="stat-icon"><i class="ph ph-hash"></i></div>
+              <div class="stat-value">790</div>
+              <div class="stat-label">唯一关键词</div>
+            </div>
+            <div class="mini-stat-card">
+              <div class="stat-icon"><i class="ph ph-users"></i></div>
+              <div class="stat-value">453</div>
+              <div class="stat-label">唯一作者</div>
+            </div>
+          </div>
+          <div class="mini-topics-list">
+            <h5>关键词统计</h5>
+            <div class="mini-topic-item">
+              <span>physics.optics</span>
+              <span class="topic-count">78 次</span>
+            </div>
+            <div class="mini-topic-item">
+              <span>optical</span>
+              <span class="topic-count">17 次</span>
+            </div>
+            <div class="mini-topic-item">
+              <span>physics.app-ph</span>
+              <span class="topic-count">8 次</span>
+            </div>
+            <div class="mini-topic-item">
+              <span>photonic</span>
+              <span class="topic-count">6 次</span>
+            </div>
+            <div class="mini-topic-item">
+              <span>cond-mat.mtrl-sci</span>
+              <span class="topic-count">6 次</span>
+            </div>
+          </div>
+        `
+      },
+      'mobile-saved': {
+        title: 'Saved Papers',
+        subtitle: '收藏夹 · iOS',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: true,
+        activeNav: 'saved',
+        content: `
+          <div class="mini-app-header">
+            <div>
+              <h4>收藏</h4>
+            </div>
+            <div class="mini-app-header-actions">
+              <div class="mini-icon-btn"><i class="ph ph-funnel"></i></div>
+            </div>
+          </div>
+          <div class="mini-paper-card">
+            <div class="mini-rank" style="color: var(--amber-500);">★</div>
+            <div class="mini-paper-body">
+              <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Physical Review</div>
+              <div class="mini-paper-title">A Langevin Model-Based Magneto-Optic Response Superparamagnetic Nanoparticles Recorded with a Michelson Interferometer Setup</div>
+              <div class="mini-paper-desc">本文为溶液中超顺磁性纳米颗粒的磁光表征提供了理论框架和实验方法，分析了迈克尔逊干涉仪中的干。</div>
+            </div>
+            <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
+          </div>
+          <div class="mini-paper-card">
+            <div class="mini-rank" style="color: var(--amber-500);">★</div>
+            <div class="mini-paper-body">
+              <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature Photonics</div>
+              <div class="mini-paper-title">A laser with instability reaching $4×10^-17$ based on a silicon cavity at sub-5 K temperatures</div>
+              <div class="mini-paper-desc">通过第一层原理研究元素金属中的体等离激元光学特性。</div>
+            </div>
+            <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
+          </div>
+          <div class="mini-paper-card">
+            <div class="mini-rank" style="color: var(--amber-500);">★</div>
+            <div class="mini-paper-body">
+              <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Science Advances</div>
+              <div class="mini-paper-title">Bulk plasmons in elemental metals</div>
+              <div class="mini-paper-desc">通过第一层原理研究元素金属中的体等离激元光学特性。</div>
+            </div>
+            <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
+          </div>
+        `
+      },
+      'desktop-feed': {
+        title: 'Desktop Feed',
+        subtitle: '三栏信息流 · Web',
+        device: 'desktop',
+        content: `
+          <div class="mini-desktop-shell">
+            <div class="mini-desktop-sidebar">
+              <h5>研究频道</h5>
+              <div class="mini-desktop-nav-item is-active"><i class="ph ph-sparkle"></i> 今日简报</div>
+              <div class="mini-desktop-nav-item"><i class="ph ph-brain"></i> AI / LLM</div>
+              <div class="mini-desktop-nav-item"><i class="ph ph-atom"></i> Physics</div>
+              <div class="mini-desktop-nav-item"><i class="ph ph-dna"></i> Bio Medicine</div>
+              <div class="mini-desktop-nav-item"><i class="ph ph-bookmark-simple"></i> 稍后读</div>
+              <div class="mini-desktop-nav-item"><i class="ph ph-binoculars"></i> 收藏专题</div>
+            </div>
+            <div class="mini-desktop-feed">
+              <div style="margin-bottom: var(--space-sm);">
+                <div style="font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 2px;">Daily Papers</div>
+                <div style="font-size: 10px; color: var(--ink-muted);">为你精选：AI / LLM、AI safety、multimodal learning</div>
+              </div>
+              <div class="mini-paper-card" style="border: 1px solid var(--line-soft); border-radius: var(--radius-md); margin-bottom: var(--space-xs);">
+                <div class="mini-rank" style="color: var(--amber-500);">★</div>
+                <div class="mini-paper-body">
+                  <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI · 因为你收藏了 reasoning</div>
+                  <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
+                  <div class="mini-paper-desc">模型推理能力提升规律变得可预测，改变训练预算规划方式。</div>
+                </div>
+                <div class="mini-bookmark"><i class="ph ph-star"></i></div>
+              </div>
+              <div class="mini-paper-card" style="border-bottom: none;">
+                <div class="mini-rank">02</div>
+                <div class="mini-paper-body">
+                  <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature</div>
+                  <div class="mini-paper-title">A reversible gene switch for safer cell therapies</div>
+                  <div class="mini-paper-desc">精确控制治疗开关，提升临床安全性。</div>
+                </div>
+                <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
+              </div>
+            </div>
+            <div class="mini-desktop-detail">
+              <h5><i class="ph-fill ph-sparkle" style="color: var(--violet);"></i> 关键发现</h5>
+              <p style="margin-bottom: var(--space-sm);">推理能力提升曲线可估 → 训练预算规划方式改变。</p>
+              <h5>Plain English</h5>
+              <p>更大模型 + 更好数据 = 推理能力稳定提升。</p>
+            </div>
+          </div>
+        `
+      },
+      'desktop-auth': {
+        title: 'Split Auth',
+        subtitle: 'Web 登录页',
+        device: 'desktop',
+        content: `
+          <div class="mini-split-auth">
+            <div class="mini-split-left">
+              <div style="margin-bottom: var(--space-md);">
+                <div style="width: 32px; height: 32px; background: var(--brand); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 14px;">S</div>
+              </div>
+              <h3>把论文推荐系统，调成你的研究口味。</h3>
+              <p>登录后同步收藏、阅读进度、关键词偏好和推荐反馈。桌面端高效整理，移动端轻松刷。</p>
+              <div class="mini-split-card">
+                <div class="mini-split-card-icon"><i class="ph ph-newspaper"></i></div>
+                <div class="mini-split-card-text">
+                  <strong>Today Briefing</strong>
+                  <span>5 top papers, summarized for your taste.</span>
+                </div>
+              </div>
+            </div>
+            <div class="mini-split-right">
+              <h4>登录 ScholarDaily</h4>
+              <p>继续你的收藏、推荐画像和阅读进度。</p>
+              <div class="mini-input-group">
+                <label>邮箱</label>
+                <div class="mini-input"></div>
+              </div>
+              <div class="mini-input-group">
+                <label>密码</label>
+                <div class="mini-input"></div>
+              </div>
+              <div class="mini-auth-btn">登录</div>
+              <div style="text-align: center; margin-top: var(--space-sm); font-size: 10px; color: var(--ink-muted);">
+                还没有账号？<span style="color: var(--brand);">创建账号</span>
+              </div>
+              <div class="mini-auth-divider"><span>或</span></div>
+              <div class="mini-social-btn"><i class="ph ph-google-logo"></i> 使用 Google 登录</div>
+            </div>
+          </div>
+        `
+      },
+      'onboarding-welcome': {
+        title: 'Welcome',
+        subtitle: '欢迎页 · Onboarding 01',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: false,
+        content: `
+          <div class="mini-auth-container" style="text-align: left;">
+            <div class="mini-auth-logo" style="margin: 0 0 var(--space-md);">S</div>
+            <div class="mini-onboarding-title">让论文像信息流一样好刷，但仍然可靠</div>
+            <div class="mini-onboarding-desc">每天 5 到 12 篇高质量论文，先给你白话关键结论，再给原文、作者和可验证来源。</div>
+            <div style="border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-sm); margin-bottom: var(--space-md); background: var(--surface);">
+              <div class="mini-paper-source" style="margin-bottom: 4px;"><span class="mini-paper-source-dot"></span>今日简报</div>
+              <div class="mini-paper-title" style="margin-bottom: 4px;">A new scaling law for reasoning in large language models</div>
+              <div class="mini-paper-desc">More → reasoning. agent 和摘要的质量也在提升。</div>
+            </div>
+            <div class="mini-auth-btn">开始个性化推荐</div>
+            <div style="text-align: center; margin-top: var(--space-sm); font-size: 10px; color: var(--ink-muted);">
+              已有账号，<span style="color: var(--brand);">登录</span>
+            </div>
+          </div>
+        `
+      },
+      'onboarding-login': {
+        title: 'Login',
+        subtitle: '登录页 · Onboarding 02',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: false,
+        content: `
+          <div class="mini-auth-container">
+            <div class="mini-auth-logo">S</div>
+            <div class="mini-auth-title">欢迎回来</div>
+            <div class="mini-auth-subtitle">继续你的今日论文简报、收藏夹和研读队列。</div>
+            <div class="mini-input-group">
+              <label>邮箱</label>
+              <div class="mini-input" style="text-align: left;">researcher@example.com</div>
+            </div>
+            <div class="mini-input-group">
+              <label>密码</label>
+              <div class="mini-input" style="text-align: left;">••••••••</div>
+            </div>
+            <div class="mini-auth-btn">登录</div>
+            <div style="text-align: center; margin-top: var(--space-sm); font-size: 10px; color: var(--ink-muted);">
+              还没有账号？<span style="color: var(--brand);">创建账号</span>
+            </div>
+            <div class="mini-auth-divider"><span>或</span></div>
+            <div class="mini-social-btn"><i class="ph ph-apple-logo"></i> 使用 Apple 继续</div>
+            <div class="mini-social-btn"><i class="ph ph-google-logo"></i> 使用 Google 继续</div>
+          </div>
+        `
+      },
+      'onboarding-interests': {
+        title: 'Pick Interests',
+        subtitle: '兴趣选择 · Onboarding 03',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: false,
+        content: `
+          <div class="mini-auth-container" style="text-align: left;">
+            <div class="mini-step-indicator">1 / 3</div>
+            <div class="mini-onboarding-title">先选几个你关心的方向</div>
+            <div class="mini-onboarding-desc">不用选很细，后续系统会继续调整。保留"不感兴趣"继续调整。</div>
+            <div class="mini-interest-tags">
+              <div class="mini-interest-tag is-active">LLM</div>
+              <div class="mini-interest-tag is-active">Agents</div>
+              <div class="mini-interest-tag">AI Safety</div>
+              <div class="mini-interest-tag">Multimodal</div>
+              <div class="mini-interest-tag">Robotics</div>
+              <div class="mini-interest-tag is-active">Biomedicine</div>
+              <div class="mini-interest-tag is-active">Physics</div>
+              <div class="mini-interest-tag">Climate</div>
+              <div class="mini-interest-tag">HCI</div>
+              <div class="mini-interest-tag">Neuroscience</div>
+              <div class="mini-interest-tag">Materials</div>
+            </div>
+            <div style="background: var(--surface-muted); border-radius: var(--radius-md); padding: var(--space-sm); margin-bottom: var(--space-md);">
+              <div style="font-size: 10px; color: var(--ink-muted); margin-bottom: 4px;">也可以导入你的档案</div>
+              <div style="font-size: 10px; color: var(--ink-soft);">粘贴 arXiv、zotero、分类、作者或领域</div>
+              <div style="font-size: 10px; color: var(--brand); font-weight: 500; margin-top: 4px;">BirTech 系统会自动生成初始画像。</div>
+            </div>
+            <div class="mini-auth-btn">继续</div>
+            <div style="text-align: center; margin-top: var(--space-sm); font-size: 10px; color: var(--ink-muted);">
+              先跳过，直接看今日的
+            </div>
+          </div>
+        `
+      },
+      'onboarding-notifications': {
+        title: 'Notifications',
+        subtitle: '通知设置 · Onboarding 04',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: false,
+        content: `
+          <div class="mini-auth-container" style="text-align: left;">
+            <div class="mini-step-indicator">2 / 3</div>
+            <div class="mini-onboarding-title">让提醒像助手，不是打扰。</div>
+            <div class="mini-onboarding-desc">只在真正有价值时提醒：今日简报、关注作者更新、关键突破推送。关掉得很容易。</div>
+            <div style="background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius-md); padding: 0 var(--space-sm); margin-bottom: var(--space-md);">
+              <div class="mini-toggle-row">
+                <div class="mini-toggle-info">
+                  <strong>每日简报</strong>
+                  <span>每天早 8 点，当日 5 篇精选 + 摘要。</span>
+                </div>
+                <div class="mini-toggle is-on"></div>
+              </div>
+              <div class="mini-toggle-row">
+                <div class="mini-toggle-info">
+                  <strong>趋势提醒</strong>
+                  <span>当某方向出现重要突破时提醒。</span>
+                </div>
+                <div class="mini-toggle is-on"></div>
+              </div>
+              <div class="mini-toggle-row">
+                <div class="mini-toggle-info">
+                  <strong>作者动态</strong>
+                  <span>关注的作者发新论文时提醒。</span>
+                </div>
+                <div class="mini-toggle"></div>
+              </div>
+              <div class="mini-toggle-row" style="border-bottom: none;">
+                <div class="mini-toggle-info">
+                  <strong>周总结</strong>
+                  <span>每周一早上回顾上周研究进展。</span>
+                </div>
+                <div class="mini-toggle is-on"></div>
+              </div>
+            </div>
+            <div class="mini-auth-btn">保存提醒偏好</div>
+            <div style="text-align: center; margin-top: var(--space-sm); font-size: 10px; color: var(--ink-muted);">
+              不允许通知，只在 App 内显示
+            </div>
+          </div>
+        `
+      },
+      'onboarding-briefing': {
+        title: 'First Briefing',
+        subtitle: '首版日报 · Onboarding 05',
+        device: 'mobile',
+        hasNotch: true,
+        hasNavBar: false,
+        content: `
+          <div class="mini-auth-container" style="text-align: left;">
+            <div class="mini-step-indicator">3 / 3</div>
+            <div class="mini-onboarding-title">为你生成的第一版日报</div>
+            <div class="mini-onboarding-desc">基于 4 个兴趣方向和 3 次投票校准，先给你一个可感受的基础。</div>
+            <div style="background: var(--brand-soft); border-radius: var(--radius-md); padding: var(--space-xs) var(--space-sm); display: inline-flex; align-items: center; gap: 4px; font-size: 10px; color: var(--brand); font-weight: 600; margin-bottom: var(--space-sm);">
+              <i class="ph-fill ph-sparkle"></i> 推荐简报 v0.1
+            </div>
+            <div style="margin-bottom: var(--space-sm);">
+              <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
+                <div class="mini-paper-body">
+                  <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
+                  <div class="mini-paper-title">Training language agents to browse papers with persistent memory</div>
+                  <div class="mini-paper-desc">像研究员一样持续阅读文献，不是每次都从头来。</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom: var(--space-sm);">
+              <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
+                <div class="mini-paper-body">
+                  <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
+                  <div class="mini-paper-title">Tool-using agents improve scientific literature review</div>
+                  <div class="mini-paper-desc">工具调用型 agent 显著提升综述质量。</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-bottom: var(--space-md);">
+              <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
+                <div class="mini-paper-body">
+                  <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature Photonics</div>
+                  <div class="mini-paper-title">Quantum emitters meet integrated photonics</div>
+                  <div class="mini-paper-desc">量子发射器与集成光子学的融合进入新阶段。</div>
+                </div>
+              </div>
+            </div>
+            <div class="mini-auth-btn">开始刷今日论文</div>
+          </div>
+        `
+      }
+    };
+
+    function openPreview(pageId) {
+      const template = pageTemplates[pageId];
+      if (!template) return;
+
+      titleEl.textContent = template.title;
+      subtitleEl.textContent = template.subtitle;
+
+      let deviceClass = '';
+      let contentHtml = '';
+
+      if (template.device === 'mobile') {
+        deviceClass = '';
+        contentHtml = `<div class="page-preview-device">`;
+        if (template.hasNotch) {
+          contentHtml += `<div class="device-notch"></div>`;
+          contentHtml += `<div class="device-status-bar"><span>9:41</span><span class="device-status-bar-right"><i class="ph ph-cellular-signal"></i><i class="ph ph-wifi-high"></i><i class="ph ph-battery-full"></i></span></div>`;
+        }
+        contentHtml += `<div class="device-content${template.hasNotch ? ' has-notch' : ''}">${template.content}</div>`;
+        if (template.hasNavBar) {
+          contentHtml += `
+            <div class="device-nav-bar">
+              <div class="device-nav-item ${template.activeNav === 'home' ? 'is-active' : ''}">
+                <i class="ph ph-house"></i>
+                <span>首页</span>
+              </div>
+              <div class="device-nav-item ${template.activeNav === 'stats' ? 'is-active' : ''}">
+                <i class="ph ph-chart-bar"></i>
+                <span>数据</span>
+              </div>
+              <div class="device-nav-item ${template.activeNav === 'saved' ? 'is-active' : ''}">
+                <i class="ph ph-bookmark-simple"></i>
+                <span>收藏</span>
+              </div>
+              <div class="device-nav-item">
+                <i class="ph ph-user-circle"></i>
+                <span>设置</span>
+              </div>
+            </div>
+          `;
+        }
+        contentHtml += '</div>';
+      } else {
+        deviceClass = 'is-desktop';
+        contentHtml = `<div class="page-preview-device is-desktop">${template.content}</div>`;
+      }
+
+      bodyEl.innerHTML = contentHtml;
+
+      overlay.classList.add('is-open');
+      panel.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePreview() {
+      overlay.classList.remove('is-open');
+      panel.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-page-preview]').forEach(card => {
+      card.addEventListener('click', () => {
+        const pageId = card.getAttribute('data-page-preview');
+        openPreview(pageId);
+      });
+    });
+
+    closeBtn.addEventListener('click', closePreview);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closePreview();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) {
+        closePreview();
+      }
+    });
+  }
+
   function init() {
     initTheme();
     initSmoothScroll();
@@ -399,6 +968,7 @@
     initSidebarToggle();
     initSidebarFilter();
     initDocNavActiveState();
+    initPagePreview();
     initI18n();
   }
 
