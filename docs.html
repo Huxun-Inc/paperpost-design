@@ -59,6 +59,11 @@
           </details>
 
           <details open data-nav-group>
+            <summary data-i18n="docs.groupTokens">设计令牌</summary>
+            <a href="#tokens-radius" data-nav-item>圆角规范</a>
+          </details>
+
+          <details open data-nav-group>
             <summary data-i18n="docs.groupComponents">组件</summary>
             <a href="#components-paper-card" data-nav-item data-i18n="docs.navPaperCard">Paper Card</a>
             <a href="#components-summary" data-nav-item data-i18n="docs.navSummaryBlock">Summary Block</a>
@@ -116,6 +121,97 @@
               <span>03</span>
               <h3 data-i18n="docs.ruleThreeTitle">有瘾性但不廉价</h3>
               <p data-i18n="docs.ruleThreeCopy">让用户持续发现价值，而不是靠噪音和刺激。反馈很轻，节奏清楚，每篇都通向下一篇。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="doc-section" id="tokens-radius">
+          <div class="doc-section-head">
+            <p class="eyebrow">Tokens</p>
+            <h2>圆角规范</h2>
+            <p>圆润友好是 PaperDaily 设计语言的核心特征之一。圆角不仅是视觉风格，更是产品性格的表达——亲和、灵动、不尖锐。</p>
+          </div>
+
+          <div class="doc-grid">
+            <div class="doc-copy">
+              <ul class="doc-list">
+                <li><strong>大圆角原则</strong>：按钮、卡片、徽标等独立元素使用大圆角，营造柔软亲和的触感。</li>
+                <li><strong>层级对应</strong>：元素越突出、越可交互，圆角越大；容器类元素圆角适中。</li>
+                <li><strong>全链路统一</strong>：从 favicon 到品牌标识，从按钮到弹窗，圆角风格保持一致。</li>
+                <li><strong>胶囊形态</strong>：小型标签、Chip 等组件使用胶囊形圆角（pill），强化灵动气质。</li>
+              </ul>
+            </div>
+
+            <div class="demo-box">
+              <div class="radius-showcase">
+                <div class="radius-item">
+                  <div class="radius-preview radius-xs"></div>
+                  <div class="radius-info">
+                    <span class="radius-label">xs</span>
+                    <span class="radius-value">6px</span>
+                  </div>
+                </div>
+                <div class="radius-item">
+                  <div class="radius-preview radius-sm"></div>
+                  <div class="radius-info">
+                    <span class="radius-label">sm</span>
+                    <span class="radius-value">8px</span>
+                  </div>
+                </div>
+                <div class="radius-item">
+                  <div class="radius-preview radius-md"></div>
+                  <div class="radius-info">
+                    <span class="radius-label">md</span>
+                    <span class="radius-value">12px</span>
+                  </div>
+                </div>
+                <div class="radius-item">
+                  <div class="radius-preview radius-lg"></div>
+                  <div class="radius-info">
+                    <span class="radius-label">lg</span>
+                    <span class="radius-value">16px</span>
+                  </div>
+                </div>
+                <div class="radius-item">
+                  <div class="radius-preview radius-xl"></div>
+                  <div class="radius-info">
+                    <span class="radius-label">xl</span>
+                    <span class="radius-value">20px</span>
+                  </div>
+                </div>
+                <div class="radius-item">
+                  <div class="radius-preview radius-2xl"></div>
+                  <div class="radius-info">
+                    <span class="radius-label">2xl</span>
+                    <span class="radius-value">24px</span>
+                  </div>
+                </div>
+                <div class="radius-item">
+                  <div class="radius-preview radius-pill"></div>
+                  <div class="radius-info">
+                    <span class="radius-label">pill</span>
+                    <span class="radius-value">999px</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rule-grid" style="margin-top: var(--space-2xl);">
+            <article class="rule-card">
+              <span>01</span>
+              <h3>按钮与交互元素</h3>
+              <p>主按钮、次按钮使用 <code>--radius-lg</code>（16px），Icon 按钮使用 <code>--radius-md</code>（12px），Chip 标签使用 <code>--radius-pill</code> 胶囊形。</p>
+            </article>
+            <article class="rule-card">
+              <span>02</span>
+              <h3>卡片与容器</h3>
+              <p>Paper Card、功能卡片使用 <code>--radius-xl</code>（20px），弹窗面板使用 <code>--radius-2xl</code>（24px），强调柔软容器感。</p>
+            </article>
+            <article class="rule-card">
+              <span>03</span>
+              <h3>品牌与标识</h3>
+              <p>品牌 Logo、favicon 统一使用 <code>--radius-2xl</code>（24px）圆角，建立圆润亲和的品牌第一印象。</p>
             </article>
           </div>
         </section>
