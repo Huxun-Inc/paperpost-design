@@ -2722,7 +2722,7 @@ img {
 }
 
 .page-card-thumb {
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 9 / 19.5;
   background: var(--paper);
   overflow: hidden;
   position: relative;
@@ -2943,12 +2943,15 @@ img {
 
 .page-preview-device {
   width: 280px;
+  aspect-ratio: 9 / 19.5;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-2xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .page-preview-device.is-desktop {

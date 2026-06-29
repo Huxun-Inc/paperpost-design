@@ -121,7 +121,7 @@
   "docs.aiActionCompare": "生成对比表",
   "docs.aiActionQueue": "加入分析队列",
   "docs.pagesFeedTitle": "Feed Page",
-  "docs.pagesFeedCopy": "首页默认是一屏可刷的信息流，不是筛选器后台。",
+  "docs.pagesFeedCopy": "首页默认是一屏可读的信息流，不是筛选器后台。",
   "docs.pagesDetailTitle": "Detail Page",
   "docs.pagesDetailCopy": "详情页前半屏只回答四件事：讲什么、发现、为什么重要、下一步做什么。",
   "docs.pagesCopilotTitle": "Research Copilot",
