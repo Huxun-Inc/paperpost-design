@@ -398,7 +398,7 @@
     const pageTemplates = {
       'mobile-feed': {
         title: 'Daily Papers',
-        subtitle: '首页信息流 · iOS',
+        subtitle: '首页信息流 · 移动端',
         device: 'mobile',
         hasNotch: true,
         hasNavBar: true,
@@ -454,7 +454,7 @@
       },
       'mobile-reader': {
         title: 'Paper Reader',
-        subtitle: '论文详情页 · iOS',
+        subtitle: '论文详情页 · 移动端',
         device: 'mobile',
         hasNotch: true,
         hasNavBar: false,
@@ -493,7 +493,7 @@
       },
       'mobile-dashboard': {
         title: 'Data Dashboard',
-        subtitle: '数据面板 · iOS',
+        subtitle: '数据面板 · 移动端',
         device: 'mobile',
         hasNotch: true,
         hasNavBar: true,
@@ -562,7 +562,7 @@
       },
       'mobile-saved': {
         title: 'Saved Papers',
-        subtitle: '收藏夹 · iOS',
+        subtitle: '收藏夹 · 移动端',
         device: 'mobile',
         hasNotch: true,
         hasNavBar: true,

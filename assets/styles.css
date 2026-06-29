@@ -2767,6 +2767,7 @@ img {
   border-radius: var(--radius-2xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  position: relative;
 }
 
 .page-preview-device.is-desktop {
@@ -2779,17 +2780,18 @@ img {
 }
 
 .device-status-bar {
-  height: 28px;
-  background: var(--surface-muted);
-  border-bottom: 1px solid var(--line-soft);
+  height: 36px;
+  background: var(--paper);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 var(--space-md);
-  font-size: 11px;
+  padding: 0 var(--space-lg);
+  font-size: 12px;
   font-weight: 600;
-  color: var(--ink-muted);
+  color: var(--ink);
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .device-status-bar-right {
@@ -2800,14 +2802,14 @@ img {
 
 .device-notch {
   position: absolute;
-  top: 0;
+  top: 6px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
+  width: 90px;
   height: 24px;
   background: #000;
-  border-radius: 0 0 14px 14px;
-  z-index: 2;
+  border-radius: 20px;
+  z-index: 10;
 }
 
 .device-nav-bar {
@@ -2847,7 +2849,7 @@ img {
 }
 
 .device-content.has-notch {
-  padding-top: 8px;
+  padding-top: 0;
 }
 
 /* Mini mock components for preview */
