@@ -56,10 +56,6 @@
             <summary data-i18n="docs.groupStart">开始</summary>
             <a href="#intro" data-nav-item data-i18n="docs.navIntro">站点说明</a>
             <a href="#philosophy-core" data-nav-item data-i18n="docs.navPhilosophy">设计哲学</a>
-          </details>
-
-          <details open data-nav-group>
-            <summary data-i18n="docs.groupTokens">设计令牌</summary>
             <a href="#tokens-radius" data-nav-item>圆角规范</a>
           </details>
 
@@ -127,8 +123,6 @@
             <div class="doc-copy">
               <ul class="doc-list">
                 <li><strong>亲和力优先</strong>：大圆角是 PaperDaily 的视觉基因，用柔软的曲线建立亲和、灵动、不尖锐的产品性格。</li>
-                <li><strong>费茨定律实践</strong>：圆角半径与点击热区关联——小圆角热区外扩至外接矩形，大圆角热区贴合视觉边界，兼顾美学与精准。</li>
-                <li><strong>Squircle 曲线</strong>：采用改良版 Lamé 曲线（类苹果 Squircle），转角曲率变化率连续，视觉更柔和、触感更自然。</li>
                 <li><strong>层级对应</strong>：元素越突出、越可交互，圆角越大；容器类元素圆角适中，形成清晰的视觉层次。</li>
               </ul>
             </div>
@@ -136,52 +130,24 @@
             <div class="demo-box">
               <div class="radius-showcase">
                 <div class="radius-item">
-                  <div class="radius-preview radius-xs"></div>
+                  <div class="radius-preview radius-lg"></div>
                   <div class="radius-info">
-                    <span class="radius-label">xs</span>
-                    <span class="radius-value">6px · 热区外扩</span>
-                  </div>
-                </div>
-                <div class="radius-item">
-                  <div class="radius-preview radius-sm"></div>
-                  <div class="radius-info">
-                    <span class="radius-label">sm</span>
-                    <span class="radius-value">8px · 热区外扩</span>
+                    <span class="radius-label">主按钮</span>
+                    <span class="radius-value">16px · radius-lg</span>
                   </div>
                 </div>
                 <div class="radius-item">
                   <div class="radius-preview radius-md"></div>
                   <div class="radius-info">
-                    <span class="radius-label">md</span>
-                    <span class="radius-value">12px · Squircle</span>
+                    <span class="radius-label">次按钮</span>
+                    <span class="radius-value">12px · radius-md</span>
                   </div>
                 </div>
                 <div class="radius-item">
-                  <div class="radius-preview radius-lg"></div>
+                  <div class="radius-preview radius-sm"></div>
                   <div class="radius-info">
-                    <span class="radius-label">lg</span>
-                    <span class="radius-value">16px · Squircle</span>
-                  </div>
-                </div>
-                <div class="radius-item">
-                  <div class="radius-preview radius-xl"></div>
-                  <div class="radius-info">
-                    <span class="radius-label">xl</span>
-                    <span class="radius-value">20px · Squircle</span>
-                  </div>
-                </div>
-                <div class="radius-item">
-                  <div class="radius-preview radius-2xl"></div>
-                  <div class="radius-info">
-                    <span class="radius-label">2xl</span>
-                    <span class="radius-value">24px · Squircle</span>
-                  </div>
-                </div>
-                <div class="radius-item">
-                  <div class="radius-preview radius-pill"></div>
-                  <div class="radius-info">
-                    <span class="radius-label">pill</span>
-                    <span class="radius-value">胶囊形 · 灵动</span>
+                    <span class="radius-label">Tab 标签</span>
+                    <span class="radius-value">8px · radius-sm</span>
                   </div>
                 </div>
               </div>
