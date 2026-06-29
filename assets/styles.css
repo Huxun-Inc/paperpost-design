@@ -891,13 +891,13 @@ img {
 }
 
 .mini-key-finding {
-  border-left: 3px solid var(--brand);
-  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-lg);
   margin-bottom: var(--space-md);
-  background: var(--surface-muted);
-  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  background: var(--brand-soft);
+  border: 1px solid color-mix(in srgb, var(--brand) 15%, transparent);
   align-self: flex-start;
-  max-width: 85%;
+  max-width: 90%;
 }
 
 .mini-kf-label {
@@ -3141,10 +3141,10 @@ img {
 
 .mini-key-finding {
   margin: var(--space-sm) var(--space-md);
-  padding: var(--space-xs) var(--space-sm);
-  border-left: 2px solid var(--brand);
-  background: var(--surface-muted);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--brand-soft);
+  border: 1px solid color-mix(in srgb, var(--brand) 15%, transparent);
+  border-radius: var(--radius-lg);
 }
 
 .mini-key-finding-label {
