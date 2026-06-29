@@ -263,7 +263,7 @@ img {
 .brand-mark {
   width: 28px;
   height: 28px;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-2xl);
   background: var(--brand);
   display: grid;
   place-items: center;
