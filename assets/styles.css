@@ -117,37 +117,49 @@
 }
 
 /* 字号缩放 */
+html[data-font-size="small"] {
+  font-size: 14px;
+}
+
+html[data-font-size="medium"] {
+  font-size: 16px;
+}
+
+html[data-font-size="large"] {
+  font-size: 18px;
+}
+
 [data-font-size="small"] {
-  --font-body-size: 13px;
-  --font-body-sm-size: 12px;
-  --font-caption-size: 11px;
-  --font-micro-size: 10px;
-  --font-display-size: 42px;
-  --font-headline-size: 26px;
-  --font-title1-size: 20px;
-  --font-title2-size: 16px;
+  --font-body-size: 0.875rem;
+  --font-body-sm-size: 0.75rem;
+  --font-caption-size: 0.6875rem;
+  --font-micro-size: 0.625rem;
+  --font-display-size: 2.625rem;
+  --font-headline-size: 1.625rem;
+  --font-title1-size: 1.25rem;
+  --font-title2-size: 1rem;
 }
 
 [data-font-size="medium"] {
-  --font-body-size: 15px;
-  --font-body-sm-size: 14px;
-  --font-caption-size: 12px;
-  --font-micro-size: 11px;
-  --font-display-size: 48px;
-  --font-headline-size: 28px;
-  --font-title1-size: 22px;
-  --font-title2-size: 18px;
+  --font-body-size: 0.9375rem;
+  --font-body-sm-size: 0.875rem;
+  --font-caption-size: 0.75rem;
+  --font-micro-size: 0.6875rem;
+  --font-display-size: 3rem;
+  --font-headline-size: 1.75rem;
+  --font-title1-size: 1.375rem;
+  --font-title2-size: 1.125rem;
 }
 
 [data-font-size="large"] {
-  --font-body-size: 17px;
-  --font-body-sm-size: 16px;
-  --font-caption-size: 14px;
-  --font-micro-size: 13px;
-  --font-display-size: 52px;
-  --font-headline-size: 32px;
-  --font-title1-size: 24px;
-  --font-title2-size: 20px;
+  --font-body-size: 1.0625rem;
+  --font-body-sm-size: 1rem;
+  --font-caption-size: 0.875rem;
+  --font-micro-size: 0.8125rem;
+  --font-display-size: 3.25rem;
+  --font-headline-size: 2rem;
+  --font-title1-size: 1.5rem;
+  --font-title2-size: 1.25rem;
 }
 
 [data-theme="dark"] {
@@ -428,11 +440,13 @@ img {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
+  height: 32px;
+  box-sizing: border-box;
 }
 
 .font-size-btn {
   width: 28px;
-  height: 28px;
+  height: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -452,7 +466,7 @@ img {
 .font-size-btn.is-active {
   color: var(--ink);
   background: var(--paper);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .fs-icon-sm {
@@ -2115,12 +2129,13 @@ img {
 }
 
 .toolbar select {
-  padding: 5px 8px;
+  height: 32px;
+  padding: 0 10px;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--ink-soft);
-  font-size: 12px;
+  font-size: 13px;
   cursor: pointer;
 }
 
