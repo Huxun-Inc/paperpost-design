@@ -168,6 +168,71 @@
   --neu-shadow-inset-sm: inset 2px 2px 4px var(--neu-dark), inset -2px -2px 4px var(--neu-light);
 }
 
+/* 系统主题自动适配（仅当用户未手动设置时生效） */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+
+    --paper: #0E0F12;
+    --paper-warm: #12110F;
+    --surface: #17181C;
+    --surface-muted: #1F2024;
+    --surface-hover: #26272C;
+    --surface-active: #2F3036;
+
+    --ink: #F3F4F6;
+    --ink-soft: #D1D5DB;
+    --ink-muted: #9CA3AF;
+    --ink-faint: #6B7280;
+
+    --line: #2B2D33;
+    --line-soft: #222429;
+    --line-strong: #3A3C42;
+
+    --brand: #3B82F6;
+    --brand-press: #60A5FA;
+    --brand-soft: rgba(59, 130, 246, 0.12);
+    --brand-line: rgba(59, 130, 246, 0.25);
+
+    --success: #34D399;
+    --success-soft: rgba(52, 211, 153, 0.12);
+    --warning: #FBBF24;
+    --warning-soft: rgba(251, 191, 36, 0.12);
+    --danger: #F87171;
+    --danger-soft: rgba(248, 113, 113, 0.12);
+    --violet: #A78BFA;
+    --violet-soft: rgba(167, 139, 250, 0.12);
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 2px 6px -1px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.5), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.5), 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 32px 64px -12px rgba(0, 0, 0, 0.6), 0 16px 32px -8px rgba(0, 0, 0, 0.4);
+
+    --glass-bg: rgba(23, 24, 28, 0.7);
+    --glass-bg-strong: rgba(23, 24, 28, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-blur: 20px;
+
+    --neu-light: #1E1F23;
+    --neu-dark: #0E0F12;
+    --neu-shadow: 6px 6px 12px var(--neu-dark), -6px -6px 12px var(--neu-light);
+    --neu-shadow-sm: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light);
+    --neu-shadow-inset: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light);
+    --neu-shadow-inset-sm: inset 2px 2px 4px var(--neu-dark), inset -2px -2px 4px var(--neu-light);
+  }
+
+  :root:not([data-theme]) .theme-toggle [data-theme-icon="sun"] {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+  }
+
+  :root:not([data-theme]) .theme-toggle [data-theme-icon="moon"] {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;

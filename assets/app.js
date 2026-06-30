@@ -3,8 +3,23 @@
   const body = document.body;
 
   function initTheme() {
-    const saved = localStorage.getItem('paperdaily-theme') || 'light';
-    applyTheme(saved);
+    // 优先使用用户保存的主题，否则跟随系统
+    const saved = localStorage.getItem('paperdaily-theme');
+    if (saved) {
+      applyTheme(saved);
+    } else {
+      // 首次访问时，根据系统主题自动设置
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(systemDark ? 'dark' : 'light');
+    }
+
+    // 监听系统主题变化（仅当用户未手动设置时）
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      const saved = localStorage.getItem('paperdaily-theme');
+      if (!saved) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
 
     const themeToggles = document.querySelectorAll('#themeToggle, [data-theme-toggle]');
     themeToggles.forEach(toggle => {
@@ -18,6 +33,16 @@
   function applyTheme(theme) {
     root.dataset.theme = theme;
     localStorage.setItem('paperdaily-theme', theme);
+    updateThemeColor(theme);
+  }
+
+  function updateThemeColor(theme) {
+    // 更新 theme-color meta 标签（手机 Chrome 地址栏颜色）
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      const color = theme === 'dark' ? '#17181C' : '#F7F8FA';
+      metaThemeColor.setAttribute('content', color);
+    }
   }
 
   function initSmoothScroll() {
