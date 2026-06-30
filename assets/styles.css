@@ -2449,7 +2449,7 @@ img {
   margin-bottom: var(--space-xl);
 }
 
-.a11y-grid--3 {
+.a11y-grid.cols-3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
