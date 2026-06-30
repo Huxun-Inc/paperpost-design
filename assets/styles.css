@@ -2620,9 +2620,40 @@ img {
 .radius-preview.radius-sm { border-radius: var(--radius-sm); }
 .radius-preview.radius-md { border-radius: var(--radius-md); }
 .radius-preview.radius-lg { border-radius: var(--radius-lg); }
-.radius-preview.radius-xl { border-radius: var(--radius-xl); }
-.radius-preview.radius-2xl { border-radius: var(--radius-2xl); }
 .radius-preview.radius-pill { border-radius: var(--radius-pill); }
+
+.icon-showcase {
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  transition: background 150ms;
+}
+
+.icon-item:hover {
+  background: var(--surface-muted);
+}
+
+.icon-item i {
+  font-size: 24px;
+  color: var(--ink);
+}
+
+.icon-item span {
+  font-size: var(--font-caption-size);
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+}
 
 .radius-info {
   display: flex;
