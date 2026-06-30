@@ -544,15 +544,23 @@ img {
 
 .hero {
   position: relative;
-  padding: var(--space-3xl) 0 var(--space-4xl);
+  padding: var(--space-4xl) 0 var(--space-3xl);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
 .hero .container {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+.hero-copy {
+  text-align: center;
+  max-width: 640px;
 }
 
 .hero-tag {
@@ -612,6 +620,122 @@ img {
   margin-bottom: var(--space-2xl);
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* ============== Mission Section ============== */
+
+.mission-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4xl) 0;
+  position: relative;
+  background: linear-gradient(180deg, var(--paper) 0%, var(--surface-muted) 100%);
+}
+
+.mission-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3xl);
+}
+
+.mission-globe-wrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission-globe {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  animation: globeFloat 4s ease-in-out infinite;
+}
+
+.globe-svg {
+  width: 100%;
+  height: 100%;
+  animation: globeSpin 20s linear infinite;
+}
+
+.globe-continents {
+  animation: continentsMove 20s linear infinite;
+}
+
+@keyframes globeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes globeSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes continentsMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-10px); }
+}
+
+.globe-sparkles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.sparkle {
+  position: absolute;
+  color: var(--brand);
+  font-size: 18px;
+  opacity: 0.6;
+  animation: sparklePulse 2s ease-in-out infinite;
+}
+
+.sparkle.s1 { top: 0; left: 50%; animation-delay: 0s; }
+.sparkle.s2 { top: 25%; right: 0; animation-delay: 0.5s; font-size: 14px; }
+.sparkle.s3 { bottom: 10%; right: 15%; animation-delay: 1s; }
+.sparkle.s4 { bottom: 0; left: 20%; animation-delay: 1.5s; font-size: 14px; }
+
+@keyframes sparklePulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.mission-content {
+  text-align: center;
+  max-width: 680px;
+}
+
+.mission-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  margin-bottom: var(--space-xl);
+  letter-spacing: -0.02em;
+}
+
+.mission-desc {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+  margin-bottom: var(--space-lg);
+  text-align: left;
+}
+
+.mission-desc:last-child {
+  margin-bottom: 0;
 }
 
 .hero-points {
@@ -3812,11 +3936,6 @@ img {
 /* ============== Responsive ============== */
 
 @media (max-width: 1024px) {
-  .hero .container {
-    grid-template-columns: 1fr;
-    gap: var(--space-2xl);
-  }
-
   .principles-grid {
     grid-template-columns: 1fr;
   }
@@ -3916,6 +4035,27 @@ img {
 
   .hero {
     padding: var(--space-2xl) 0 var(--space-3xl);
+    min-height: 60vh;
+  }
+
+  .mission-globe-wrapper,
+  .mission-globe {
+    width: 160px;
+    height: 160px;
+  }
+
+  .globe-sparkles {
+    width: 220px;
+    height: 220px;
+  }
+
+  .mission-title {
+    font-size: 26px;
+  }
+
+  .mission-desc {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
   .section {

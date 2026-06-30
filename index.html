@@ -48,13 +48,10 @@
         <div class="container">
           <div class="hero-copy">
             <h1 class="hero-title">
-              <span data-i18n="landing.heroTitle1">PaperDaily Design System 的使命</span>
+              <span data-i18n="landing.heroTitle1">PaperDaily Design System</span>
             </h1>
             <p class="hero-subtitle" data-i18n="landing.heroSubtitle">
               用清晰、克制、可信的 UI，把复杂的前沿知识变成每个人都能更快找到、读懂、用上的信息体验。
-            </p>
-            <p class="hero-mission" data-i18n="landing.heroMission">
-              我们相信，很多有价值的新想法之所以难以抵达更多人，并不只是因为内容本身复杂，也因为它们常常被困在难读的界面、分散的信息、语言门槛和低效的工具里。PaperDaily Design System 要解决的，不只是「界面好不好看」的问题，而是如何让复杂内容变得清晰，让重要信息被准确推荐，让 AI 工具真正服务阅读、理解和判断，让不同语言背景的用户都能舒服地接近前沿知识。
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary btn-lg" href="docs.html">
@@ -67,98 +64,66 @@
               </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="hero-visual">
-            <div class="component-showcase">
-              <div class="showcase-tabs">
-                <button class="showcase-tab is-active" data-showcase-tab="paper-card">Paper Card</button>
-                <button class="showcase-tab" data-showcase-tab="key-finding">Key Finding</button>
-                <button class="showcase-tab" data-showcase-tab="ai-answer">AI Answer</button>
-              </div>
-              <div class="showcase-frame">
-                <div class="showcase-pane is-active" data-showcase-pane="paper-card">
-                  <div class="mini-sidebar">
-                    <div class="mini-sidebar-title">GUIDE</div>
-                    <div class="mini-nav-item is-active">Paper Card</div>
-                    <div class="mini-nav-item">Summary Block</div>
-                    <div class="mini-nav-item">Command Bar</div>
-                    <div class="mini-nav-item">AI Answer</div>
-                  </div>
-                  <div class="mini-content">
-                    <div class="mini-content-tag">Component</div>
-                    <h3 class="mini-content-title">Paper Card</h3>
-                    <article class="mini-paper-card">
-                      <div class="mini-paper-rank">01</div>
-                      <div class="mini-paper-body">
-                        <p class="mini-paper-source">ArXiv AI · because you saved reasoning papers</p>
-                        <h4>A new scaling law for reasoning in large language models</h4>
-                        <p class="mini-paper-desc" data-i18n="landing.previewSummary">三秒内知道值不值得点开，十秒内知道值不值得收藏。</p>
-                        <div class="mini-paper-tags">
-                          <span>reasoning</span>
-                          <span>benchmark</span>
-                          <span>LLM</span>
-                        </div>
-                      </div>
-                      <button class="mini-bookmark"><i class="ph ph-star"></i></button>
-                    </article>
-                    <div class="mini-action-row">
-                      <button class="mini-action-btn primary" data-i18n="landing.actionRecommend">推荐</button>
-                      <button class="mini-action-btn" data-i18n="landing.actionRead">已读</button>
-                      <button class="mini-action-btn" data-i18n="landing.actionSave">收藏</button>
-                      <button class="mini-action-btn" data-i18n="landing.actionMore">更多类似</button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="showcase-pane" data-showcase-pane="key-finding">
-                  <div class="mini-sidebar">
-                    <div class="mini-sidebar-title">GUIDE</div>
-                    <div class="mini-nav-item">Paper Card</div>
-                    <div class="mini-nav-item is-active">Summary Block</div>
-                    <div class="mini-nav-item">Command Bar</div>
-                    <div class="mini-nav-item">AI Answer</div>
-                  </div>
-                  <div class="mini-content">
-                    <div class="mini-content-tag">Component</div>
-                    <h3 class="mini-content-title">Key Finding</h3>
-                    <div class="mini-key-finding">
-                      <div class="mini-kf-label"><i class="ph-fill ph-key"></i> Key Finding</div>
-                      <p data-i18n="landing.kfCopy">推理表现的上升趋势变得可估计，这会改变训练预算和评估计划的制定方式。</p>
-                    </div>
-                    <div class="mini-bullet-stack">
-                      <p><strong>Plain English.</strong> <span data-i18n="landing.kfPlainEnglish">更大的模型加上更好的数据，推理能力会稳步提升。</span></p>
-                      <p><strong>Why it matters.</strong> <span data-i18n="landing.kfWhyItMatters">团队可以更准确地规划算力预算，减少盲目试错。</span></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="showcase-pane" data-showcase-pane="ai-answer">
-                  <div class="mini-sidebar">
-                    <div class="mini-sidebar-title">GUIDE</div>
-                    <div class="mini-nav-item">Paper Card</div>
-                    <div class="mini-nav-item">Summary Block</div>
-                    <div class="mini-nav-item">Command Bar</div>
-                    <div class="mini-nav-item is-active">AI Answer</div>
-                  </div>
-                  <div class="mini-content">
-                    <div class="mini-content-tag">Component</div>
-                    <h3 class="mini-content-title">AI Answer</h3>
-                    <article class="mini-ai-card">
-                      <div class="mini-ai-top">
-                        <span class="mini-ai-badge">AI</span>
-                        <button class="mini-citation-toggle" data-i18n="landing.actionCitations">显示引用</button>
-                      </div>
-                      <p data-i18n="landing.aiAnswerCopy">这篇论文真正的新意不是更大的模型，而是把 reasoning 的提升规律写成了可以预测的函数。</p>
-                      <div class="mini-citation-list">
-                        <button>[1] Scaling Law</button>
-                        <button>[2] Chinchilla</button>
-                        <button>[3] Data Quality</button>
-                      </div>
-                    </article>
-                  </div>
-                </div>
+      <section class="mission-section">
+        <div class="container">
+          <div class="mission-globe-wrapper">
+            <div class="mission-globe" id="missionGlobe">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="globe-svg">
+                <defs>
+                  <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#4F9EFD;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0756C9;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#34D399;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#16A36A;stop-opacity:1" />
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <circle cx="100" cy="100" r="85" fill="url(#oceanGrad)" filter="url(#glow)"/>
+                <g class="globe-continents">
+                  <path d="M65,50 Q80,40 95,48 Q110,55 105,70 Q100,85 80,82 Q60,79 58,65 Q56,52 65,50 Z" fill="url(#landGrad)"/>
+                  <path d="M115,60 Q130,55 142,65 Q150,78 140,90 Q128,100 112,92 Q105,82 115,60 Z" fill="url(#landGrad)"/>
+                  <path d="M70,105 Q85,98 100,105 Q112,115 105,130 Q95,145 78,138 Q62,130 65,118 Q68,108 70,105 Z" fill="url(#landGrad)"/>
+                  <path d="M120,115 Q135,110 145,120 Q148,135 135,142 Q120,148 115,138 Q112,125 120,115 Z" fill="url(#landGrad)"/>
+                  <path d="M45,75 Q55,70 62,78 Q65,90 55,95 Q42,98 38,88 Q35,78 45,75 Z" fill="url(#landGrad)"/>
+                </g>
+                <g class="globe-grid" stroke="rgba(255,255,255,0.15)" fill="none" stroke-width="1">
+                  <ellipse cx="100" cy="100" rx="85" ry="30"/>
+                  <ellipse cx="100" cy="100" rx="85" ry="55"/>
+                  <ellipse cx="100" cy="100" rx="85" ry="75"/>
+                  <line x1="15" y1="100" x2="185" y2="100"/>
+                  <ellipse cx="100" cy="100" rx="30" ry="85"/>
+                  <ellipse cx="100" cy="100" rx="55" ry="85"/>
+                  <ellipse cx="100" cy="100" rx="75" ry="85"/>
+                </g>
+                <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+              </svg>
+              <div class="globe-sparkles">
+                <span class="sparkle s1">✦</span>
+                <span class="sparkle s2">✧</span>
+                <span class="sparkle s3">✦</span>
+                <span class="sparkle s4">✧</span>
               </div>
             </div>
+          </div>
+          <div class="mission-content">
+            <h2 class="mission-title" data-i18n="landing.missionTitle">PaperDaily Design System 的使命</h2>
+            <p class="mission-desc" data-i18n="landing.missionDesc">
+              我们相信，很多有价值的新想法之所以难以抵达更多人，并不只是因为内容本身复杂，也因为它们常常被困在难读的界面、分散的信息、语言门槛和低效的工具里。
+            </p>
+            <p class="mission-desc" data-i18n="landing.missionDesc2">
+              PaperDaily Design System 要解决的，不只是「界面好不好看」的问题，而是如何让复杂内容变得清晰，让重要信息被准确推荐，让 AI 工具真正服务阅读、理解和判断，让不同语言背景的用户都能舒服地接近前沿知识。
+            </p>
           </div>
         </div>
       </section>
