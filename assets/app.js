@@ -388,19 +388,21 @@
       });
 
     function updateContent() {
+      const currentYear = new Date().getFullYear();
+
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        el.textContent = i18next.t(key);
+        el.textContent = i18next.t(key, { year: currentYear });
       });
 
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
-        el.setAttribute('placeholder', i18next.t(key));
+        el.setAttribute('placeholder', i18next.t(key, { year: currentYear }));
       });
 
       document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
         const key = el.getAttribute('data-i18n-aria-label');
-        el.setAttribute('aria-label', i18next.t(key));
+        el.setAttribute('aria-label', i18next.t(key, { year: currentYear }));
       });
 
       const pageTitle = i18next.t('landing.pageTitle', { fallbackValue: document.title });
