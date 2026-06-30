@@ -87,16 +87,26 @@
           </details>
 
           <details open data-nav-group>
-            <summary data-i18n="docs.groupComponents">组件</summary>
-            <a href="#components-paper-card" data-nav-item data-i18n="docs.navPaperCard">Paper Card</a>
-            <a href="#components-summary" data-nav-item data-i18n="docs.navSummaryBlock">Summary Block</a>
-            <a href="#components-text-actions" data-nav-item data-i18n="docs.navTextActions">排版与标签</a>
-            <a href="#components-command" data-nav-item data-i18n="docs.navCommandBar">Command Bar</a>
-            <a href="#components-common" data-nav-item data-i18n="docs.navCommonUi">常用控件</a>
-            <a href="#components-kit" data-nav-item data-i18n="docs.navComponentKit">组件矩阵</a>
-            <a href="#components-sheet" data-nav-item data-i18n="docs.navBottomSheet">Bottom Sheet</a>
-            <a href="#components-ai" data-nav-item data-i18n="docs.navAiAnswer">AI Answer</a>
-            <a href="#components-email" data-nav-item data-i18n="docs.navEmailTemplate">邮件模板</a>
+            <summary data-i18n="docs.groupComponents">Components</summary>
+            <a href="#components-paper-card" data-nav-item>Paper Card</a>
+            <a href="#components-summary" data-nav-item>Summary Block</a>
+            <a href="#components-text-toolbar" data-nav-item>Text Toolbar</a>
+            <a href="#components-buttons-callouts" data-nav-item>Buttons &amp; Callouts</a>
+            <a href="#components-command" data-nav-item>Command Bar</a>
+            <a href="#components-breadcrumb" data-nav-item>Breadcrumb</a>
+            <a href="#components-tooltip" data-nav-item>Tooltip</a>
+            <a href="#components-menu" data-nav-item>Menu</a>
+            <a href="#components-dialog" data-nav-item>Dialog</a>
+            <a href="#components-toast" data-nav-item>Toast</a>
+            <a href="#components-filter-pills" data-nav-item>Filter Pills</a>
+            <a href="#components-search-input" data-nav-item>Search Input</a>
+            <a href="#components-status-indicators" data-nav-item>Status Indicators</a>
+            <a href="#components-reading-list" data-nav-item>Reading List</a>
+            <a href="#components-metrics" data-nav-item>Metrics</a>
+            <a href="#components-notice-bar" data-nav-item>Notice Bar</a>
+            <a href="#components-sheet" data-nav-item>Bottom Sheet</a>
+            <a href="#components-ai" data-nav-item>AI Answer Block</a>
+            <a href="#components-email" data-nav-item>Email Template</a>
           </details>
 
           <details open data-nav-group>
@@ -474,19 +484,19 @@
           </div>
         </section>
 
-        <section class="doc-section" id="components-text-actions">
+        <section class="doc-section" id="components-text-toolbar">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
-            <h2 data-i18n="docs.textActionsTitle">文本排版、按钮与提示标签</h2>
-            <p data-i18n="docs.textActionsDesc">文本工具要像编辑器控件，不像营销按钮；提示标签用轻玻璃底和细边框，避免整块高饱和色压住正文。</p>
+            <h2>Text Toolbar</h2>
+            <p data-i18n="docs.textToolbarDesc">文本排版工具要像编辑器控件，不像营销按钮；使用熟悉图标，鼠标悬停再解释含义。</p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.textActionsRuleOne">排版动作使用熟悉图标，鼠标悬停再解释含义。</li>
-                <li data-i18n="docs.textActionsRuleTwo">重要按钮保持实体感，次级动作降低对比度，避免一排按钮全在抢注意力。</li>
-                <li data-i18n="docs.textActionsRuleThree">引用、Info、Warning、Tip 用同一套玻璃态标签，只靠左侧细线和图标区分语义。</li>
+                <li data-i18n="docs.textToolbarRuleOne">排版动作使用熟悉图标，鼠标悬停再解释含义。</li>
+                <li data-i18n="docs.textToolbarRuleTwo">图标间距均匀，分组清晰，避免误触。</li>
+                <li data-i18n="docs.textToolbarRuleThree">激活态用轻底色反馈，不用强色块压住工具栏。</li>
               </ul>
             </div>
 
@@ -499,6 +509,29 @@
                   <button type="button" data-i18n-title="docs.textBullets" title="项目列表"><i class="ph ph-list-bullets"></i></button>
                   <button type="button" data-i18n-title="docs.textCode" title="代码"><i class="ph ph-code"></i></button>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="components-buttons-callouts">
+          <div class="doc-section-head">
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <h2>Buttons &amp; Callouts</h2>
+            <p data-i18n="docs.buttonsCalloutsDesc">重要按钮保持实体感，次级动作降低对比度；提示标签用轻玻璃底和细边框，避免整块高饱和色压住正文。</p>
+          </div>
+
+          <div class="doc-grid">
+            <div class="doc-copy">
+              <ul class="doc-list">
+                <li data-i18n="docs.buttonsCalloutsRuleOne">重要按钮保持实体感，次级动作降低对比度，避免一排按钮全在抢注意力。</li>
+                <li data-i18n="docs.buttonsCalloutsRuleTwo">按钮图标与文字间距一致，点击区域充足。</li>
+                <li data-i18n="docs.buttonsCalloutsRuleThree">引用、Info、Warning、Tip 用同一套玻璃态标签，只靠左侧细线和图标区分语义。</li>
+              </ul>
+            </div>
+
+            <div class="demo-box">
+              <div class="demo-content">
                 <div class="button-demo-row rich-buttons">
                   <button class="btn btn-primary btn-md" type="button"><i class="ph ph-sparkle"></i><span data-i18n="docs.buttonGenerate">生成摘要</span></button>
                   <button class="btn btn-secondary btn-md" type="button"><i class="ph ph-bookmark-simple"></i><span data-i18n="docs.buttonSave">收藏</span></button>
