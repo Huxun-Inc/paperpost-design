@@ -1449,20 +1449,36 @@
 
     const animation = lottie.loadAnimation({
       container: container,
-      renderer: 'svg',
+      renderer: 'canvas',
       loop: true,
       autoplay: true,
-      path: 'assets/global-knowledge-lottie/animations/scene-1.json',
+      path: 'assets/global-knowledge-lottie/global-knowledge-earth.lottie.json',
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid meet',
-        progressiveLoad: true,
-        hideOnTransparent: false
+        progressiveLoad: true
       }
     });
 
     animation.addEventListener('DOMLoaded', () => {
       container.dataset.animationReady = 'true';
       animation.goToAndPlay(1, true);
+      console.log('[Lottie] DOM loaded, layers:', animation.animationData?.layers?.length);
+    });
+
+    animation.addEventListener('data_failed', (err) => {
+      console.error('[Lottie] Data failed:', err);
+    });
+
+    animation.addEventListener('config_ready', () => {
+      console.log('[Lottie] Config ready');
+    });
+
+    animation.addEventListener('data_ready', () => {
+      console.log('[Lottie] Data ready');
+    });
+
+    animation.addEventListener('error', (err) => {
+      console.error('[Lottie] Error:', err);
     });
 
     window.__paperDailyLottie = window.__paperDailyLottie || [];
