@@ -2454,7 +2454,7 @@ img {
 }
 
 .a11y-card {
-  background: var(--paper);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   padding: var(--space-lg);
