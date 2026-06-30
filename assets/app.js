@@ -46,22 +46,26 @@
   }
 
   function initFontSize() {
-    const fontSizeSelect = document.getElementById('fontSizeSelect');
-    if (!fontSizeSelect) return;
+    const buttons = document.querySelectorAll('.font-size-btn');
+    if (!buttons.length) return;
 
-    // 优先使用用户保存的字号，否则默认 medium
     const saved = localStorage.getItem('paperdaily-font-size') || 'medium';
     applyFontSize(saved);
-    fontSizeSelect.value = saved;
 
-    fontSizeSelect.addEventListener('change', (e) => {
-      applyFontSize(e.target.value);
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const size = btn.dataset.fontSize;
+        applyFontSize(size);
+      });
     });
   }
 
   function applyFontSize(size) {
     root.dataset.fontSize = size;
     localStorage.setItem('paperdaily-font-size', size);
+    document.querySelectorAll('.font-size-btn').forEach(btn => {
+      btn.classList.toggle('is-active', btn.dataset.fontSize === size);
+    });
   }
 
   function initSmoothScroll() {

@@ -35,11 +35,17 @@
             <option value="en">English</option>
             <option value="ar">العربية</option>
           </select>
-          <select id="fontSizeSelect" class="font-size-select" aria-label="字号">
-            <option value="small">小</option>
-            <option value="medium" selected>中</option>
-            <option value="large">大</option>
-          </select>
+          <div class="font-size-buttons" role="group" aria-label="字号">
+            <button type="button" class="font-size-btn" data-font-size="small" aria-label="小号字体">
+              <span class="fs-icon-sm">A</span>
+            </button>
+            <button type="button" class="font-size-btn is-active" data-font-size="medium" aria-label="中号字体">
+              <span class="fs-icon-md">A</span>
+            </button>
+            <button type="button" class="font-size-btn" data-font-size="large" aria-label="大号字体">
+              <span class="fs-icon-lg">A</span>
+            </button>
+          </div>
           <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
             <i class="ph ph-sun" data-theme-icon="sun"></i>
             <i class="ph-fill ph-moon" data-theme-icon="moon"></i>
