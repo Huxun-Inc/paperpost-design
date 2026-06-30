@@ -2434,6 +2434,10 @@ img {
   margin-bottom: var(--space-xl);
 }
 
+.a11y-grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .a11y-card {
   background: var(--paper);
   border: 1px solid var(--line);
