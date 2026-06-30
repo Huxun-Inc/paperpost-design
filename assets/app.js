@@ -298,16 +298,25 @@
     const list = document.getElementById('citationList');
     if (!toggle || !list) return;
 
+    function updateToggleText() {
+      if (typeof i18next === 'undefined') return;
+      const isHidden = list.hasAttribute('hidden');
+      toggle.textContent = isHidden
+        ? i18next.t('docs.toggleCitation')
+        : i18next.t('docs.toggleCitationHide');
+    }
+
     toggle.addEventListener('click', () => {
       const isHidden = list.hasAttribute('hidden');
       if (isHidden) {
         list.removeAttribute('hidden');
-        toggle.textContent = '隐藏引用';
       } else {
         list.setAttribute('hidden', '');
-        toggle.textContent = '显示引用';
       }
+      updateToggleText();
     });
+
+    updateToggleText();
   }
 
   function initSidebarToggle() {
@@ -1257,6 +1266,19 @@
     });
   }
 
+  function initGlobeLottie() {
+    const container = document.getElementById('globeLottie');
+    if (!container || typeof lottie === 'undefined') return;
+
+    lottie.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'assets/globe.lottie.json'
+    });
+  }
+
   function init() {
     initTheme();
     initFontSize();
@@ -1276,6 +1298,7 @@
     initI18n();
     initShowcaseTabs();
     initSearchButton();
+    initGlobeLottie();
   }
 
   if (document.readyState === 'loading') {
