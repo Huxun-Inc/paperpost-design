@@ -176,34 +176,88 @@
         <section class="doc-section" id="accessibility">
           <div class="doc-section-head">
             <p class="eyebrow">设计哲学</p>
-            <h2>无障碍阅读</h2>
+            <h2>语言平等可达</h2>
             <p>PaperDaily Design System 不把多语言当作简单翻译，而把它视为"平等可达"的基础能力。</p>
           </div>
 
-          <div class="doc-grid">
-            <div class="doc-copy">
+          <div class="a11y-grid">
+            <article class="a11y-card">
+              <div class="a11y-icon">
+                <i class="ph ph-globe"></i>
+              </div>
               <h3>语言覆盖与文字系统</h3>
-              <p>我们会优先覆盖全球使用人口较多的语言，同时支持重要地区语言与不同文字系统，包括英语、简体中文、繁体中文、印地语、西班牙语、阿拉伯语、法语、孟加拉语、葡萄牙语、印尼语、乌尔都语、日语、越南语、泰语、韩语等。</p>
+              <p>优先覆盖全球使用人口较多的语言，同时支持重要地区语言与不同文字系统。</p>
+              <div class="a11y-tags">
+                <span>English</span>
+                <span>简体中文</span>
+                <span>繁體中文</span>
+                <span>العربية</span>
+                <span>Español</span>
+                <span>Français</span>
+                <span>日本語</span>
+                <span>한국어</span>
+                <span>ไทย</span>
+                <span>Tiếng Việt</span>
+                <span>हिन्दी</span>
+                <span>বাংলা</span>
+                <span>Português</span>
+                <span>Indonesia</span>
+                <span>اردو</span>
+              </div>
+            </article>
 
+            <article class="a11y-card">
+              <div class="a11y-icon">
+                <i class="ph ph-arrows-left-right"></i>
+              </div>
               <h3>RTL 语言适配</h3>
-              <p>在 UI 设计上，PaperDaily 遵循 W3C 国际化与无障碍相关规范，不只翻译内容，也适配不同语言的阅读方向、排版规则与使用习惯。阿拉伯语、乌尔都语等 RTL 语言需要支持从右到左阅读；页面方向、导航位置、返回图标、卡片排列、信息流动线和输入框都应正确镜像。同时，论文标题、作者名、公式、代码、DOI 等 LTR 内容在 RTL 页面中也要保持正确显示，避免混排错乱。</p>
+              <p>阿拉伯语、乌尔都语等 RTL 语言完整支持从右到左阅读。页面方向、导航位置、返回图标、卡片排列、信息流动线和输入框全部正确镜像。论文标题、作者名、公式、代码、DOI 等 LTR 内容在 RTL 页面中保持正确显示，避免混排错乱。</p>
+            </article>
 
+            <article class="a11y-card">
+              <div class="a11y-icon">
+                <i class="ph ph-text-aa"></i>
+              </div>
               <h3>换行与排版优化</h3>
-              <p>中文、日语、泰语等语言没有天然空格分词，因此标题截断、摘要换行、标签排列和卡片高度需要单独优化；越南语、泰语等语言对音调、行高和字形清晰度更敏感，需要在小屏阅读中保持稳定可读。</p>
+              <p>中文、日语、泰语等无空格分词语言，标题截断、摘要换行、标签排列和卡片高度单独优化；越南语、泰语等音调语言，行高和字形清晰度在小屏阅读中保持稳定可读。</p>
+            </article>
 
+            <article class="a11y-card">
+              <div class="a11y-icon">
+                <i class="ph ph-text-t"></i>
+              </div>
               <h3>全局字号缩放</h3>
-              <p>PaperDaily 支持全局字号缩放。用户可以根据自己的阅读习惯、设备尺寸和视力需求调整整体字体大小；在字号放大后，页面仍应保持信息完整、布局不破碎、功能可正常使用。设计系统为不同字号等级定义清晰的排版规则，让推荐流、论文卡片、摘要、标签、按钮和 AI 阅读工具都能随字号一起自然适配。</p>
+              <p>用户可根据阅读习惯、设备尺寸和视力需求调整整体字体大小。字号放大后页面保持信息完整、布局不破碎、功能可正常使用。推荐流、论文卡片、摘要、标签、按钮和 AI 阅读工具随字号自然适配。</p>
+            </article>
+          </div>
 
-              <h3>设计目标</h3>
-              <p>我们的目标，是让不同语言、不同地区、不同阅读习惯的用户打开 PaperDaily 时，都感觉这不是一套被临时翻译过来的界面，而是一套真正为他们设计过的阅读体验。</p>
-
+          <div class="a11y-standard">
+            <div class="a11y-standard-head">
+              <p class="eyebrow">Reference</p>
               <h3>参考标准</h3>
-              <ul class="doc-list">
-                <li><strong>W3C Internationalization：RTL 与 dir 属性</strong>：说明右到左文字应通过 dir 设置基础文本方向，适用于阿拉伯语、希伯来语、乌尔都语等文字系统。<a href="https://www.w3.org/International/questions/qa-html-dir.en.html" target="_blank" rel="noopener">查看文档</a></li>
-                <li><strong>W3C Authoring HTML: Handling Right-to-left Scripts</strong>：提供 HTML/CSS 中处理 RTL、双向文本和本地化页面的建议。<a href="https://www.w3.org/TR/i18n-html-tech-bidi/" target="_blank" rel="noopener">查看文档</a></li>
-                <li><strong>W3C Approaches to Line Breaking</strong>：说明不同文字系统在换行、断行和排版上的差异。<a href="https://www.w3.org/International/articles/typography/linebreak.en.html" target="_blank" rel="noopener">查看文档</a></li>
-                <li><strong>Web Content Accessibility Guidelines (WCAG) 2.2</strong>：无障碍内容指南。<a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">查看文档</a></li>
-              </ul>
+              <p>遵循 W3C 国际化与无障碍相关规范</p>
+            </div>
+            <div class="a11y-standard-grid">
+              <a class="standard-card" href="https://www.w3.org/International/questions/qa-html-dir.en.html" target="_blank" rel="noopener">
+                <h4>RTL 与 dir 属性</h4>
+                <p>右到左文字应通过 dir 设置基础文本方向，适用于阿拉伯语、希伯来语、乌尔都语等文字系统。</p>
+                <span class="standard-link">W3C →</span>
+              </a>
+              <a class="standard-card" href="https://www.w3.org/TR/i18n-html-tech-bidi/" target="_blank" rel="noopener">
+                <h4>Handling Right-to-left Scripts</h4>
+                <p>HTML/CSS 中处理 RTL、双向文本和本地化页面的建议。</p>
+                <span class="standard-link">W3C →</span>
+              </a>
+              <a class="standard-card" href="https://www.w3.org/International/articles/typography/linebreak.en.html" target="_blank" rel="noopener">
+                <h4>Approaches to Line Breaking</h4>
+                <p>不同文字系统在换行、断行和排版上的差异。</p>
+                <span class="standard-link">W3C →</span>
+              </a>
+              <a class="standard-card" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">
+                <h4>WCAG 2.2</h4>
+                <p>Web Content Accessibility Guidelines，无障碍内容指南。</p>
+                <span class="standard-link">W3C →</span>
+              </a>
             </div>
           </div>
         </section>

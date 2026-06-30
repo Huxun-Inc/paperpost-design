@@ -2427,6 +2427,133 @@ img {
   line-height: 1.6;
 }
 
+.a11y-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.a11y-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  transition: all 200ms var(--ease-out);
+}
+
+.a11y-card:hover {
+  border-color: var(--line-strong);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.08);
+}
+
+.a11y-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: var(--brand-soft);
+  color: var(--brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  font-size: 22px;
+}
+
+.a11y-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: var(--space-xs);
+}
+
+.a11y-card p {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.a11y-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--space-sm);
+}
+
+.a11y-tags span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.a11y-standard {
+  background: var(--surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+.a11y-standard-head {
+  margin-bottom: var(--space-lg);
+}
+
+.a11y-standard-head h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: var(--space-xs) 0 var(--space-xs);
+}
+
+.a11y-standard-head p {
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+.a11y-standard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.standard-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  text-decoration: none;
+  color: inherit;
+  transition: all 150ms var(--ease-out);
+}
+
+.standard-card:hover {
+  border-color: var(--brand);
+  background: var(--paper);
+}
+
+.standard-card h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.standard-card p {
+  font-size: 13px;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.standard-link {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brand);
+}
+
 .doc-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -4138,6 +4265,14 @@ img {
   }
 
   .rule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .a11y-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .a11y-standard-grid {
     grid-template-columns: 1fr;
   }
 
