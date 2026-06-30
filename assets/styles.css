@@ -2092,7 +2092,7 @@ img {
   background-color: var(--surface);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 8px center;
+  background-position: right 12px center;
   background-size: 14px;
   color: var(--ink-soft);
   font-size: var(--font-body-sm-size);
@@ -2700,9 +2700,9 @@ img {
 .command-dialog {
   width: min(560px, calc(100% - 32px));
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: none;
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-xl);
   overflow: hidden;
   animation: slideUp 220ms var(--ease-out);
 }
@@ -2717,7 +2717,6 @@ img {
   align-items: center;
   gap: var(--space-xs);
   padding: var(--space-sm) var(--space-md);
-  border-bottom: 1px solid var(--line-soft);
 }
 
 .command-input-row input {
