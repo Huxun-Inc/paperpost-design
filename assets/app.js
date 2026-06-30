@@ -46,12 +46,10 @@
   }
 
   function initFontSize() {
-    const buttons = document.querySelectorAll('.font-size-btn');
-    if (!buttons.length) return;
-
     const saved = localStorage.getItem('paperdaily-font-size') || 'medium';
     applyFontSize(saved);
 
+    const buttons = document.querySelectorAll('.font-size-btn');
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         const size = btn.dataset.fontSize;

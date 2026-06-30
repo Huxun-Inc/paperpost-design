@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body data-page="docs">
-    <a class="skip-link" href="#docsMain">跳转到主要内容</a>
+    <a class="skip-link" href="#docsMain" data-i18n="docs.skipToMain">跳转到主要内容</a>
 
     <header class="topbar">
       <div class="topbar-inner">
@@ -30,23 +30,23 @@
             <i class="ph ph-list"></i>
             <span data-i18n="docs.menu">目录</span>
           </button>
-          <select id="languageSelect" aria-label="语言">
+          <select id="languageSelect" data-i18n-aria-label="docs.language" aria-label="语言">
             <option value="zh">中文</option>
             <option value="en">English</option>
             <option value="ar">العربية</option>
           </select>
-          <div class="font-size-buttons" role="group" aria-label="字号">
-            <button type="button" class="font-size-btn" data-font-size="small" aria-label="小号字体">
+          <div class="font-size-buttons" role="group" data-i18n-aria-label="docs.fontSize" aria-label="字号">
+            <button type="button" class="font-size-btn" data-font-size="small" data-i18n-aria-label="docs.fontSizeSmall" aria-label="小号字体">
               <span class="fs-icon-sm">A</span>
             </button>
-            <button type="button" class="font-size-btn is-active" data-font-size="medium" aria-label="中号字体">
+            <button type="button" class="font-size-btn is-active" data-font-size="medium" data-i18n-aria-label="docs.fontSizeMedium" aria-label="中号字体">
               <span class="fs-icon-md">A</span>
             </button>
-            <button type="button" class="font-size-btn" data-font-size="large" aria-label="大号字体">
+            <button type="button" class="font-size-btn" data-font-size="large" data-i18n-aria-label="docs.fontSizeLarge" aria-label="大号字体">
               <span class="fs-icon-lg">A</span>
             </button>
           </div>
-          <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+          <button class="icon-button theme-toggle" id="themeToggle" type="button" data-i18n-aria-label="docs.toggleTheme" aria-label="切换主题">
             <i class="ph ph-sun" data-theme-icon="sun"></i>
             <i class="ph-fill ph-moon" data-theme-icon="moon"></i>
           </button>
@@ -73,8 +73,8 @@
           <details open data-nav-group>
             <summary data-i18n="docs.groupPhilosophy">设计哲学</summary>
             <a href="#philosophy-core" data-nav-item data-i18n="docs.navPhilosophy">三个核心</a>
-            <a href="#tokens-radius" data-nav-item>圆角规范</a>
-            <a href="#accessibility" data-nav-item>无障碍阅读</a>
+            <a href="#tokens-radius" data-nav-item data-i18n="docs.navRadius">圆角规范</a>
+            <a href="#accessibility" data-nav-item data-i18n="docs.navAccessibility">无障碍阅读</a>
           </details>
 
           <details open data-nav-group>
@@ -99,8 +99,8 @@
       <main class="docs-main" id="docsMain">
         <section class="doc-hero" id="intro">
           <p class="eyebrow" data-i18n="docs.heroEyebrow">Design Guidelines</p>
-          <h1>为研究者打造的高质量论文信息流</h1>
-          <p class="hero-text">
+          <h1 data-i18n="docs.heroTitle">为研究者打造的高质量论文信息流</h1>
+          <p class="hero-text" data-i18n="docs.heroCopy">
             PaperDaily 面向每天需要追踪前沿论文、会议动态与研究趋势的用户，将复杂的学术信息组织成清晰、可信、可持续浏览的信息体验。精准推荐、实干 AI、舒服交互，让前沿研究像一款精心策划的知识杂志一样自然、克制、好读。
           </p>
         </section>
@@ -109,7 +109,7 @@
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.philosophyEyebrow">Philosophy</p>
             <h2 data-i18n="docs.philosophyTitle">设计哲学：三个核心</h2>
-            <p>PaperDaily 面向每天需要追踪前沿论文、会议动态与研究趋势的用户，将复杂的学术信息组织成清晰、可信、可持续浏览的信息体验。</p>
+            <p data-i18n="docs.philosophyDesc">PaperDaily 面向每天需要追踪前沿论文、会议动态与研究趋势的用户，将复杂的学术信息组织成清晰、可信、可持续浏览的信息体验。</p>
           </div>
           <div class="a11y-grid cols-3">
             <article class="a11y-card">
@@ -138,16 +138,16 @@
 
         <section class="doc-section" id="tokens-radius">
           <div class="doc-section-head">
-            <p class="eyebrow">设计哲学</p>
-            <h2>圆角规范</h2>
-            <p>圆角是 PaperDaily Design 亲和力的核心来源。用柔软的曲线对冲学术内容的严肃感，让研究信息的消费体验更轻盈、更友好。</p>
+            <p class="eyebrow" data-i18n="docs.philosophyEyebrow">设计哲学</p>
+            <h2 data-i18n="docs.radiusTitle">圆角规范</h2>
+            <p data-i18n="docs.radiusDesc">圆角是 PaperDaily Design 亲和力的核心来源。用柔软的曲线对冲学术内容的严肃感，让研究信息的消费体验更轻盈、更友好。</p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li><strong>亲和力优先</strong>：大圆角是 PaperDaily 的视觉基因，用柔软的曲线建立亲和、灵动、不尖锐的产品性格。</li>
-                <li><strong>层级对应</strong>：元素越突出、越可交互，圆角越大；容器类元素圆角适中，形成清晰的视觉层次。</li>
+                <li data-i18n="docs.radiusRuleOne"><strong>亲和力优先</strong>：大圆角是 PaperDaily 的视觉基因，用柔软的曲线建立亲和、灵动、不尖锐的产品性格。</li>
+                <li data-i18n="docs.radiusRuleTwo"><strong>层级对应</strong>：元素越突出、越可交互，圆角越大；容器类元素圆角适中，形成清晰的视觉层次。</li>
               </ul>
             </div>
 
@@ -156,22 +156,22 @@
                 <div class="radius-item">
                   <div class="radius-preview radius-lg"></div>
                   <div class="radius-info">
-                    <span class="radius-label">主按钮</span>
+                    <span class="radius-label" data-i18n="docs.radiusPrimary">主按钮</span>
                     <span class="radius-value">1rem · radius-lg</span>
                   </div>
                 </div>
                 <div class="radius-item">
                   <div class="radius-preview radius-md"></div>
                   <div class="radius-info">
-                    <span class="radius-label">次按钮</span>
+                    <span class="radius-label" data-i18n="docs.radiusSecondary">次按钮</span>
                     <span class="radius-value">0.75rem · radius-md</span>
                   </div>
                 </div>
                 <div class="radius-item">
                   <div class="radius-preview radius-pill"></div>
                   <div class="radius-info">
-                    <span class="radius-label">Tab 标签</span>
-                    <span class="radius-value">pill · 胶囊形</span>
+                    <span class="radius-label" data-i18n="docs.radiusTab">Tab 标签</span>
+                    <span class="radius-value" data-i18n="docs.radiusPill">pill · 胶囊形</span>
                   </div>
                 </div>
               </div>
@@ -181,9 +181,9 @@
 
         <section class="doc-section" id="accessibility">
           <div class="doc-section-head">
-            <p class="eyebrow">设计哲学</p>
-            <h2>语言平等可达</h2>
-            <p>PaperDaily Design System 不把多语言当作简单翻译，而把它视为"平等可达"的基础能力。</p>
+            <p class="eyebrow" data-i18n="docs.philosophyEyebrow">设计哲学</p>
+            <h2 data-i18n="docs.accessibilityTitle">语言平等可达</h2>
+            <p data-i18n="docs.accessibilityDesc">PaperDaily Design System 不把多语言当作简单翻译，而把它视为"平等可达"的基础能力。</p>
           </div>
 
           <div class="a11y-grid">
@@ -191,8 +191,8 @@
               <div class="a11y-icon">
                 <i class="ph ph-globe"></i>
               </div>
-              <h3>语言覆盖与文字系统</h3>
-              <p>优先覆盖全球使用人口较多的语言，同时支持重要地区语言与不同文字系统。</p>
+              <h3 data-i18n="docs.a11yLangTitle">语言覆盖与文字系统</h3>
+              <p data-i18n="docs.a11yLangDesc">优先覆盖全球使用人口较多的语言，同时支持重要地区语言与不同文字系统。</p>
               <div class="a11y-tags">
                 <span>English</span>
                 <span>简体中文</span>
@@ -209,7 +209,7 @@
                 <span>Português</span>
                 <span>Indonesia</span>
                 <span>اردو</span>
-                <span>……</span>
+                <span data-i18n="docs.a11yMore">……</span>
               </div>
             </article>
 
@@ -217,36 +217,36 @@
               <div class="a11y-icon">
                 <i class="ph ph-arrows-left-right"></i>
               </div>
-              <h3>RTL 语言适配</h3>
-              <p>阿拉伯语、乌尔都语等 RTL 语言完整支持从右到左阅读。页面方向、导航位置、返回图标、卡片排列、信息流动线和输入框全部正确镜像。论文标题、作者名、公式、代码、DOI 等 LTR 内容在 RTL 页面中保持正确显示，避免混排错乱。</p>
+              <h3 data-i18n="docs.a11yRtlTitle">RTL 语言适配</h3>
+              <p data-i18n="docs.a11yRtlDesc">阿拉伯语、乌尔都语等 RTL 语言完整支持从右到左阅读。页面方向、导航位置、返回图标、卡片排列、信息流动线和输入框全部正确镜像。论文标题、作者名、公式、代码、DOI 等 LTR 内容在 RTL 页面中保持正确显示，避免混排错乱。</p>
             </article>
 
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-text-aa"></i>
               </div>
-              <h3>换行与排版优化</h3>
-              <p>中文、日语、泰语等无空格分词语言，标题截断、摘要换行、标签排列和卡片高度单独优化；越南语、泰语等音调语言，行高和字形清晰度在小屏阅读中保持稳定可读。</p>
+              <h3 data-i18n="docs.a11yTypoTitle">换行与排版优化</h3>
+              <p data-i18n="docs.a11yTypoDesc">中文、日语、泰语等无空格分词语言，标题截断、摘要换行、标签排列和卡片高度单独优化；越南语、泰语等音调语言，行高和字形清晰度在小屏阅读中保持稳定可读。</p>
             </article>
 
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-text-t"></i>
               </div>
-              <h3>全局字号缩放</h3>
-              <p>用户可根据阅读习惯、设备尺寸和视力需求调整整体字体大小。字号放大后页面保持信息完整、布局不破碎、功能可正常使用。推荐流、论文卡片、摘要、标签、按钮和 AI 阅读工具随字号自然适配。</p>
+              <h3 data-i18n="docs.a11yFontTitle">全局字号缩放</h3>
+              <p data-i18n="docs.a11yFontDesc">用户可根据阅读习惯、设备尺寸和视力需求调整整体字体大小。字号放大后页面保持信息完整、布局不破碎、功能可正常使用。推荐流、论文卡片、摘要、标签、按钮和 AI 阅读工具随字号自然适配。</p>
             </article>
           </div>
 
           <div class="a11y-ref">
-            <p class="eyebrow">Reference</p>
-            <h3>参考标准</h3>
-            <p>遵循 <strong>W3C Internationalization</strong> 与无障碍相关规范，确保多语言与无障碍设计的正确实现。</p>
+            <p class="eyebrow" data-i18n="docs.refEyebrow">Reference</p>
+            <h3 data-i18n="docs.refTitle">参考标准</h3>
+            <p data-i18n="docs.refDesc">遵循 <strong>W3C Internationalization</strong> 与无障碍相关规范，确保多语言与无障碍设计的正确实现。</p>
             <ul class="a11y-ref-list">
-              <li><a href="https://www.w3.org/International/questions/qa-html-dir.en.html" target="_blank" rel="noopener">RTL 与 dir 属性</a> — 右到左文字的基础文本方向设置</li>
-              <li><a href="https://www.w3.org/TR/i18n-html-tech-bidi/" target="_blank" rel="noopener">Handling Right-to-left Scripts</a> — HTML/CSS 中处理 RTL、双向文本</li>
-              <li><a href="https://www.w3.org/International/articles/typography/linebreak.en.html" target="_blank" rel="noopener">Approaches to Line Breaking</a> — 不同文字系统的换行与排版差异</li>
-              <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">WCAG 2.2</a> — Web Content Accessibility Guidelines 无障碍内容指南</li>
+              <li><a href="https://www.w3.org/International/questions/qa-html-dir.en.html" target="_blank" rel="noopener" data-i18n="docs.refRtlTitle">RTL 与 dir 属性</a> — <span data-i18n="docs.refRtlDesc">右到左文字的基础文本方向设置</span></li>
+              <li><a href="https://www.w3.org/TR/i18n-html-tech-bidi/" target="_blank" rel="noopener">Handling Right-to-left Scripts</a> — <span data-i18n="docs.refBidiDesc">HTML/CSS 中处理 RTL、双向文本</span></li>
+              <li><a href="https://www.w3.org/International/articles/typography/linebreak.en.html" target="_blank" rel="noopener">Approaches to Line Breaking</a> — <span data-i18n="docs.refLinebreakDesc">不同文字系统的换行与排版差异</span></li>
+              <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">WCAG 2.2</a> — <span data-i18n="docs.refWcagDesc">Web Content Accessibility Guidelines 无障碍内容指南</span></li>
             </ul>
           </div>
         </section>
@@ -254,7 +254,7 @@
         <section class="doc-section" id="components-paper-card">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2>Paper Card</h2>
+            <h2 data-i18n="docs.paperCardTitle">Paper Card</h2>
             <p data-i18n="docs.paperCardCopy">用一张卡片解决"值不值得读、值不值得存、为什么推给我"。</p>
           </div>
 
@@ -269,14 +269,14 @@
 
             <div class="demo-box">
               <div class="demo-toolbar">
-                <button class="chip-button is-active" type="button" data-paper-state="default">Default</button>
-                <button class="chip-button" type="button" data-paper-state="read">Read</button>
-                <button class="chip-button" type="button" data-paper-state="saved">Saved</button>
+                <button class="chip-button is-active" type="button" data-paper-state="default" data-i18n="docs.paperCardStateDefault">Default</button>
+                <button class="chip-button" type="button" data-paper-state="read" data-i18n="docs.paperCardStateRead">Read</button>
+                <button class="chip-button" type="button" data-paper-state="saved" data-i18n="docs.paperCardStateSaved">Saved</button>
               </div>
               <article class="paper-card-demo is-featured" id="paperCardDemo">
                 <div class="paper-card-rank">01</div>
                 <div class="paper-card-body">
-                  <p class="paper-card-source">ArXiv AI · 因为你收藏了 reasoning</p>
+                  <p class="paper-card-source" data-i18n="docs.paperCardDemoSource">ArXiv AI · 因为你收藏了 reasoning</p>
                   <h3>A new scaling law for reasoning in large language models</h3>
                   <p class="paper-card-summary" data-i18n="docs.paperCardDemoCopy">更多高质量数据和算力会稳定提升 reasoning 表现，提升规律可预测。</p>
                   <div class="token-row">
@@ -285,7 +285,7 @@
                     <span>LLM</span>
                   </div>
                 </div>
-                <button class="bookmark-button" type="button" data-bookmark>
+                <button class="bookmark-button" type="button" data-bookmark data-i18n-aria-label="docs.bookmark" aria-label="收藏">
                   <i class="ph ph-bookmark-simple"></i>
                 </button>
               </article>
@@ -296,7 +296,7 @@
         <section class="doc-section" id="components-summary">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2>Summary Block</h2>
+            <h2 data-i18n="docs.summaryTitleSection">Summary Block</h2>
             <p data-i18n="docs.summaryCopy">用在详情页前半屏，把关键信息压成一眼能扫完的块。</p>
           </div>
 
@@ -311,8 +311,8 @@
 
             <div class="demo-box">
               <div class="demo-toolbar">
-                <button class="chip-button is-active" type="button" data-summary-mode="brief">Brief</button>
-                <button class="chip-button" type="button" data-summary-mode="detail">Detail</button>
+                <button class="chip-button is-active" type="button" data-summary-mode="brief" data-i18n="docs.summaryModeBrief">Brief</button>
+                <button class="chip-button" type="button" data-summary-mode="detail" data-i18n="docs.summaryModeDetail">Detail</button>
               </div>
               <div class="summary-block" id="summaryBlockDemo">
                 <strong data-i18n="docs.summaryTitle">Key Finding</strong>
@@ -325,7 +325,7 @@
         <section class="doc-section" id="components-command">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2>Command Bar</h2>
+            <h2 data-i18n="docs.commandTitle">Command Bar</h2>
             <p data-i18n="docs.commandCopy">桌面端不要只给搜索框，要给命令入口，支持跳页、查论文、开 AI 分析。</p>
           </div>
 
@@ -342,7 +342,7 @@
               <button class="command-trigger" type="button" id="commandOpenButton">
                 <span>
                   <i class="ph ph-magnifying-glass"></i>
-                  Open Command Bar
+                  <span data-i18n="docs.openCommandBar">Open Command Bar</span>
                 </span>
                 <kbd>⌘K</kbd>
               </button>
@@ -353,7 +353,7 @@
         <section class="doc-section" id="components-sheet">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2>Bottom Sheet</h2>
+            <h2 data-i18n="docs.sheetTitleSection">Bottom Sheet</h2>
             <p data-i18n="docs.sheetCopy">移动端反馈、筛选和更多操作走底部面板，别把卡片长按菜单做得太隐蔽。</p>
           </div>
 
@@ -378,7 +378,7 @@
         <section class="doc-section" id="components-ai">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2>AI Answer Block</h2>
+            <h2 data-i18n="docs.aiTitleSection">AI Answer Block</h2>
             <p data-i18n="docs.aiCopy">AI 回复不是一大坨聊天文本，而是回答、证据和动作三层结构。</p>
           </div>
 
@@ -432,7 +432,7 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-app-header">
                       <div>
-                        <h4>今日简报</h4>
+                        <h4 data-i18n="docs.miniFeedTitle">今日简报</h4>
                         <div class="date-text">Oct 24, 2026</div>
                       </div>
                       <div class="mini-app-header-actions">
@@ -445,7 +445,7 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature</div>
                         <div class="mini-paper-title">A safer gene switch for cell therapies</div>
-                        <div class="mini-paper-desc">精确控制治疗开关，提升临床安全性。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniFeedDesc1">精确控制治疗开关，提升临床安全性。</div>
                       </div>
                       <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
                     </div>
@@ -454,7 +454,7 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                         <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
-                        <div class="mini-paper-desc">模型推理能力的提升规律变得可估。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniFeedDesc2">模型推理能力的提升规律变得可估。</div>
                       </div>
                       <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
                     </div>
@@ -479,11 +479,11 @@
                       </div>
                     </div>
                     <div class="mini-key-finding">
-                      <div class="mini-key-finding-label"><i class="ph-fill ph-key"></i> Key Finding</div>
+                      <div class="mini-key-finding-label"><i class="ph-fill ph-key"></i> <span data-i18n="docs.miniReaderKeyFinding">Key Finding</span></div>
                       <p>The reasoning ability of models improves predictably with more compute and better data.</p>
                     </div>
                     <div class="mini-plain-english">
-                      <strong>In Plain English</strong>
+                      <strong data-i18n="docs.miniReaderPlainEnglish">In Plain English</strong>
                       <ul>
                         <li>Bigger models reason better.</li>
                         <li>The relationship is predictable.</li>
@@ -491,8 +491,8 @@
                       </ul>
                     </div>
                     <div class="mini-cta-row">
-                      <div class="mini-btn-outline">Read Original</div>
-                      <div class="mini-btn-primary">Next Paper →</div>
+                      <div class="mini-btn-outline" data-i18n="docs.miniReaderReadOriginal">Read Original</div>
+                      <div class="mini-btn-primary" data-i18n="docs.miniReaderNextPaper">Next Paper →</div>
                     </div>
                   </div>
                 </div>
@@ -507,8 +507,8 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-app-header">
                       <div>
-                        <h4>数据面板</h4>
-                        <div class="date-text">总览</div>
+                        <h4 data-i18n="docs.miniDashboardTitle">数据面板</h4>
+                        <div class="date-text" data-i18n="docs.miniDashboardSubtitle">总览</div>
                       </div>
                       <div class="mini-app-header-actions">
                         <div class="mini-icon-btn"><i class="ph ph-arrows-clockwise"></i></div>
@@ -518,27 +518,27 @@
                       <div class="mini-stat-card">
                         <div class="stat-icon"><i class="ph ph-file-text"></i></div>
                         <div class="stat-value">78</div>
-                        <div class="stat-label">论文数量</div>
+                        <div class="stat-label" data-i18n="docs.miniDashboardPapers">论文数量</div>
                       </div>
                       <div class="mini-stat-card">
                         <div class="stat-icon"><i class="ph ph-calendar"></i></div>
                         <div class="stat-value">12</div>
-                        <div class="stat-label">日期范围</div>
+                        <div class="stat-label" data-i18n="docs.miniDashboardDateRange">日期范围</div>
                       </div>
                     </div>
                     <div class="mini-topics-list">
-                      <h5>关键词统计</h5>
+                      <h5 data-i18n="docs.miniDashboardKeywords">关键词统计</h5>
                       <div class="mini-topic-item">
                         <span>physics.optics</span>
-                        <span class="topic-count">78 次</span>
+                        <span class="topic-count" data-i18n="docs.miniDashboardCount1">78 次</span>
                       </div>
                       <div class="mini-topic-item">
                         <span>optical</span>
-                        <span class="topic-count">17 次</span>
+                        <span class="topic-count" data-i18n="docs.miniDashboardCount2">17 次</span>
                       </div>
                       <div class="mini-topic-item">
                         <span>physics.app-ph</span>
-                        <span class="topic-count">8 次</span>
+                        <span class="topic-count" data-i18n="docs.miniDashboardCount3">8 次</span>
                       </div>
                     </div>
                   </div>
@@ -554,7 +554,7 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-app-header">
                       <div>
-                        <h4>收藏</h4>
+                        <h4 data-i18n="docs.miniSavedTitle">收藏</h4>
                       </div>
                       <div class="mini-app-header-actions">
                         <div class="mini-icon-btn"><i class="ph ph-funnel"></i></div>
@@ -565,7 +565,7 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Physical Review</div>
                         <div class="mini-paper-title">A Langevin model-based magneto-optic response</div>
-                        <div class="mini-paper-desc">本文为溶液中超顺磁性纳米颗粒的磁光表征提供了理论框架。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniSavedDesc1">本文为溶液中超顺磁性纳米颗粒的磁光表征提供了理论框架。</div>
                       </div>
                       <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
                     </div>
@@ -574,7 +574,7 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature</div>
                         <div class="mini-paper-title">A laser with instability reaching $4×10^-17$</div>
-                        <div class="mini-paper-desc">实现了10厘米长的超稳硅腔，在5K温度下达到极低频率不稳定度。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniSavedDesc2">实现了10厘米长的超稳硅腔，在5K温度下达到极低频率不稳定度。</div>
                       </div>
                       <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
                     </div>
@@ -596,8 +596,8 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-desktop-shell">
                       <div class="mini-desktop-sidebar">
-                        <h5>Library</h5>
-                        <div class="mini-desktop-nav-item is-active">今日简报</div>
+                        <h5 data-i18n="docs.miniDesktopLibrary">Library</h5>
+                        <div class="mini-desktop-nav-item is-active" data-i18n="docs.miniDesktopToday">今日简报</div>
                         <div class="mini-desktop-nav-item">AI / LLM</div>
                         <div class="mini-desktop-nav-item">Physics</div>
                         <div class="mini-desktop-nav-item">Bio Medicine</div>
@@ -608,14 +608,14 @@
                           <div class="mini-paper-body">
                             <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                             <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
-                            <div class="mini-paper-desc">模型推理能力提升规律变得可预测，改变训练预算规划方式。</div>
+                            <div class="mini-paper-desc" data-i18n="docs.miniDesktopFeedDesc">模型推理能力提升规律变得可预测，改变训练预算规划方式。</div>
                           </div>
                           <div class="mini-bookmark"><i class="ph ph-star"></i></div>
                         </div>
                       </div>
                       <div class="mini-desktop-detail">
-                        <h5>Why this matters</h5>
-                        <p>关键发现、相关论文、下一步动作都在右栏。</p>
+                        <h5 data-i18n="docs.miniDesktopWhyMatters">Why this matters</h5>
+                        <p data-i18n="docs.miniDesktopWhyMattersDesc">关键发现、相关论文、下一步动作都在右栏。</p>
                       </div>
                     </div>
                   </div>
@@ -631,28 +631,28 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-split-auth">
                       <div class="mini-split-left">
-                        <h3>把论文推荐系统，调成你的研究口味。</h3>
-                        <p>登录后同步收藏、阅读进度、关键词偏好和推荐反馈。桌面端高效整理，移动端轻松阅读。</p>
+                        <h3 data-i18n="docs.miniAuthHeroTitle">把论文推荐系统，调成你的研究口味。</h3>
+                        <p data-i18n="docs.miniAuthHeroDesc">登录后同步收藏、阅读进度、关键词偏好和推荐反馈。桌面端高效整理，移动端轻松阅读。</p>
                         <div class="mini-split-card">
                           <div class="mini-split-card-icon"><i class="ph ph-newspaper"></i></div>
                           <div class="mini-split-card-text">
-                            <strong>Today Briefing</strong>
+                            <strong data-i18n="docs.miniAuthCardTitle">Today Briefing</strong>
                             <span>5 top papers, summarized for your taste.</span>
                           </div>
                         </div>
                       </div>
                       <div class="mini-split-right">
-                        <h4>登录 ScholarDaily</h4>
-                        <p>继续你的收藏、推荐画像和阅读进度。</p>
+                        <h4 data-i18n="docs.miniAuthLoginTitle">登录 ScholarDaily</h4>
+                        <p data-i18n="docs.miniAuthLoginSubtitle">继续你的收藏、推荐画像和阅读进度。</p>
                         <div class="mini-input-group">
-                          <label>邮箱</label>
+                          <label data-i18n="docs.miniAuthEmail">邮箱</label>
                           <div class="mini-input"></div>
                         </div>
                         <div class="mini-input-group">
-                          <label>密码</label>
+                          <label data-i18n="docs.miniAuthPassword">密码</label>
                           <div class="mini-input"></div>
                         </div>
-                        <div class="mini-auth-btn">登录</div>
+                        <div class="mini-auth-btn" data-i18n="docs.miniAuthLoginButton">登录</div>
                       </div>
                     </div>
                   </div>
@@ -675,15 +675,15 @@
                       </div>
                       <div style="flex: 1; display: flex; overflow: hidden;">
                         <div style="width: 70px; background: var(--surface); border-right: 1px solid var(--line); padding: 6px; font-size: 7px;">
-                          <div style="font-weight: 600; margin-bottom: 5px; color: var(--ink-muted);">研究频道</div>
-                          <div style="padding: 4px 5px; background: var(--brand-soft); color: var(--brand); border-radius: 4px; margin-bottom: 3px; font-weight: 500;">今日简报</div>
+                          <div style="font-weight: 600; margin-bottom: 5px; color: var(--ink-muted);" data-i18n="docs.miniMacosChannels">研究频道</div>
+                          <div style="padding: 4px 5px; background: var(--brand-soft); color: var(--brand); border-radius: 4px; margin-bottom: 3px; font-weight: 500;" data-i18n="docs.miniMacosToday">今日简报</div>
                           <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px; margin-bottom: 3px;">AI / LLM</div>
                           <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px; margin-bottom: 3px;">Physics</div>
-                          <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px;">收藏专题</div>
+                          <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px;" data-i18n="docs.miniMacosSaved">收藏专题</div>
                         </div>
                         <div style="flex: 1; padding: 8px; overflow: hidden; border-right: 1px solid var(--line);">
-                          <div style="font-size: 10px; font-weight: 700; margin-bottom: 2px;">Daily Papers</div>
-                          <div style="font-size: 6px; color: var(--ink-muted); margin-bottom: 6px;">为你精选</div>
+                          <div style="font-size: 10px; font-weight: 700; margin-bottom: 2px;" data-i18n="docs.miniMacosDaily">Daily Papers</div>
+                          <div style="font-size: 6px; color: var(--ink-muted); margin-bottom: 6px;" data-i18n="docs.miniMacosForYou">为你精选</div>
                           <div style="margin-bottom: 5px;">
                             <div class="mini-paper-card" style="padding: 5px; background: var(--brand-soft); border: 1px solid var(--brand-line); border-radius: 5px;">
                               <div class="mini-rank" style="background: var(--brand); color: white; font-size: 7px;">★</div>
@@ -702,13 +702,13 @@
                           </div>
                         </div>
                         <div style="width: 80px; padding: 8px; font-size: 7px;">
-                          <div style="font-weight: 600; margin-bottom: 5px;">Why this matters</div>
+                          <div style="font-weight: 600; margin-bottom: 5px;" data-i18n="docs.miniMacosWhyMatters">Why this matters</div>
                           <div style="background: var(--brand-soft); border-radius: 4px; padding: 5px; margin-bottom: 5px;">
-                            <div style="font-size: 6px; font-weight: 600; color: var(--brand); margin-bottom: 3px;"><i class="ph-fill ph-key" style="font-size: 7px;"></i> Key Finding</div>
-                            <p style="font-size: 6px; margin: 0;">推理能力随算力可预测提升。</p>
+                            <div style="font-size: 6px; font-weight: 600; color: var(--brand); margin-bottom: 3px;"><i class="ph-fill ph-key" style="font-size: 7px;"></i> <span data-i18n="docs.miniMacosKeyFinding">Key Finding</span></div>
+                            <p style="font-size: 6px; margin: 0;" data-i18n="docs.miniMacosKeyFindingDesc">推理能力随算力可预测提升。</p>
                           </div>
                           <div style="background: var(--ink); color: var(--paper); padding: 4px 6px; border-radius: 4px; font-size: 6px; display: flex; align-items: center; gap: 3px;">
-                            <i class="ph-fill ph-sparkle"></i> 听论文
+                            <i class="ph-fill ph-sparkle"></i> <span data-i18n="docs.miniMacosListen">听论文</span>
                           </div>
                         </div>
                       </div>
@@ -731,16 +731,16 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-auth-logo" style="margin: 0 0 var(--space-md);">S</div>
-                      <div class="mini-onboarding-title">让论文像信息流一样好读，但仍然可靠</div>
-                      <div class="mini-onboarding-desc">每天 5 到 12 篇高质量论文，先给你白话关键结论，再给原文、作者和可验证来源。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniWelcomeTitle">让论文像信息流一样好读，但仍然可靠</div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniWelcomeDesc">每天 5 到 12 篇高质量论文，先给你白话关键结论，再给原文、作者和可验证来源。</div>
                       <div class="mini-paper-card" style="border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-sm); margin-bottom: var(--space-md);">
                         <div class="mini-paper-body">
-                          <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>今日简报</div>
+                          <div class="mini-paper-source"><span class="mini-paper-source-dot"></span><span data-i18n="docs.miniWelcomeSource">今日简报</span></div>
                           <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
-                          <div class="mini-paper-desc">More → reasoning. agent 和摘要的质量也在提升。</div>
+                          <div class="mini-paper-desc" data-i18n="docs.miniWelcomePaperDesc">More → reasoning. agent 和摘要的质量也在提升。</div>
                         </div>
                       </div>
-                      <div class="mini-auth-btn">开始个性化推荐</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniWelcomeButton">开始个性化推荐</div>
                     </div>
                   </div>
                 </div>
@@ -755,20 +755,20 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container">
                       <div class="mini-auth-logo">S</div>
-                      <div class="mini-auth-title">欢迎回来</div>
-                      <div class="mini-auth-subtitle">继续你的今日论文简报、收藏夹和研读队列。</div>
+                      <div class="mini-auth-title" data-i18n="docs.miniLoginTitle">欢迎回来</div>
+                      <div class="mini-auth-subtitle" data-i18n="docs.miniLoginSubtitle">继续你的今日论文简报、收藏夹和研读队列。</div>
                       <div class="mini-input-group">
-                        <label>邮箱</label>
+                        <label data-i18n="docs.miniLoginEmail">邮箱</label>
                         <div class="mini-input"></div>
                       </div>
                       <div class="mini-input-group">
-                        <label>密码</label>
+                        <label data-i18n="docs.miniLoginPassword">密码</label>
                         <div class="mini-input"></div>
                       </div>
-                      <div class="mini-auth-btn">登录</div>
-                      <div class="mini-auth-divider"><span>或</span></div>
-                      <div class="mini-social-btn"><i class="ph ph-apple-logo"></i> 使用 Apple 继续</div>
-                      <div class="mini-social-btn"><i class="ph ph-google-logo"></i> 使用 Google 继续</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniLoginButton">登录</div>
+                      <div class="mini-auth-divider"><span data-i18n="docs.miniLoginOr">或</span></div>
+                      <div class="mini-social-btn"><i class="ph ph-apple-logo"></i> <span data-i18n="docs.miniLoginApple">使用 Apple 继续</span></div>
+                      <div class="mini-social-btn"><i class="ph ph-google-logo"></i> <span data-i18n="docs.miniLoginGoogle">使用 Google 继续</span></div>
                     </div>
                   </div>
                 </div>
@@ -783,21 +783,21 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-auth-logo" style="margin: 0 0 var(--space-sm);">S</div>
-                      <div class="mini-onboarding-title" style="font-size: 13px;">创建你的研究口味</div>
-                      <div class="mini-onboarding-desc" style="font-size: 9px; margin-bottom: var(--space-sm);">我们只问必要的信息。</div>
+                      <div class="mini-onboarding-title" style="font-size: 13px;" data-i18n="docs.miniRegisterTitle">创建你的研究口味</div>
+                      <div class="mini-onboarding-desc" style="font-size: 9px; margin-bottom: var(--space-sm);" data-i18n="docs.miniRegisterDesc">我们只问必要的信息。</div>
                       <div class="mini-input-group" style="margin-bottom: 6px;">
-                        <label style="font-size: 8px;">昵称</label>
+                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterNickname">昵称</label>
                         <div class="mini-input" style="height: 22px;"></div>
                       </div>
                       <div class="mini-input-group" style="margin-bottom: 6px;">
-                        <label style="font-size: 8px;">邮箱</label>
+                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterEmail">邮箱</label>
                         <div class="mini-input" style="height: 22px;"></div>
                       </div>
                       <div class="mini-input-group" style="margin-bottom: 6px;">
-                        <label style="font-size: 8px;">密码</label>
+                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterPassword">密码</label>
                         <div class="mini-input" style="height: 22px;"></div>
                       </div>
-                      <div class="mini-auth-btn" style="height: 28px; font-size: 10px;">创建账号</div>
+                      <div class="mini-auth-btn" style="height: 28px; font-size: 10px;" data-i18n="docs.miniRegisterButton">创建账号</div>
                     </div>
                   </div>
                 </div>
@@ -812,8 +812,8 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">1 / 3</div>
-                      <div class="mini-onboarding-title">先选几个你关心的方向</div>
-                      <div class="mini-onboarding-desc">不用选很细，后续系统会继续调整。保留"不感兴趣"继续调整。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniInterestsTitle">先选几个你关心的方向</div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniInterestsDesc">不用选很细，后续系统会继续调整。保留"不感兴趣"继续调整。</div>
                       <div class="mini-interest-tags">
                         <div class="mini-interest-tag is-active">LLM</div>
                         <div class="mini-interest-tag is-active">Agents</div>
@@ -824,7 +824,7 @@
                         <div class="mini-interest-tag">Physics</div>
                         <div class="mini-interest-tag">Climate</div>
                       </div>
-                      <div class="mini-auth-btn">继续</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniInterestsContinue">继续</div>
                     </div>
                   </div>
                 </div>
@@ -839,30 +839,30 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">2 / 3</div>
-                      <div class="mini-onboarding-title">让提醒像助手，不是打扰。</div>
-                      <div class="mini-onboarding-desc">只在真正有价值时提醒：今日简报、关注作者更新、关键突破推送。关掉得很容易。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniNotificationsTitle">让提醒像助手，不是打扰。</div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniNotificationsDesc">只在真正有价值时提醒：今日简报、关注作者更新、关键突破推送。关掉得很容易。</div>
                       <div class="mini-toggle-row">
                         <div class="mini-toggle-info">
-                          <strong>每日简报</strong>
-                          <span>每天早 8 点，当日 5 篇精选 + 摘要。</span>
+                          <strong data-i18n="docs.miniNotificationsDaily">每日简报</strong>
+                          <span data-i18n="docs.miniNotificationsDailyDesc">每天早 8 点，当日 5 篇精选 + 摘要。</span>
                         </div>
                         <div class="mini-toggle is-on"></div>
                       </div>
                       <div class="mini-toggle-row">
                         <div class="mini-toggle-info">
-                          <strong>趋势提醒</strong>
-                          <span>当某方向出现重要突破时提醒。</span>
+                          <strong data-i18n="docs.miniNotificationsTrend">趋势提醒</strong>
+                          <span data-i18n="docs.miniNotificationsTrendDesc">当某方向出现重要突破时提醒。</span>
                         </div>
                         <div class="mini-toggle is-on"></div>
                       </div>
                       <div class="mini-toggle-row">
                         <div class="mini-toggle-info">
-                          <strong>作者动态</strong>
-                          <span>关注的作者发新论文时提醒。</span>
+                          <strong data-i18n="docs.miniNotificationsAuthor">作者动态</strong>
+                          <span data-i18n="docs.miniNotificationsAuthorDesc">关注的作者发新论文时提醒。</span>
                         </div>
                         <div class="mini-toggle"></div>
                       </div>
-                      <div class="mini-auth-btn">保存提醒偏好</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniNotificationsSave">保存提醒偏好</div>
                     </div>
                   </div>
                 </div>
@@ -877,19 +877,19 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">2 / 3</div>
-                      <div class="mini-onboarding-title" style="font-size: 12px;">快速校准推荐</div>
-                      <div class="mini-onboarding-desc" style="font-size: 8px; margin-bottom: var(--space-sm);">快速标记你的研究兴趣方向。</div>
+                      <div class="mini-onboarding-title" style="font-size: 12px;" data-i18n="docs.miniSurveyTitle">快速校准推荐</div>
+                      <div class="mini-onboarding-desc" style="font-size: 8px; margin-bottom: var(--space-sm);" data-i18n="docs.miniSurveyDesc">快速标记你的研究兴趣方向。</div>
                       <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 8px; margin-bottom: 8px;">
                         <div class="mini-paper-source" style="font-size: 8px; margin-bottom: 3px;"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                         <div class="mini-paper-title" style="font-size: 9px; margin-bottom: 3px;">Training language agents with memory</div>
-                        <div class="mini-paper-desc" style="font-size: 8px;">像研究员一样持续阅读文献。</div>
+                        <div class="mini-paper-desc" style="font-size: 8px;" data-i18n="docs.miniSurveyPaperDesc">像研究员一样持续阅读文献。</div>
                       </div>
                       <div style="display: flex; gap: 4px; margin-bottom: 8px;">
-                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--line); border-radius: 4px; font-size: 7px; color: var(--ink-muted);">不感兴趣</div>
-                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: var(--brand); background: var(--brand-soft);">收藏</div>
-                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: white; background: var(--brand);">更多类似</div>
+                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--line); border-radius: 4px; font-size: 7px; color: var(--ink-muted);" data-i18n="docs.miniSurveyDislike">不感兴趣</div>
+                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: var(--brand); background: var(--brand-soft);" data-i18n="docs.miniSurveySave">收藏</div>
+                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: white; background: var(--brand);" data-i18n="docs.miniSurveyMore">更多类似</div>
                       </div>
-                      <div class="mini-auth-btn" style="height: 26px; font-size: 9px;">进入今日简报</div>
+                      <div class="mini-auth-btn" style="height: 26px; font-size: 9px;" data-i18n="docs.miniSurveyButton">进入今日简报</div>
                     </div>
                   </div>
                 </div>
@@ -904,23 +904,23 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">3 / 3</div>
-                      <div class="mini-onboarding-title">为你生成的第一版日报</div>
-                      <div class="mini-onboarding-desc">基于 4 个兴趣方向和 3 次投票校准，先给你一个可感受的基础。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniBriefingTitle">为你生成的第一版日报</div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniBriefingDesc">基于 4 个兴趣方向和 3 次投票校准，先给你一个可感受的基础。</div>
                       <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
                         <div class="mini-paper-body">
                           <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                           <div class="mini-paper-title">Training language agents to browse papers with persistent memory</div>
-                          <div class="mini-paper-desc">像研究员一样持续阅读文献，不是每次都从头来。</div>
+                          <div class="mini-paper-desc" data-i18n="docs.miniBriefingDesc1">像研究员一样持续阅读文献，不是每次都从头来。</div>
                         </div>
                       </div>
                       <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
                         <div class="mini-paper-body">
                           <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                           <div class="mini-paper-title">Tool-using agents improve scientific literature review</div>
-                          <div class="mini-paper-desc">工具调用型 agent 显著提升综述质量。</div>
+                          <div class="mini-paper-desc" data-i18n="docs.miniBriefingDesc2">工具调用型 agent 显著提升综述质量。</div>
                         </div>
                       </div>
-                      <div class="mini-auth-btn">开启今日阅读</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniBriefingButton">开启今日阅读</div>
                     </div>
                   </div>
                 </div>
@@ -939,21 +939,21 @@
       <div class="command-dialog">
         <div class="command-input-row">
           <i class="ph ph-magnifying-glass" style="color: var(--ink-muted);"></i>
-          <input id="commandInput" type="text" placeholder="Search docs, pages, or actions" />
+          <input id="commandInput" type="text" data-i18n-placeholder="docs.commandPlaceholder" placeholder="Search docs, pages, or actions" />
           <button class="ghost-button" type="button" id="commandCloseButton">Esc</button>
         </div>
         <div class="command-results" id="commandResults">
           <button type="button" data-command-target="#components-paper-card">
             <i class="ph ph-file-text"></i>
-            Go to Paper Card
+            <span data-i18n="docs.commandGoPaperCard">Go to Paper Card</span>
           </button>
           <button type="button" data-command-target="#components-ai">
             <i class="ph-fill ph-sparkle"></i>
-            Open AI Answer Block
+            <span data-i18n="docs.commandOpenAiAnswer">Open AI Answer Block</span>
           </button>
           <button type="button" data-command-target="#pages-copilot">
             <i class="ph ph-chat-circle"></i>
-            Jump to Research Copilot
+            <span data-i18n="docs.commandJumpCopilot">Jump to Research Copilot</span>
           </button>
         </div>
       </div>
@@ -986,10 +986,10 @@
       <div class="page-preview-panel" id="pagePreviewPanel">
         <div class="page-preview-header">
           <div class="page-preview-title">
-            <strong id="pagePreviewTitle">页面预览</strong>
-            <span id="pagePreviewSubtitle">点击空白处关闭</span>
+            <strong id="pagePreviewTitle" data-i18n="docs.pagePreviewTitle">页面预览</strong>
+            <span id="pagePreviewSubtitle" data-i18n="docs.pagePreviewSubtitle">点击空白处关闭</span>
           </div>
-          <button class="page-preview-close" id="pagePreviewClose" type="button" aria-label="关闭预览">
+          <button class="page-preview-close" id="pagePreviewClose" type="button" data-i18n-aria-label="docs.pagePreviewClose" aria-label="关闭预览">
             <i class="ph ph-x"></i>
           </button>
         </div>
