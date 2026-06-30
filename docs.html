@@ -362,17 +362,21 @@
         <section class="doc-section" id="accessibility">
           <div class="doc-section-head">
             <p class="eyebrow" data-i18n="docs.philosophyEyebrow">设计哲学</p>
-            <h2 data-i18n="docs.accessibilityTitle">语言平等可达</h2>
-            <p data-i18n="docs.accessibilityDesc">PaperDaily Design System 不把多语言当作简单翻译，而把它视为"平等可达"的基础能力。</p>
+            <h2 data-i18n="docs.accessibilityTitle">无障碍阅读</h2>
+            <p data-i18n="docs.accessibilityDesc">PaperDaily 认为无障碍不是附加功能，而是产品的基础能力。它包含两个维度：i18n（国际化，让不同语言和文字系统的用户都能平等使用）与 a11y（可访问性，让不同能力和使用场景的用户都能顺畅阅读）。</p>
           </div>
 
-          <div class="a11y-grid">
-            <article class="a11y-card">
-              <div class="a11y-icon">
-                <i class="ph ph-globe"></i>
-              </div>
-              <h3 data-i18n="docs.a11yLangTitle">语言覆盖与文字系统</h3>
-              <p data-i18n="docs.a11yLangDesc">优先覆盖全球使用人口较多的语言，同时支持重要地区语言与不同文字系统。</p>
+          <div class="doc-grid">
+            <div class="doc-copy">
+              <h3 data-i18n="docs.a11yI18nTitle">i18n · 国际化</h3>
+              <ul class="doc-list">
+                <li data-i18n="docs.a11yI18nRuleOne"><strong>多语言覆盖</strong>：优先覆盖全球使用人口较多的语言，同时支持重要地区语言与不同文字系统。</li>
+                <li data-i18n="docs.a11yI18nRuleTwo"><strong>RTL 完整适配</strong>：阿拉伯语、乌尔都语等 RTL 语言从页面方向、导航位置到信息流动线全部正确镜像，混排内容不乱。</li>
+                <li data-i18n="docs.a11yI18nRuleThree"><strong>文字系统适配</strong>：中日泰等无空格语言的换行与截断、越南语泰语等音调语言的行高与清晰度单独优化。</li>
+              </ul>
+            </div>
+
+            <div class="demo-box">
               <div class="a11y-tags">
                 <span>English</span>
                 <span>简体中文</span>
@@ -391,42 +395,62 @@
                 <span>اردو</span>
                 <span data-i18n="docs.a11yMore">……</span>
               </div>
-            </article>
+            </div>
+          </div>
 
-            <article class="a11y-card">
-              <div class="a11y-icon">
-                <i class="ph ph-arrows-left-right"></i>
-              </div>
-              <h3 data-i18n="docs.a11yRtlTitle">RTL 语言适配</h3>
-              <p data-i18n="docs.a11yRtlDesc">阿拉伯语、乌尔都语等 RTL 语言完整支持从右到左阅读。页面方向、导航位置、返回图标、卡片排列、信息流动线和输入框全部正确镜像。论文标题、作者名、公式、代码、DOI 等 LTR 内容在 RTL 页面中保持正确显示，避免混排错乱。</p>
-            </article>
+          <div class="doc-grid" style="margin-top: var(--space-xl);">
+            <div class="doc-copy">
+              <h3 data-i18n="docs.a11yA11yTitle">a11y · 可访问性</h3>
+              <ul class="doc-list">
+                <li data-i18n="docs.a11yA11yRuleOne"><strong>字号与对比度</strong>：全局字号可缩放，正文对比度满足 WCAG AA 标准，重要操作满足 AAA，色盲友好配色。</li>
+                <li data-i18n="docs.a11yA11yRuleTwo"><strong>键盘与读屏</strong>：完整键盘导航，焦点环清晰可见，语义化 HTML 结构，ARIA 标签准确，屏幕阅读器流畅朗读。</li>
+                <li data-i18n="docs.a11yA11yRuleThree"><strong>动效可控</strong>：尊重系统"减少动效"偏好，装饰性动画可关闭，关键反馈信息同时提供文字和视觉两种通道。</li>
+              </ul>
+            </div>
 
-            <article class="a11y-card">
-              <div class="a11y-icon">
-                <i class="ph ph-text-aa"></i>
+            <div class="demo-box">
+              <div class="a11y-feature-grid">
+                <div class="a11y-feature">
+                  <i class="ph ph-text-aa"></i>
+                  <div>
+                    <strong data-i18n="docs.a11yFeatureFont">字号缩放</strong>
+                    <span data-i18n="docs.a11yFeatureFontDesc">全局 4 档可调</span>
+                  </div>
+                </div>
+                <div class="a11y-feature">
+                  <i class="ph ph-contrast"></i>
+                  <div>
+                    <strong data-i18n="docs.a11yFeatureContrast">高对比度</strong>
+                    <span data-i18n="docs.a11yFeatureContrastDesc">WCAG AA / AAA</span>
+                  </div>
+                </div>
+                <div class="a11y-feature">
+                  <i class="ph ph-keyboard"></i>
+                  <div>
+                    <strong data-i18n="docs.a11yFeatureKeyboard">键盘导航</strong>
+                    <span data-i18n="docs.a11yFeatureKeyboardDesc">Tab / Enter / Esc</span>
+                  </div>
+                </div>
+                <div class="a11y-feature">
+                  <i class="ph ph-eye-slash"></i>
+                  <div>
+                    <strong data-i18n="docs.a11yFeatureMotion">减少动效</strong>
+                    <span data-i18n="docs.a11yFeatureMotionDesc">prefers-reduced-motion</span>
+                  </div>
+                </div>
               </div>
-              <h3 data-i18n="docs.a11yTypoTitle">换行与排版优化</h3>
-              <p data-i18n="docs.a11yTypoDesc">中文、日语、泰语等无空格分词语言，标题截断、摘要换行、标签排列和卡片高度单独优化；越南语、泰语等音调语言，行高和字形清晰度在小屏阅读中保持稳定可读。</p>
-            </article>
-
-            <article class="a11y-card">
-              <div class="a11y-icon">
-                <i class="ph ph-text-t"></i>
-              </div>
-              <h3 data-i18n="docs.a11yFontTitle">全局字号缩放</h3>
-              <p data-i18n="docs.a11yFontDesc">用户可根据阅读习惯、设备尺寸和视力需求调整整体字体大小。字号放大后页面保持信息完整、布局不破碎、功能可正常使用。推荐流、论文卡片、摘要、标签、按钮和 AI 阅读工具随字号自然适配。</p>
-            </article>
+            </div>
           </div>
 
           <div class="a11y-ref">
             <p class="eyebrow" data-i18n="docs.refEyebrow">Reference</p>
             <h3 data-i18n="docs.refTitle">参考标准</h3>
-            <p data-i18n="docs.refDesc">遵循 <strong>W3C Internationalization</strong> 与无障碍相关规范，确保多语言与无障碍设计的正确实现。</p>
+            <p data-i18n="docs.refDesc">遵循 W3C Internationalization 与 Web Accessibility 相关规范，确保国际化与无障碍设计的正确实现。</p>
             <ul class="a11y-ref-list">
+              <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">WCAG 2.2</a> — <span data-i18n="docs.refWcagDesc">Web Content Accessibility Guidelines 无障碍内容指南</span></li>
               <li><a href="https://www.w3.org/International/questions/qa-html-dir.en.html" target="_blank" rel="noopener" data-i18n="docs.refRtlTitle">RTL 与 dir 属性</a> — <span data-i18n="docs.refRtlDesc">右到左文字的基础文本方向设置</span></li>
               <li><a href="https://www.w3.org/TR/i18n-html-tech-bidi/" target="_blank" rel="noopener">Handling Right-to-left Scripts</a> — <span data-i18n="docs.refBidiDesc">HTML/CSS 中处理 RTL、双向文本</span></li>
               <li><a href="https://www.w3.org/International/articles/typography/linebreak.en.html" target="_blank" rel="noopener">Approaches to Line Breaking</a> — <span data-i18n="docs.refLinebreakDesc">不同文字系统的换行与排版差异</span></li>
-              <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">WCAG 2.2</a> — <span data-i18n="docs.refWcagDesc">Web Content Accessibility Guidelines 无障碍内容指南</span></li>
             </ul>
           </div>
         </section>

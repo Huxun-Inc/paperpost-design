@@ -3003,6 +3003,41 @@ img {
   border: 1px solid var(--line);
 }
 
+.a11y-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.a11y-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+}
+
+.a11y-feature i {
+  font-size: 20px;
+  color: var(--ink-soft);
+  flex-shrink: 0;
+}
+
+.a11y-feature strong {
+  display: block;
+  font-size: var(--font-body-sm-size);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+
+.a11y-feature span {
+  font-size: var(--font-caption-size);
+  color: var(--ink-muted);
+}
+
 .a11y-ref {
   margin-top: var(--space-xl);
   padding-top: var(--space-lg);
