@@ -93,6 +93,7 @@
             <a href="#components-summary" data-nav-item>Summary Block</a>
             <a href="#components-text-toolbar" data-nav-item>Text Toolbar</a>
             <a href="#components-buttons-callouts" data-nav-item>Buttons &amp; Callouts</a>
+            <a href="#components-switch" data-nav-item>Switch</a>
             <a href="#components-command" data-nav-item>Command Bar</a>
             <a href="#components-breadcrumb" data-nav-item>Breadcrumb</a>
             <a href="#components-tooltip" data-nav-item>Tooltip</a>
@@ -593,6 +594,58 @@
                   <div class="callout-chip is-info"><i class="ph ph-info"></i><span data-i18n="docs.calloutInfo">Info：这个结论适用于 10B 到 100B 参数范围。</span></div>
                   <div class="callout-chip is-warning"><i class="ph ph-warning"></i><span data-i18n="docs.calloutWarning">Warning：小样本外推需要谨慎。</span></div>
                   <div class="callout-chip is-tip"><i class="ph ph-lightbulb"></i><span data-i18n="docs.calloutTip">Tip：可直接加入本周阅读队列。</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="components-switch">
+          <div class="doc-section-head">
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <h2>Switch</h2>
+            <p data-i18n="docs.switchDesc">圆角左右滑块用于明确的开关状态，适合偏好设置、通知开关和阅读辅助选项。</p>
+          </div>
+
+          <div class="doc-grid">
+            <div class="doc-copy">
+              <ul class="doc-list">
+                <li data-i18n="docs.switchRuleOne">开关只用于二元状态：开/关、启用/停用，不承载多选项。</li>
+                <li data-i18n="docs.switchRuleTwo">滑块左右移动，轨道颜色变化，状态不只依赖颜色。</li>
+                <li data-i18n="docs.switchRuleThree">标签写清楚被控制的设置，禁用态降低透明度但仍可读。</li>
+              </ul>
+            </div>
+
+            <div class="demo-box">
+              <div class="demo-content">
+                <div class="switch-demo-stack">
+                  <div class="switch-demo-row">
+                    <div class="switch-demo-copy">
+                      <strong data-i18n="docs.switchDemoDigest">每日简报</strong>
+                      <span data-i18n="docs.switchDemoDigestDesc">每天推送 5-12 篇高价值论文。</span>
+                    </div>
+                    <button class="switch-demo is-on" type="button" role="switch" aria-checked="true">
+                      <span></span>
+                    </button>
+                  </div>
+                  <div class="switch-demo-row">
+                    <div class="switch-demo-copy">
+                      <strong data-i18n="docs.switchDemoMotion">减少动效</strong>
+                      <span data-i18n="docs.switchDemoMotionDesc">降低装饰动画，保留必要反馈。</span>
+                    </div>
+                    <button class="switch-demo" type="button" role="switch" aria-checked="false">
+                      <span></span>
+                    </button>
+                  </div>
+                  <div class="switch-demo-row is-disabled">
+                    <div class="switch-demo-copy">
+                      <strong data-i18n="docs.switchDemoLocked">机构同步</strong>
+                      <span data-i18n="docs.switchDemoLockedDesc">由团队管理员统一配置。</span>
+                    </div>
+                    <button class="switch-demo" type="button" role="switch" aria-checked="false" disabled>
+                      <span></span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -190,6 +190,18 @@
     });
   }
 
+  function initSwitchDemos() {
+    document.querySelectorAll('.switch-demo[role="switch"]').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        if (toggle.disabled) return;
+
+        const isOn = toggle.getAttribute('aria-checked') === 'true';
+        toggle.setAttribute('aria-checked', String(!isOn));
+        toggle.classList.toggle('is-on', !isOn);
+      });
+    });
+  }
+
   function initSummaryModes() {
     const demoBoxes = document.querySelectorAll('.demo-box');
     demoBoxes.forEach(box => {
@@ -1684,6 +1696,7 @@
     initBookmarkButtons();
     initPageTabs();
     initPaperCardStates();
+    initSwitchDemos();
     initSummaryModes();
     initCommandBar();
     initBottomSheet();
