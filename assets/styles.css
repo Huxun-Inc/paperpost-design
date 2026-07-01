@@ -1131,75 +1131,39 @@ img {
   color: var(--ink-muted);
 }
 
-.mission-insight-card {
+.mission-desc-evidence {
   margin-top: var(--space-md);
-  padding: var(--space-lg);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-xl);
-  background:
-    linear-gradient(180deg, var(--panel-tint-top), var(--panel-tint-bottom)),
-    var(--surface);
-  box-shadow: var(--shadow-xs);
-  display: grid;
-  gap: var(--space-md);
 }
 
-.mission-insight-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-xs);
-  font-size: var(--font-micro-size);
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--brand-press);
-}
-
-.mission-insight-eyebrow::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--brand);
-  box-shadow: 0 0 0 6px color-mix(in srgb, var(--brand-soft) 65%, transparent);
-}
-
-.mission-insight-body {
-  margin: 0;
+.mission-source-summary {
+  margin: 0 0 var(--space-sm);
   font-size: var(--font-caption-size);
-  line-height: 1.8;
-  color: var(--ink);
+  line-height: 1.7;
+  color: var(--ink-muted);
 }
 
-.mission-insight-links {
+.mission-source-actions {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
 }
 
-.mission-insight-link {
+.mission-source-button {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
   min-height: 34px;
   padding: 0 14px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--line);
-  background: var(--glass-bg-strong);
+  background: transparent;
   color: var(--ink);
   font-size: var(--font-micro-size);
   font-weight: 700;
   transition: border-color 180ms var(--ease-out), background 180ms var(--ease-out), transform 180ms var(--ease-out);
 }
 
-.mission-insight-link::after {
-  content: "\2197";
-  font-size: 12px;
-  opacity: 0.65;
-}
-
-.mission-insight-link:hover {
+.mission-source-button:hover {
   border-color: var(--line-strong);
   background: var(--surface-hover);
   transform: translateY(-1px);
@@ -6402,17 +6366,12 @@ img {
     min-height: 0;
   }
 
-  .mission-insight-card {
-    padding: var(--space-md);
-  }
-
-  .mission-insight-links {
+  .mission-source-actions {
     flex-direction: column;
   }
 
-  .mission-insight-link {
+  .mission-source-button {
     width: 100%;
-    justify-content: space-between;
   }
 
   .section {
