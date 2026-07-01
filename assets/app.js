@@ -200,9 +200,11 @@
       const toggles = box.querySelectorAll('.switch-demo[role="switch"]');
       if (!toggles.length) return;
 
+      // Track saved state; start committed (no pending-change glow)
       const savedStates = new Map();
       toggles.forEach(t => {
         savedStates.set(t, { checked: t.getAttribute('aria-checked') === 'true', isOn: t.classList.contains('is-on') });
+        t.classList.add('is-committed');
       });
 
       toggles.forEach(toggle => {
@@ -211,6 +213,10 @@
           const isOn = toggle.getAttribute('aria-checked') === 'true';
           toggle.setAttribute('aria-checked', String(!isOn));
           toggle.classList.toggle('is-on', !isOn);
+          // Show glow whenever state differs from last save
+          const s = savedStates.get(toggle);
+          const nowOn = !isOn;
+          toggle.classList.toggle('is-committed', nowOn === s.isOn);
         });
       });
 
@@ -222,6 +228,7 @@
           if (saveBtn.classList.contains('is-saved')) return;
           toggles.forEach(t => {
             savedStates.set(t, { checked: t.getAttribute('aria-checked') === 'true', isOn: t.classList.contains('is-on') });
+            t.classList.add('is-committed');
           });
           const origLabel = saveBtn.textContent;
           const savedLabel = typeof i18next !== 'undefined' ? i18next.t('docs.switchSaved') : '已保存';
@@ -241,6 +248,7 @@
             if (!s) return;
             t.setAttribute('aria-checked', String(s.checked));
             t.classList.toggle('is-on', s.isOn);
+            t.classList.add('is-committed');
           });
         });
       }
