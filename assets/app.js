@@ -456,7 +456,7 @@
 
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        el.textContent = i18next.t(key, { year: currentYear });
+        setTranslatedContent(el, i18next.t(key, { year: currentYear }));
       });
 
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
@@ -482,6 +482,32 @@
         const descValue = i18next.t('landing.pageDescription', { fallbackValue: metaDesc.getAttribute('content') });
         metaDesc.setAttribute('content', descValue);
       }
+    }
+
+    function setTranslatedContent(el, value) {
+      const template = document.createElement('template');
+      template.innerHTML = value;
+
+      const allowedTags = new Set(['STRONG', 'EM', 'CODE', 'BR']);
+      const walker = document.createTreeWalker(template.content, NodeFilter.SHOW_ELEMENT);
+      const disallowed = [];
+      let node = walker.nextNode();
+
+      while (node) {
+        if (!allowedTags.has(node.tagName)) {
+          disallowed.push(node);
+        } else {
+          [...node.attributes].forEach(attr => node.removeAttribute(attr.name));
+        }
+        node = walker.nextNode();
+      }
+
+      if (disallowed.length) {
+        el.textContent = value;
+        return;
+      }
+
+      el.replaceChildren(template.content.cloneNode(true));
     }
 
     if (languageSelect) {
