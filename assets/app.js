@@ -464,23 +464,31 @@
       const href = item.getAttribute('href');
       if (href && href.startsWith('#')) {
         const el = document.querySelector(href);
-        if (el) sections.push({ id: href.slice(1), el, item });
+        if (el) sections.push({ el, item });
       }
     });
 
     if (!sections.length) return;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          sections.forEach(s => {
-            s.item.classList.toggle('is-active', s.el === entry.target);
-          });
-        }
-      });
-    }, { rootMargin: '-30% 0px -60% 0px', threshold: 0.1 });
+    let ticking = false;
 
-    sections.forEach(s => observer.observe(s.el));
+    function updateActive() {
+      const trigger = window.innerHeight * 0.35;
+      let active = sections[0];
+      for (const s of sections) {
+        if (s.el.getBoundingClientRect().top <= trigger) active = s;
+      }
+      sections.forEach(s => s.item.classList.toggle('is-active', s === active));
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => { updateActive(); ticking = false; });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    updateActive();
   }
 
   function initI18n() {
