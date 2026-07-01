@@ -1314,24 +1314,36 @@ img {
   line-height: 1.8;
 }
 
-.citation-marker:target,
-.citation-marker.is-target-pulse,
 .citation-reference-item:target,
 .citation-reference-item.is-target-pulse {
-  animation: citationTargetPulse 620ms var(--ease-out) 1;
+  animation: citationRefPulse 620ms var(--ease-out) 1;
   background: transparent;
 }
 
-@keyframes citationTargetPulse {
+@keyframes citationRefPulse {
   0%, 100% {
     background: transparent;
-    border-color: var(--line);
+    border-color: transparent;
     box-shadow: none;
   }
   45% {
     background: transparent;
     border-color: var(--brand);
     box-shadow: none;
+  }
+}
+
+.citation-marker:target,
+.citation-marker.is-target-pulse {
+  animation: citationMarkerPulse 620ms var(--ease-out) 1;
+}
+
+@keyframes citationMarkerPulse {
+  0%, 100% {
+    box-shadow: none;
+  }
+  45% {
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--brand-soft) 72%, transparent);
   }
 }
 
