@@ -93,6 +93,7 @@
             <a href="#components-summary" data-nav-item>Summary Block</a>
             <a href="#components-text-toolbar" data-nav-item>Text Toolbar</a>
             <a href="#components-buttons-callouts" data-nav-item>Buttons &amp; Callouts</a>
+            <a href="#components-citation-trace" data-nav-item>Citation Trace</a>
             <a href="#components-switch" data-nav-item>Switch</a>
             <a href="#components-command" data-nav-item>Command Bar</a>
             <a href="#components-breadcrumb" data-nav-item>Breadcrumb</a>
@@ -595,6 +596,38 @@
                   <div class="callout-chip is-warning"><i class="ph ph-warning"></i><span data-i18n="docs.calloutWarning">Warning：小样本外推需要谨慎。</span></div>
                   <div class="callout-chip is-tip"><i class="ph ph-lightbulb"></i><span data-i18n="docs.calloutTip">Tip：可直接加入本周阅读队列。</span></div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section" id="components-citation-trace">
+          <div class="doc-section-head">
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <h2>Citation Trace</h2>
+            <p data-i18n="docs.citationTraceDesc">用于论文阅读、AI 摘要和数据洞见中的可溯源引用：正文小标负责快速定位来源，底部参考条目负责返回被引用位置，帮助用户在阅读过程中验证证据而不中断理解。</p>
+          </div>
+
+          <div class="doc-grid">
+            <div class="doc-copy">
+              <ul class="doc-list">
+                <li data-i18n="docs.citationTraceRuleOne">引用小标紧跟被支撑的数据、结论或判断，不单独占据一行，也不抢正文层级。</li>
+                <li data-i18n="docs.citationTraceRuleTwo">点击正文小标跳到参考条目，条目短暂闪烁；点击条目左侧返回按钮跳回正文小标。</li>
+                <li data-i18n="docs.citationTraceRuleThree">参考条目保留作者、年份、题名、出版物或机构、DOI / URL，并区分原始证据与界面解释。</li>
+              </ul>
+            </div>
+
+            <div class="demo-box">
+              <div class="citation-demo">
+                <p>
+                  <span data-i18n="docs.citationTraceDemoText">非英语研究成果在全球检索与综述中更容易被忽略，因此跨语言阅读不只是翻译功能，而是知识可达性的基础设施。</span><a id="doc-cite-trace-1" class="citation-marker" href="#doc-ref-trace-1" data-i18n-aria-label="docs.citationTraceJumpAria" aria-label="查看参考依据">1</a>
+                </p>
+                <ol class="citation-reference-list">
+                  <li class="citation-reference-item" id="doc-ref-trace-1">
+                    <a class="citation-back" href="#doc-cite-trace-1" data-i18n-aria-label="docs.citationTraceBackAria" aria-label="回到正文引用"><i class="ph ph-arrow-u-up-left"></i></a>
+                    <p><strong data-i18n="docs.citationTraceDemoRefTitle">Amano et al. (2016).</strong> <span data-i18n="docs.citationTraceDemoRef">Languages Are Still a Major Barrier to Global Science. PLOS Biology. DOI: 10.1371/journal.pbio.2000933.</span></p>
+                  </li>
+                </ol>
               </div>
             </div>
           </div>

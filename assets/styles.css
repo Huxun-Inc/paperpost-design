@@ -1069,7 +1069,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-sm);
-  margin-top: var(--space-xl);
+  margin: var(--space-xl) 0;
   text-align: left;
 }
 
@@ -1132,41 +1132,7 @@ img {
 }
 
 .mission-desc-evidence {
-  margin-top: var(--space-md);
-}
-
-.mission-source-summary {
-  margin: 0 0 var(--space-sm);
-  font-size: var(--font-caption-size);
-  line-height: 1.7;
-  color: var(--ink-muted);
-}
-
-.mission-source-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-}
-
-.mission-source-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  padding: 0 14px;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
-  font-size: var(--font-micro-size);
-  font-weight: 700;
-  transition: border-color 180ms var(--ease-out), background 180ms var(--ease-out), transform 180ms var(--ease-out);
-}
-
-.mission-source-button:hover {
-  border-color: var(--line-strong);
-  background: var(--surface-hover);
-  transform: translateY(-1px);
+  margin-top: 0;
 }
 
 .mission-sources {
@@ -1219,6 +1185,134 @@ img {
   border: 1px solid var(--brand);
   border-radius: 50%;
   transform: translateY(-50%);
+}
+
+.citation-marker {
+  scroll-margin-top: 96px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.42em;
+  height: 1.42em;
+  margin: 0 0.16em;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--glass-bg-strong);
+  color: var(--brand-press);
+  font-size: 0.66em;
+  line-height: 1;
+  font-weight: 800;
+  vertical-align: super;
+  transform: translateY(-0.12em);
+  transition: border-color 160ms var(--ease-out), background 160ms var(--ease-out), color 160ms var(--ease-out);
+}
+
+.citation-marker:hover {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  color: var(--brand-press);
+}
+
+.citation-reference-list {
+  display: grid;
+  gap: var(--space-xs);
+  list-style: none;
+  counter-reset: citation-ref;
+}
+
+.citation-reference-item {
+  scroll-margin-top: 96px;
+  counter-increment: citation-ref;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-xs);
+  align-items: start;
+  padding: var(--space-sm);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  color: var(--ink-muted);
+}
+
+.citation-reference-item p {
+  margin: 0;
+  font-size: var(--font-caption-size);
+  line-height: 1.7;
+}
+
+.citation-reference-item p::before {
+  content: "[" counter(citation-ref) "] ";
+  color: var(--ink-muted);
+  font-family: var(--font-mono);
+  font-size: var(--font-micro-size);
+  font-weight: 800;
+}
+
+.citation-reference-item strong {
+  color: var(--ink);
+}
+
+.citation-back {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink-muted);
+  transition: border-color 160ms var(--ease-out), background 160ms var(--ease-out), color 160ms var(--ease-out), transform 160ms var(--ease-out);
+}
+
+.citation-back:hover,
+.citation-back:focus-visible {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  color: var(--brand-press);
+  transform: translateY(-1px);
+}
+
+.citation-source-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.35em;
+  color: var(--brand-press);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.citation-source-link:hover {
+  color: var(--brand);
+}
+
+.citation-demo {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.citation-demo p {
+  margin: 0;
+  color: var(--ink);
+  font-size: var(--font-body-sm-size);
+  line-height: 1.8;
+}
+
+.citation-marker:target,
+.citation-marker.is-target-pulse,
+.citation-reference-item:target,
+.citation-reference-item.is-target-pulse {
+  animation: citationTargetPulse 520ms var(--ease-out) 3;
+}
+
+@keyframes citationTargetPulse {
+  0%, 100% {
+    border-color: var(--line);
+    box-shadow: none;
+  }
+  45% {
+    border-color: var(--brand);
+    box-shadow: 0 0 0 5px color-mix(in srgb, var(--brand-soft) 72%, transparent);
+  }
 }
 
 .hero-points {
@@ -6366,12 +6460,8 @@ img {
     min-height: 0;
   }
 
-  .mission-source-actions {
-    flex-direction: column;
-  }
-
-  .mission-source-button {
-    width: 100%;
+  .citation-reference-item {
+    padding: var(--space-xs);
   }
 
   .section {

@@ -77,6 +77,11 @@
           const offset = navbarHeight + 16;
           const pos = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top: pos, behavior: 'smooth' });
+          window.history.pushState(null, '', href);
+          target.classList.remove('is-target-pulse');
+          void target.offsetWidth;
+          target.classList.add('is-target-pulse');
+          window.setTimeout(() => target.classList.remove('is-target-pulse'), 1800);
         }
       });
     });
