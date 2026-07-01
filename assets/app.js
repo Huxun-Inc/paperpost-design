@@ -4,7 +4,7 @@
 
   function initTheme() {
     // 优先使用用户保存的主题，否则跟随系统
-    const saved = localStorage.getItem('paperdaily-theme');
+    const saved = localStorage.getItem('PaperPost-theme');
     if (saved) {
       applyTheme(saved);
     } else {
@@ -14,7 +14,7 @@
 
     // 监听系统主题变化（仅当用户未手动设置时）
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      const saved = localStorage.getItem('paperdaily-theme');
+      const saved = localStorage.getItem('PaperPost-theme');
       if (!saved) {
         applyTheme(e.matches ? 'dark' : 'light');
       }
@@ -31,7 +31,7 @@
 
   function applyTheme(theme) {
     root.dataset.theme = theme;
-    localStorage.setItem('paperdaily-theme', theme);
+    localStorage.setItem('PaperPost-theme', theme);
     updateThemeColor(theme);
   }
 
@@ -45,7 +45,7 @@
   }
 
   function initFontSize() {
-    const saved = localStorage.getItem('paperdaily-font-size') || 'medium';
+    const saved = localStorage.getItem('PaperPost-font-size') || 'medium';
     applyFontSize(saved);
 
     const buttons = document.querySelectorAll('.font-size-btn');
@@ -59,7 +59,7 @@
 
   function applyFontSize(size) {
     root.dataset.fontSize = size;
-    localStorage.setItem('paperdaily-font-size', size);
+    localStorage.setItem('PaperPost-font-size', size);
     document.querySelectorAll('.font-size-btn').forEach(btn => {
       btn.classList.toggle('is-active', btn.dataset.fontSize === size);
     });
@@ -448,7 +448,7 @@
     if (typeof i18next === 'undefined') return;
 
     const languageSelect = document.getElementById('languageSelect');
-    const savedLanguage = localStorage.getItem('paperdaily-language');
+    const savedLanguage = localStorage.getItem('PaperPost-language');
 
     i18next
       .use(i18nextHttpBackend)
@@ -537,7 +537,7 @@
           updateContent();
           document.documentElement.lang = nextLanguage;
           document.documentElement.dir = nextLanguage === 'ar' ? 'rtl' : 'ltr';
-          localStorage.setItem('paperdaily-language', nextLanguage);
+          localStorage.setItem('PaperPost-language', nextLanguage);
         });
       });
     }
@@ -780,7 +780,7 @@
             <div class="mini-desktop-sidebar">
               <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding: 0 4px;">
                 <div style="width: 28px; height: 28px; background: var(--brand); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 12px;">S</div>
-                <div style="font-size: 13px; font-weight: 700; color: var(--ink);">ScholarDaily</div>
+                <div style="font-size: 13px; font-weight: 700; color: var(--ink);">PaperPost</div>
               </div>
               <div style="font-size: 10px; font-weight: 600; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; padding: 0 4px;">${pt('desktopFeedChannels', '研究频道')}</div>
               <div class="mini-desktop-nav-item is-active"><i class="ph ph-sparkle"></i> ${pt('desktopFeedNavToday', '今日简报')}</div>
@@ -855,7 +855,7 @@
               </div>
             </div>
             <div class="mini-split-right">
-              <h4>${pt('desktopAuthLoginTitle', '登录 ScholarDaily')}</h4>
+              <h4>${pt('desktopAuthLoginTitle', '登录 PaperPost')}</h4>
               <p>${pt('desktopAuthLoginSubtitle', '继续你的收藏、推荐画像和阅读进度。')}</p>
               <div class="mini-input-group">
                 <label>${pt('desktopAuthEmailLabel', '邮箱')}</label>
@@ -1142,7 +1142,7 @@
                 <div style="width: 12px; height: 12px; border-radius: 50%; background: #febc2e;"></div>
                 <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
               </div>
-              <div style="flex: 1; text-align: center; font-size: 13px; font-weight: 600; color: var(--ink);">PaperDaily</div>
+              <div style="flex: 1; text-align: center; font-size: 13px; font-weight: 600; color: var(--ink);">PaperPost</div>
               <div style="width: 60px;"></div>
             </div>
             <div style="flex: 1; display: flex;">
