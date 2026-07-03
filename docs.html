@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body data-page="docs">
-    <a class="skip-link" href="#docsMain" data-i18n="docs.skipToMain">跳转到主要内容</a>
+    <a class="skip-link" href="#docsMain" data-i18n="docs.skipToMain"></a>
 
     <header class="topbar">
       <div class="topbar-inner">
@@ -28,15 +28,15 @@
         <div class="toolbar">
           <button class="toolbar-button mobile-only" id="sidebarToggle" type="button" aria-expanded="false" aria-controls="docsSidebar">
             <i class="ph ph-list"></i>
-            <span data-i18n="docs.menu">目录</span>
+            <span data-i18n="docs.menu"></span>
           </button>
           <button class="toolbar-button settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="toolbarSettings">
             <i class="ph ph-gear-six"></i>
-            <span data-i18n="docs.settings">设置</span>
+            <span data-i18n="docs.settings"></span>
           </button>
           <div class="toolbar-settings" id="toolbarSettings">
             <label class="toolbar-control">
-              <span data-i18n="docs.languageLabel">语言</span>
+              <span data-i18n="docs.languageLabel"></span>
               <select id="languageSelect" data-i18n-aria-label="docs.language" aria-label="语言">
                 <option value="zh">中文</option>
                 <option value="en">English</option>
@@ -44,7 +44,7 @@
               </select>
             </label>
             <div class="toolbar-control">
-              <span data-i18n="docs.fontLabel">字号</span>
+              <span data-i18n="docs.fontLabel"></span>
               <div class="font-size-buttons" role="group" data-i18n-aria-label="docs.fontSize" aria-label="字号">
                 <button type="button" class="font-size-btn" data-font-size="small" data-i18n-aria-label="docs.fontSizeSmall" aria-label="小号字体">
                   <span class="fs-icon-sm">A</span>
@@ -74,21 +74,21 @@
           </div>
 
           <details open data-nav-group>
-            <summary data-i18n="docs.groupStart">开始</summary>
-            <a href="#intro" data-nav-item data-i18n="docs.navIntro">站点说明</a>
+            <summary data-i18n="docs.groupStart"></summary>
+            <a href="#intro" data-nav-item data-i18n="docs.navIntro"></a>
           </details>
 
           <details open data-nav-group>
-            <summary data-i18n="docs.groupPhilosophy">设计哲学</summary>
-            <a href="#philosophy-core" data-nav-item data-i18n="docs.navPhilosophy">三个核心</a>
-            <a href="#tokens-radius" data-nav-item data-i18n="docs.navRadius">圆角规范</a>
-            <a href="#tokens-typography" data-nav-item data-i18n="docs.navTypography">字体排版</a>
-            <a href="#tokens-colors" data-nav-item data-i18n="docs.navColors">主题色彩</a>
-            <a href="#accessibility" data-nav-item data-i18n="docs.navAccessibility">无障碍阅读</a>
+            <summary data-i18n="docs.groupPhilosophy"></summary>
+            <a href="#philosophy-core" data-nav-item data-i18n="docs.navPhilosophy"></a>
+            <a href="#tokens-radius" data-nav-item data-i18n="docs.navRadius"></a>
+            <a href="#tokens-typography" data-nav-item data-i18n="docs.navTypography"></a>
+            <a href="#tokens-colors" data-nav-item data-i18n="docs.navColors"></a>
+            <a href="#accessibility" data-nav-item data-i18n="docs.navAccessibility"></a>
           </details>
 
           <details open data-nav-group>
-            <summary data-i18n="docs.groupComponents">Components</summary>
+            <summary data-i18n="docs.groupComponents"></summary>
             <a href="#components-paper-card" data-nav-item>Paper Card</a>
             <a href="#components-summary" data-nav-item>Summary Block</a>
             <a href="#components-text-toolbar" data-nav-item>Text Toolbar</a>
@@ -113,72 +113,70 @@
           </details>
 
           <details open data-nav-group>
-            <summary data-i18n="docs.groupIcons">图标库</summary>
-            <a href="#icon-system" data-nav-item data-i18n="docs.navIcons">图标浏览器</a>
+            <summary data-i18n="docs.groupIcons"></summary>
+            <a href="#icon-system" data-nav-item data-i18n="docs.navIcons"></a>
           </details>
 
           <details open data-nav-group>
-            <summary data-i18n="docs.groupPages">页面案例</summary>
-            <a href="#pages-feed" data-nav-item data-i18n="docs.navFeedPage">Feed Page</a>
-            <a href="#pages-detail" data-nav-item data-i18n="docs.navDetailPage">Detail Page</a>
-            <a href="#pages-copilot" data-nav-item data-i18n="docs.navCopilotPage">Research Copilot</a>
-            <a href="#pages-onboarding" data-nav-item data-i18n="docs.navOnboardingPage">Onboarding</a>
+            <summary data-i18n="docs.groupPages"></summary>
+            <a href="#pages-feed" data-nav-item data-i18n="docs.navFeedPage"></a>
+            <a href="#pages-detail" data-nav-item data-i18n="docs.navDetailPage"></a>
+            <a href="#pages-copilot" data-nav-item data-i18n="docs.navCopilotPage"></a>
+            <a href="#pages-onboarding" data-nav-item data-i18n="docs.navOnboardingPage"></a>
           </details>
         </div>
       </aside>
 
       <main class="docs-main" id="docsMain">
         <section class="doc-hero" id="intro">
-          <p class="eyebrow" data-i18n="docs.heroEyebrow">Design Guidelines</p>
-          <h1 data-i18n="docs.heroTitle">为研究者打造的高质量论文信息流</h1>
-          <p class="hero-text" data-i18n="docs.heroCopy">
-            PaperPost 面向每天需要追踪前沿论文、会议动态与研究趋势的用户，将复杂的学术信息组织成清晰、可信、可持续浏览的信息体验。精准推荐、实干 AI、舒服交互，让前沿研究像一款精心策划的知识杂志一样自然、克制、好读。
-          </p>
+          <p class="eyebrow" data-i18n="docs.heroEyebrow"></p>
+          <h1 data-i18n="docs.heroTitle"></h1>
+          <p class="hero-text" data-i18n="docs.heroCopy"></p>
         </section>
 
         <section class="doc-section" id="philosophy-core">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.philosophyEyebrow">Philosophy</p>
-            <h2 data-i18n="docs.philosophyTitle">设计哲学：三个核心</h2>
-            <p data-i18n="docs.philosophyDesc">PaperPost 面向每天需要追踪前沿论文、会议动态与研究趋势的用户，将复杂的学术信息组织成清晰、可信、可持续浏览的信息体验。</p>
+            <p class="eyebrow" data-i18n="docs.philosophyEyebrow"></p>
+            <h2 data-i18n="docs.philosophyTitle"></h2>
+            <p data-i18n="docs.philosophyDesc"></p>
           </div>
           <div class="a11y-grid cols-3">
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-target"></i>
               </div>
-              <h3 data-i18n="docs.ruleOneTitle">精准推荐</h3>
-              <p data-i18n="docs.ruleOneCopy">让用户每天直接看到与自己研究方向、兴趣领域和阅读习惯相关的高价值内容，无需在海量论文中反复搜索。</p>
+              <h3 data-i18n="docs.ruleOneTitle"></h3>
+              <p data-i18n="docs.ruleOneCopy"></p>
             </article>
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-sparkle"></i>
               </div>
-              <h3 data-i18n="docs.ruleTwoTitle">实干 AI</h3>
-              <p data-i18n="docs.ruleTwoCopy">AI 服务于真实研究场景：提炼论文重点、解释方法贡献、生成速读摘要，辅助用户判断是否值得深入阅读。</p>
+              <h3 data-i18n="docs.ruleTwoTitle"></h3>
+              <p data-i18n="docs.ruleTwoCopy"></p>
             </article>
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-heart"></i>
               </div>
-              <h3 data-i18n="docs.ruleThreeTitle">舒服交互</h3>
-              <p data-i18n="docs.ruleThreeCopy">界面保持克制、清晰、顺滑。浏览、阅读、收藏、继续阅读和方向追踪一气呵成，让研究信息像日常内容消费一样自然进入工作流。</p>
+              <h3 data-i18n="docs.ruleThreeTitle"></h3>
+              <p data-i18n="docs.ruleThreeCopy"></p>
             </article>
           </div>
         </section>
 
         <section class="doc-section" id="tokens-radius">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.philosophyEyebrow">设计哲学</p>
-            <h2 data-i18n="docs.radiusTitle">圆角规范</h2>
-            <p data-i18n="docs.radiusDesc">圆角是 PaperPost Design 亲和力的核心来源。用柔软的曲线对冲学术内容的严肃感，让研究信息的消费体验更轻盈、更友好。</p>
+            <p class="eyebrow" data-i18n="docs.philosophyEyebrow"></p>
+            <h2 data-i18n="docs.radiusTitle"></h2>
+            <p data-i18n="docs.radiusDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.radiusRuleOne"><strong>亲和力优先</strong>：大圆角是 PaperPost 的视觉基因，用柔软的曲线建立亲和、灵动、不尖锐的产品性格。</li>
-                <li data-i18n="docs.radiusRuleTwo"><strong>层级对应</strong>：元素越突出、越可交互，圆角越大；容器类元素圆角适中，形成清晰的视觉层次。</li>
+                <li data-i18n="docs.radiusRuleOne"></li>
+                <li data-i18n="docs.radiusRuleTwo"></li>
               </ul>
             </div>
 
@@ -187,22 +185,22 @@
                 <div class="radius-item">
                   <div class="radius-preview radius-lg"></div>
                   <div class="radius-info">
-                    <span class="radius-label" data-i18n="docs.radiusPrimary">主按钮</span>
+                    <span class="radius-label" data-i18n="docs.radiusPrimary"></span>
                     <span class="radius-value">1rem · radius-lg</span>
                   </div>
                 </div>
                 <div class="radius-item">
                   <div class="radius-preview radius-md"></div>
                   <div class="radius-info">
-                    <span class="radius-label" data-i18n="docs.radiusSecondary">次按钮</span>
+                    <span class="radius-label" data-i18n="docs.radiusSecondary"></span>
                     <span class="radius-value">0.75rem · radius-md</span>
                   </div>
                 </div>
                 <div class="radius-item">
                   <div class="radius-preview radius-pill"></div>
                   <div class="radius-info">
-                    <span class="radius-label" data-i18n="docs.radiusTab">Tab 标签</span>
-                    <span class="radius-value" data-i18n="docs.radiusPill">pill · 胶囊形</span>
+                    <span class="radius-label" data-i18n="docs.radiusTab"></span>
+                    <span class="radius-value" data-i18n="docs.radiusPill"></span>
                   </div>
                 </div>
               </div>
@@ -212,9 +210,9 @@
 
         <section class="doc-section" id="tokens-typography">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.philosophyEyebrow">设计哲学</p>
-            <h2 data-i18n="docs.typographyTitle">字体排版</h2>
-            <p data-i18n="docs.typographyDesc">低干扰排版是 PaperPost 的阅读底色。字号层级克制、字重对比分明、行高舒适透气——让论文内容本身成为主角，排版只是安静的支撑。</p>
+            <p class="eyebrow" data-i18n="docs.philosophyEyebrow"></p>
+            <h2 data-i18n="docs.typographyTitle"></h2>
+            <p data-i18n="docs.typographyDesc"></p>
           </div>
 
           <div class="a11y-grid cols-3">
@@ -222,69 +220,69 @@
               <div class="a11y-icon">
                 <i class="ph ph-text-h-three"></i>
               </div>
-              <h3 data-i18n="docs.typographyRuleOneTitle">层级克制</h3>
-              <p data-i18n="docs.typographyRuleOneDesc">只有 Display / Heading / Body / Caption 四个层级，避免字号过多造成视觉噪音。大标题拉开气场，正文安静可读，辅助信息不抢戏。</p>
+              <h3 data-i18n="docs.typographyRuleOneTitle"></h3>
+              <p data-i18n="docs.typographyRuleOneDesc"></p>
             </article>
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-text-b"></i>
               </div>
-              <h3 data-i18n="docs.typographyRuleTwoTitle">字重分明</h3>
-              <p data-i18n="docs.typographyRuleTwoDesc">标题用 700-800 粗体建立层级，正文用 400 常规保证长文舒适，辅助文字用 500 中等保持清晰。对比明确但不刺眼。</p>
+              <h3 data-i18n="docs.typographyRuleTwoTitle"></h3>
+              <p data-i18n="docs.typographyRuleTwoDesc"></p>
             </article>
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-text-align-left"></i>
               </div>
-              <h3 data-i18n="docs.typographyRuleThreeTitle">行高合理</h3>
-              <p data-i18n="docs.typographyRuleThreeDesc">大标题行高紧凑（1.15）保证气场，正文行高宽松（1.60）保证长文阅读舒适度，小标题行高适中（1.30-1.35）兼顾密度与呼吸感。</p>
+              <h3 data-i18n="docs.typographyRuleThreeTitle"></h3>
+              <p data-i18n="docs.typographyRuleThreeDesc"></p>
             </article>
           </div>
 
           <div class="typo-showcase">
             <div class="typo-showcase-head">
-              <span data-i18n="docs.typoShowcaseLabel">Typography Scale</span>
-              <strong data-i18n="docs.typoShowcaseTitle">字号对照</strong>
+              <span data-i18n="docs.typoShowcaseLabel"></span>
+              <strong data-i18n="docs.typoShowcaseTitle"></strong>
             </div>
             <div class="font-family-section">
               <div class="font-family-item">
                 <div class="font-family-sample" style="font-family: var(--font-display);">PaperPost · 论文邮报</div>
                 <div class="font-family-info">
-                  <strong data-i18n="docs.fontDisplayTitle">标题字体</strong>
+                  <strong data-i18n="docs.fontDisplayTitle"></strong>
                   <span>Noto Sans SC / PingFang SC / Inter</span>
                 </div>
               </div>
               <div class="font-family-item">
                 <div class="font-family-sample" style="font-family: var(--font-ui);">PaperPost · 论文邮报</div>
                 <div class="font-family-info">
-                  <strong data-i18n="docs.fontUiTitle">正文字体</strong>
+                  <strong data-i18n="docs.fontUiTitle"></strong>
                   <span>System UI / Noto Sans SC / Inter</span>
                 </div>
               </div>
             </div>
             <div class="typography-scale is-large">
               <div class="type-row is-hero">
-                <strong data-i18n="docs.typeDisplayHero">Display Hero</strong>
+                <strong data-i18n="docs.typeDisplayHero"></strong>
                 <span>48px / 800 / 1.15</span>
               </div>
               <div class="type-row is-display">
-                <strong data-i18n="docs.typeDisplaySecondary">Display Secondary</strong>
+                <strong data-i18n="docs.typeDisplaySecondary"></strong>
                 <span>42px / 800 / 1.15</span>
               </div>
               <div class="type-row is-heading">
-                <strong data-i18n="docs.typeSectionHeading">Section Heading</strong>
+                <strong data-i18n="docs.typeSectionHeading"></strong>
                 <span>28px / 700 / 1.30</span>
               </div>
               <div class="type-row is-subheading">
-                <strong data-i18n="docs.typeSubheadingLarge">Sub-heading Large</strong>
+                <strong data-i18n="docs.typeSubheadingLarge"></strong>
                 <span>22px / 700 / 1.35</span>
               </div>
               <div class="type-row is-body">
-                <strong data-i18n="docs.typeBody">Body Text</strong>
+                <strong data-i18n="docs.typeBody"></strong>
                 <span>15px / 400 / 1.60</span>
               </div>
               <div class="type-row is-caption">
-                <strong data-i18n="docs.typeCaption">Caption</strong>
+                <strong data-i18n="docs.typeCaption"></strong>
                 <span>12px / 500 / 1.50</span>
               </div>
             </div>
@@ -293,9 +291,9 @@
 
         <section class="doc-section" id="tokens-colors">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.philosophyEyebrow">设计哲学</p>
-            <h2 data-i18n="docs.colorsTitle">主题色彩</h2>
-            <p data-i18n="docs.colorsDesc">底色中性克制，品牌色精准落点，语义色各司其职。不靠彩色撑气氛，内容本身是主角。深海青与冰海青只在关键处落笔。</p>
+            <p class="eyebrow" data-i18n="docs.philosophyEyebrow"></p>
+            <h2 data-i18n="docs.colorsTitle"></h2>
+            <p data-i18n="docs.colorsDesc"></p>
           </div>
 
           <div class="a11y-grid cols-3">
@@ -303,104 +301,104 @@
               <div class="a11y-icon">
                 <i class="ph ph-squares-four"></i>
               </div>
-              <h3 data-i18n="docs.colorsRuleOneTitle">底色中性</h3>
-              <p data-i18n="docs.colorsRuleOneDesc">页面主背景是纸白与淡灰，不靠彩色撑气氛。内容本身是主角，背景只是安静的画布。</p>
+              <h3 data-i18n="docs.colorsRuleOneTitle"></h3>
+              <p data-i18n="docs.colorsRuleOneDesc"></p>
             </article>
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-paint-brush"></i>
               </div>
-              <h3 data-i18n="docs.colorsRuleTwoTitle">品牌克制</h3>
-              <p data-i18n="docs.colorsRuleTwoDesc">深海青与冰海青只用于品牌触点和关键行动，不铺满大区域。出现即有意义，不滥用不失重。</p>
+              <h3 data-i18n="docs.colorsRuleTwoTitle"></h3>
+              <p data-i18n="docs.colorsRuleTwoDesc"></p>
             </article>
             <article class="a11y-card">
               <div class="a11y-icon">
                 <i class="ph ph-traffic-signal"></i>
               </div>
-              <h3 data-i18n="docs.colorsRuleThreeTitle">语义清晰</h3>
-              <p data-i18n="docs.colorsRuleThreeDesc">建议用苔绿、提醒用赭黄、风险用校对红，各司其职不混用。色彩即信号，用色即表达。</p>
+              <h3 data-i18n="docs.colorsRuleThreeTitle"></h3>
+              <p data-i18n="docs.colorsRuleThreeDesc"></p>
             </article>
           </div>
 
           <div class="palette-showcase">
             <div class="palette-showcase-group">
-              <h4 data-i18n="docs.colorGroupPrimary">主色</h4>
+              <h4 data-i18n="docs.colorGroupPrimary"></h4>
               <div class="color-card-grid is-large">
                 <div class="color-card">
                   <span class="color-swatch" style="background: #1F3238;"></span>
-                  <strong data-i18n="docs.colorInk">墨黑</strong>
+                  <strong data-i18n="docs.colorInk"></strong>
                   <code>#1F3238</code>
-                  <p data-i18n="docs.colorInkDesc">正文与标题</p>
+                  <p data-i18n="docs.colorInkDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #FFFFFF;"></span>
-                  <strong data-i18n="docs.colorWhite">纸白</strong>
+                  <strong data-i18n="docs.colorWhite"></strong>
                   <code>#FFFFFF</code>
-                  <p data-i18n="docs.colorWhiteDesc">页面主背景</p>
+                  <p data-i18n="docs.colorWhiteDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #264653;"></span>
-                  <strong data-i18n="docs.colorBrand">深海青</strong>
+                  <strong data-i18n="docs.colorBrand"></strong>
                   <code>#264653</code>
-                  <p data-i18n="docs.colorBrandDesc">品牌主色</p>
+                  <p data-i18n="docs.colorBrandDesc"></p>
                 </div>
               </div>
             </div>
             <div class="palette-showcase-group">
-              <h4 data-i18n="docs.colorGroupNeutral">中性色</h4>
+              <h4 data-i18n="docs.colorGroupNeutral"></h4>
               <div class="color-card-grid is-large">
                 <div class="color-card">
                   <span class="color-swatch" style="background: #F7F7F5;"></span>
-                  <strong data-i18n="docs.colorPage">页面灰</strong>
+                  <strong data-i18n="docs.colorPage"></strong>
                   <code>#F7F7F5</code>
-                  <p data-i18n="docs.colorPageDesc">淡灰底色</p>
+                  <p data-i18n="docs.colorPageDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #EDEDEA;"></span>
-                  <strong data-i18n="docs.colorLine">分割线</strong>
+                  <strong data-i18n="docs.colorLine"></strong>
                   <code>#EDEDEA</code>
-                  <p data-i18n="docs.colorLineDesc">分割线与描边</p>
+                  <p data-i18n="docs.colorLineDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #6B716F;"></span>
-                  <strong data-i18n="docs.colorMuted">辅助灰</strong>
+                  <strong data-i18n="docs.colorMuted"></strong>
                   <code>#6B716F</code>
-                  <p data-i18n="docs.colorMutedDesc">辅助文字</p>
+                  <p data-i18n="docs.colorMutedDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #FFF9E8;"></span>
-                  <strong data-i18n="docs.colorWarm">报纸黄</strong>
+                  <strong data-i18n="docs.colorWarm"></strong>
                   <code>#FFF9E8</code>
-                  <p data-i18n="docs.colorWarmDesc">日报高亮底</p>
+                  <p data-i18n="docs.colorWarmDesc"></p>
                 </div>
               </div>
             </div>
             <div class="palette-showcase-group">
-              <h4 data-i18n="docs.colorGroupAccent">语义强调</h4>
+              <h4 data-i18n="docs.colorGroupAccent"></h4>
               <div class="color-card-grid is-large">
                 <div class="color-card">
                   <span class="color-swatch" style="background: #A8DDDC;"></span>
-                  <strong data-i18n="docs.colorAqua">冰海青</strong>
+                  <strong data-i18n="docs.colorAqua"></strong>
                   <code>#A8DDDC</code>
-                  <p data-i18n="docs.colorAquaDesc">成功与信息态</p>
+                  <p data-i18n="docs.colorAquaDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #6F7B52;"></span>
-                  <strong data-i18n="docs.colorMoss">苔藓绿</strong>
+                  <strong data-i18n="docs.colorMoss"></strong>
                   <code>#6F7B52</code>
-                  <p data-i18n="docs.colorMossDesc">建议与确认</p>
+                  <p data-i18n="docs.colorMossDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #C99B3B;"></span>
-                  <strong data-i18n="docs.colorOchre">赭石黄</strong>
+                  <strong data-i18n="docs.colorOchre"></strong>
                   <code>#C99B3B</code>
-                  <p data-i18n="docs.colorOchreDesc">提醒</p>
+                  <p data-i18n="docs.colorOchreDesc"></p>
                 </div>
                 <div class="color-card">
                   <span class="color-swatch" style="background: #B75D46;"></span>
-                  <strong data-i18n="docs.colorProof">校对红</strong>
+                  <strong data-i18n="docs.colorProof"></strong>
                   <code>#B75D46</code>
-                  <p data-i18n="docs.colorProofDesc">风险与校样</p>
+                  <p data-i18n="docs.colorProofDesc"></p>
                 </div>
               </div>
             </div>
@@ -409,18 +407,18 @@
 
         <section class="doc-section" id="accessibility">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.philosophyEyebrow">设计哲学</p>
-            <h2 data-i18n="docs.accessibilityTitle">无障碍阅读</h2>
-            <p data-i18n="docs.accessibilityDesc">PaperPost 把无障碍视为产品的基础能力，它包含两个维度：i18n（国际化，让不同语言和文字系统的用户都能平等使用）与 a11y（可访问性，让不同能力和使用场景的用户都能顺畅阅读）。</p>
+            <p class="eyebrow" data-i18n="docs.philosophyEyebrow"></p>
+            <h2 data-i18n="docs.accessibilityTitle"></h2>
+            <p data-i18n="docs.accessibilityDesc"></p>
           </div>
 
           <div class="doc-grid doc-grid-single accessibility-block">
             <div class="doc-copy">
-              <h3 data-i18n="docs.a11yI18nTitle">i18n · 国际化</h3>
+              <h3 data-i18n="docs.a11yI18nTitle"></h3>
               <ul class="doc-list">
-                <li data-i18n="docs.a11yI18nRuleOne"><strong>多语言覆盖</strong>：优先覆盖全球使用人口较多的语言，同时支持重要地区语言与不同文字系统。</li>
-                <li data-i18n="docs.a11yI18nRuleTwo"><strong>RTL 完整适配</strong>：阿拉伯语、乌尔都语等 RTL 语言从页面方向、导航位置到信息流动线全部正确镜像，混排内容不乱。</li>
-                <li data-i18n="docs.a11yI18nRuleThree"><strong>文字系统适配</strong>：中日泰等无空格语言的换行与截断、越南语泰语等音调语言的行高与清晰度单独优化。</li>
+                <li data-i18n="docs.a11yI18nRuleOne"></li>
+                <li data-i18n="docs.a11yI18nRuleTwo"></li>
+                <li data-i18n="docs.a11yI18nRuleThree"></li>
               </ul>
               <div class="a11y-tags">
                 <span>English</span>
@@ -438,61 +436,61 @@
                 <span>Português</span>
                 <span>Indonesia</span>
                 <span>اردو</span>
-                <span data-i18n="docs.a11yMore">……</span>
+                <span data-i18n="docs.a11yMore"></span>
               </div>
             </div>
           </div>
 
           <div class="accessibility-block accessibility-block-separated">
-            <h3 data-i18n="docs.a11yA11yTitle">a11y · 可访问性</h3>
+            <h3 data-i18n="docs.a11yA11yTitle"></h3>
             <ul class="doc-list">
-              <li data-i18n="docs.a11yA11yRuleOne"><strong>字号与对比度</strong>：全局字号可缩放，正文对比度满足 WCAG AA 标准，重要操作满足 AAA，色盲友好配色。</li>
-              <li data-i18n="docs.a11yA11yRuleTwo"><strong>键盘与读屏</strong>：完整键盘导航，焦点环清晰可见，语义化 HTML 结构，ARIA 标签准确，屏幕阅读器流畅朗读。</li>
-              <li data-i18n="docs.a11yA11yRuleThree"><strong>动效可控</strong>：尊重系统"减少动效"偏好，装饰性动画可关闭，关键反馈信息同时提供文字和视觉两种通道。</li>
+              <li data-i18n="docs.a11yA11yRuleOne"></li>
+              <li data-i18n="docs.a11yA11yRuleTwo"></li>
+              <li data-i18n="docs.a11yA11yRuleThree"></li>
             </ul>
           </div>
 
           <div class="a11y-ref">
-            <p class="eyebrow" data-i18n="docs.refEyebrow">Reference</p>
-            <h3 data-i18n="docs.refTitle">参考标准</h3>
-            <p data-i18n="docs.refDesc">遵循 W3C Internationalization 与 Web Accessibility 相关规范，确保国际化与无障碍设计的正确实现。</p>
+            <p class="eyebrow" data-i18n="docs.refEyebrow"></p>
+            <h3 data-i18n="docs.refTitle"></h3>
+            <p data-i18n="docs.refDesc"></p>
             <ul class="a11y-ref-list">
-              <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">WCAG 2.2</a> — <span data-i18n="docs.refWcagDesc">Web Content Accessibility Guidelines 无障碍内容指南</span></li>
-              <li><a href="https://www.w3.org/International/questions/qa-html-dir.en.html" target="_blank" rel="noopener" data-i18n="docs.refRtlTitle">RTL 与 dir 属性</a> — <span data-i18n="docs.refRtlDesc">右到左文字的基础文本方向设置</span></li>
-              <li><a href="https://www.w3.org/TR/i18n-html-tech-bidi/" target="_blank" rel="noopener">Handling Right-to-left Scripts</a> — <span data-i18n="docs.refBidiDesc">HTML/CSS 中处理 RTL、双向文本</span></li>
-              <li><a href="https://www.w3.org/International/articles/typography/linebreak.en.html" target="_blank" rel="noopener">Approaches to Line Breaking</a> — <span data-i18n="docs.refLinebreakDesc">不同文字系统的换行与排版差异</span></li>
+              <li><a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener">WCAG 2.2</a> — <span data-i18n="docs.refWcagDesc"></span></li>
+              <li><a href="https://www.w3.org/International/questions/qa-html-dir.en.html" target="_blank" rel="noopener" data-i18n="docs.refRtlTitle"></a> — <span data-i18n="docs.refRtlDesc"></span></li>
+              <li><a href="https://www.w3.org/TR/i18n-html-tech-bidi/" target="_blank" rel="noopener">Handling Right-to-left Scripts</a> — <span data-i18n="docs.refBidiDesc"></span></li>
+              <li><a href="https://www.w3.org/International/articles/typography/linebreak.en.html" target="_blank" rel="noopener">Approaches to Line Breaking</a> — <span data-i18n="docs.refLinebreakDesc"></span></li>
             </ul>
           </div>
         </section>
 
         <section class="doc-section" id="components-paper-card">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2 data-i18n="docs.paperCardTitle">Paper Card</h2>
-            <p data-i18n="docs.paperCardCopy">用一张卡片解决"值不值得读、值不值得存、为什么推给我"。</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
+            <h2 data-i18n="docs.paperCardTitle"></h2>
+            <p data-i18n="docs.paperCardCopy"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.paperCardRuleOne">标题最多 2 行，摘要最多 3 行。</li>
-                <li data-i18n="docs.paperCardRuleTwo">推荐理由放在来源行，不单独抢视觉。</li>
-                <li data-i18n="docs.paperCardRuleThree">收藏、已读、更多类似都应就地反馈。</li>
+                <li data-i18n="docs.paperCardRuleOne"></li>
+                <li data-i18n="docs.paperCardRuleTwo"></li>
+                <li data-i18n="docs.paperCardRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <div class="demo-toolbar">
-                <button class="chip-button is-active" type="button" data-paper-state="default" data-i18n="docs.paperCardStateDefault">Default</button>
-                <button class="chip-button" type="button" data-paper-state="read" data-i18n="docs.paperCardStateRead">Read</button>
-                <button class="chip-button" type="button" data-paper-state="saved" data-i18n="docs.paperCardStateSaved">Saved</button>
+                <button class="chip-button is-active" type="button" data-paper-state="default" data-i18n="docs.paperCardStateDefault"></button>
+                <button class="chip-button" type="button" data-paper-state="read" data-i18n="docs.paperCardStateRead"></button>
+                <button class="chip-button" type="button" data-paper-state="saved" data-i18n="docs.paperCardStateSaved"></button>
               </div>
               <article class="paper-card-demo is-featured" id="paperCardDemo">
                 <div class="paper-card-rank">01</div>
                 <div class="paper-card-body">
-                  <p class="paper-card-source" data-i18n="docs.paperCardDemoSource">ArXiv AI · 因为你收藏了 reasoning</p>
+                  <p class="paper-card-source" data-i18n="docs.paperCardDemoSource"></p>
                   <h3>A new scaling law for reasoning in large language models</h3>
-                  <p class="paper-card-summary" data-i18n="docs.paperCardDemoCopy">更多高质量数据和算力会稳定提升 reasoning 表现，提升规律可预测。</p>
+                  <p class="paper-card-summary" data-i18n="docs.paperCardDemoCopy"></p>
                   <div class="token-row">
                     <span>reasoning</span>
                     <span>scaling</span>
@@ -509,28 +507,28 @@
 
         <section class="doc-section" id="components-summary">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2 data-i18n="docs.summaryTitleSection">Summary Block</h2>
-            <p data-i18n="docs.summaryCopy">用在详情页前半屏，把关键信息压成一眼能扫完的块。</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
+            <h2 data-i18n="docs.summaryTitleSection"></h2>
+            <p data-i18n="docs.summaryCopy"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.summaryRuleOne">正文 2 到 4 行，拒绝冗长段落。</li>
-                <li data-i18n="docs.summaryRuleTwo">高亮结论，不用高饱和大面积底色。</li>
-                <li data-i18n="docs.summaryRuleThree">允许切换简洁版和详细版。</li>
+                <li data-i18n="docs.summaryRuleOne"></li>
+                <li data-i18n="docs.summaryRuleTwo"></li>
+                <li data-i18n="docs.summaryRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <div class="demo-toolbar">
-                <button class="chip-button is-active" type="button" data-summary-mode="brief" data-i18n="docs.summaryModeBrief">Brief</button>
-                <button class="chip-button" type="button" data-summary-mode="detail" data-i18n="docs.summaryModeDetail">Detail</button>
+                <button class="chip-button is-active" type="button" data-summary-mode="brief" data-i18n="docs.summaryModeBrief"></button>
+                <button class="chip-button" type="button" data-summary-mode="detail" data-i18n="docs.summaryModeDetail"></button>
               </div>
               <div class="summary-block" id="summaryBlockDemo">
-                <strong data-i18n="docs.summaryTitle">Key Finding</strong>
-                <p data-summary-text data-i18n="docs.summaryBrief">更多高质量数据和算力会稳定提升 reasoning 表现。</p>
+                <strong data-i18n="docs.summaryTitle"></strong>
+                <p data-summary-text data-i18n="docs.summaryBrief"></p>
               </div>
             </div>
           </div>
@@ -538,17 +536,17 @@
 
         <section class="doc-section" id="components-text-toolbar">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Text Toolbar</h2>
-            <p data-i18n="docs.textToolbarDesc">文本排版工具要像编辑器控件，不像营销按钮；使用熟悉图标，鼠标悬停再解释含义。</p>
+            <p data-i18n="docs.textToolbarDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.textToolbarRuleOne">排版动作使用熟悉图标，鼠标悬停再解释含义。</li>
-                <li data-i18n="docs.textToolbarRuleTwo">图标间距均匀，分组清晰，避免误触。</li>
-                <li data-i18n="docs.textToolbarRuleThree">激活态用轻底色反馈，不用强色块压住工具栏。</li>
+                <li data-i18n="docs.textToolbarRuleOne"></li>
+                <li data-i18n="docs.textToolbarRuleTwo"></li>
+                <li data-i18n="docs.textToolbarRuleThree"></li>
               </ul>
             </div>
 
@@ -568,17 +566,17 @@
 
         <section class="doc-section" id="components-buttons-callouts">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Buttons &amp; Callouts</h2>
-            <p data-i18n="docs.buttonsCalloutsDesc">重要按钮保持实体感，次级动作降低对比度；提示标签用轻玻璃底和细边框，避免整块高饱和色压住正文。</p>
+            <p data-i18n="docs.buttonsCalloutsDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.buttonsCalloutsRuleOne">重要按钮保持实体感，次级动作降低对比度，避免一排按钮全在抢注意力。</li>
-                <li data-i18n="docs.buttonsCalloutsRuleTwo">按钮图标与文字间距一致，点击区域充足。</li>
-                <li data-i18n="docs.buttonsCalloutsRuleThree">引用、Info、Warning、Tip 用同一套玻璃态标签，只靠左侧细线和图标区分语义。</li>
+                <li data-i18n="docs.buttonsCalloutsRuleOne"></li>
+                <li data-i18n="docs.buttonsCalloutsRuleTwo"></li>
+                <li data-i18n="docs.buttonsCalloutsRuleThree"></li>
               </ul>
             </div>
 
@@ -586,21 +584,21 @@
               <div class="demo-content">
                 <div class="btn-demo-section">
                   <div class="button-demo-row">
-                    <button class="btn btn-primary btn-md" type="button"><i class="ph ph-sparkle"></i><span data-i18n="docs.buttonGenerate">生成摘要</span></button>
-                    <button class="btn btn-secondary btn-md" type="button"><i class="ph ph-bookmark-simple"></i><span data-i18n="docs.buttonSave">收藏</span></button>
-                    <button class="btn btn-outline btn-md" type="button"><i class="ph ph-share-network"></i><span data-i18n="docs.buttonShare">分享</span></button>
-                    <button class="btn btn-ghost btn-md" type="button"><i class="ph ph-dots-three"></i><span data-i18n="docs.buttonMore">更多</span></button>
+                    <button class="btn btn-primary btn-md" type="button"><i class="ph ph-sparkle"></i><span data-i18n="docs.buttonGenerate"></span></button>
+                    <button class="btn btn-secondary btn-md" type="button"><i class="ph ph-bookmark-simple"></i><span data-i18n="docs.buttonSave"></span></button>
+                    <button class="btn btn-outline btn-md" type="button"><i class="ph ph-share-network"></i><span data-i18n="docs.buttonShare"></span></button>
+                    <button class="btn btn-ghost btn-md" type="button"><i class="ph ph-dots-three"></i><span data-i18n="docs.buttonMore"></span></button>
                   </div>
                   <div class="button-demo-row">
-                    <button class="btn btn-ghost btn-sm" type="button" data-i18n="docs.commonDialogCancel">稍后</button>
-                    <button class="btn btn-primary btn-sm" type="button" data-i18n="docs.commonDialogConfirm">保存并刷新</button>
+                    <button class="btn btn-ghost btn-sm" type="button" data-i18n="docs.commonDialogCancel"></button>
+                    <button class="btn btn-primary btn-sm" type="button" data-i18n="docs.commonDialogConfirm"></button>
                   </div>
                 </div>
                 <div class="callout-stack">
-                  <div class="callout-chip is-citation"><i class="ph ph-quotes"></i><span data-i18n="docs.calloutCitation">[1] 引用来自原文实验设置段落。</span></div>
-                  <div class="callout-chip is-info"><i class="ph ph-info"></i><span data-i18n="docs.calloutInfo">这个结论适用于 10B 到 100B 参数范围。</span></div>
-                  <div class="callout-chip is-warning"><i class="ph ph-warning"></i><span data-i18n="docs.calloutWarning">小样本外推需要谨慎。</span></div>
-                  <div class="callout-chip is-tip"><i class="ph ph-lightbulb"></i><span data-i18n="docs.calloutTip">可直接加入本周阅读队列。</span></div>
+                  <div class="callout-chip is-citation"><i class="ph ph-quotes"></i><span data-i18n="docs.calloutCitation"></span></div>
+                  <div class="callout-chip is-info"><i class="ph ph-info"></i><span data-i18n="docs.calloutInfo"></span></div>
+                  <div class="callout-chip is-warning"><i class="ph ph-warning"></i><span data-i18n="docs.calloutWarning"></span></div>
+                  <div class="callout-chip is-tip"><i class="ph ph-lightbulb"></i><span data-i18n="docs.calloutTip"></span></div>
                 </div>
               </div>
             </div>
@@ -609,17 +607,17 @@
 
         <section class="doc-section" id="components-citation-trace">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Citation Trace</h2>
-            <p data-i18n="docs.citationTraceDesc">用于论文阅读、AI 摘要和数据洞见中的可溯源引用：正文实心圆小标负责快速定位来源，参考条目的实心圆编号保持一致，句末返回按钮带用户回到被引用位置。</p>
+            <p data-i18n="docs.citationTraceDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.citationTraceRuleOne">正文引用小标使用实心圆数字，紧跟被支撑的数据、结论或判断，不单独占据一行。</li>
-                <li data-i18n="docs.citationTraceRuleTwo">点击正文小标跳到参考条目，目标条目轻闪一次；参考条目数字也使用同款实心圆，保持视觉对应。</li>
-                <li data-i18n="docs.citationTraceRuleThree">参考条目保留作者、年份、题名、出版物或机构、DOI / URL，并把返回按钮放在条目末尾，像脚注一样可回跳。</li>
+                <li data-i18n="docs.citationTraceRuleOne"></li>
+                <li data-i18n="docs.citationTraceRuleTwo"></li>
+                <li data-i18n="docs.citationTraceRuleThree"></li>
               </ul>
             </div>
 
@@ -627,11 +625,11 @@
               <div class="demo-content">
               <div class="citation-demo">
                 <p>
-                  <span data-i18n="docs.citationTraceDemoText">非英语研究成果在全球检索与综述中更容易被忽略，因此跨语言阅读不只是翻译功能，而是知识可达性的基础设施。</span><a id="doc-cite-trace-1" class="citation-marker" href="#doc-ref-trace-1" data-i18n-aria-label="docs.citationTraceJumpAria" aria-label="查看参考依据">1</a>
+                  <span data-i18n="docs.citationTraceDemoText"></span><a id="doc-cite-trace-1" class="citation-marker" href="#doc-ref-trace-1" data-i18n-aria-label="docs.citationTraceJumpAria" aria-label="查看参考依据">1</a>
                 </p>
                 <ol class="citation-reference-list">
                   <li class="citation-reference-item" id="doc-ref-trace-1">
-                    <p><strong data-i18n="docs.citationTraceDemoRefTitle">Amano et al. (2016).</strong> <span data-i18n="docs.citationTraceDemoRef">Languages Are Still a Major Barrier to Global Science. PLOS Biology. DOI: 10.1371/journal.pbio.2000933.</span> <a class="citation-back" href="#doc-cite-trace-1" data-i18n-aria-label="docs.citationTraceBackAria" aria-label="回到正文引用"><i class="ph ph-arrow-u-up-left"></i></a></p>
+                    <p><strong data-i18n="docs.citationTraceDemoRefTitle"></strong> <span data-i18n="docs.citationTraceDemoRef"></span> <a class="citation-back" href="#doc-cite-trace-1" data-i18n-aria-label="docs.citationTraceBackAria" aria-label="回到正文引用"><i class="ph ph-arrow-u-up-left"></i></a></p>
                   </li>
                 </ol>
               </div>
@@ -642,17 +640,17 @@
 
         <section class="doc-section" id="components-switch">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Switch</h2>
-            <p data-i18n="docs.switchDesc">圆角左右滑块用于明确的开关状态，适合偏好设置、通知开关和阅读辅助选项。</p>
+            <p data-i18n="docs.switchDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.switchRuleOne">开关只用于二元状态：开/关、启用/停用，不承载多选项。</li>
-                <li data-i18n="docs.switchRuleTwo">滑块左右移动，轨道颜色变化，状态不只依赖颜色。</li>
-                <li data-i18n="docs.switchRuleThree">标签写清楚被控制的设置，禁用态降低透明度但仍可读。</li>
+                <li data-i18n="docs.switchRuleOne"></li>
+                <li data-i18n="docs.switchRuleTwo"></li>
+                <li data-i18n="docs.switchRuleThree"></li>
               </ul>
             </div>
 
@@ -661,8 +659,8 @@
                 <div class="switch-demo-stack">
                   <div class="switch-demo-row">
                     <div class="switch-demo-copy">
-                      <strong data-i18n="docs.switchDemoDigest">每日简报</strong>
-                      <span data-i18n="docs.switchDemoDigestDesc">每天推送 5-12 篇高价值论文。</span>
+                      <strong data-i18n="docs.switchDemoDigest"></strong>
+                      <span data-i18n="docs.switchDemoDigestDesc"></span>
                     </div>
                     <button class="switch-demo is-on is-committed" type="button" role="switch" aria-checked="true">
                       <span></span>
@@ -670,8 +668,8 @@
                   </div>
                   <div class="switch-demo-row">
                     <div class="switch-demo-copy">
-                      <strong data-i18n="docs.switchDemoMotion">减少动效</strong>
-                      <span data-i18n="docs.switchDemoMotionDesc">降低装饰动画，保留必要反馈。</span>
+                      <strong data-i18n="docs.switchDemoMotion"></strong>
+                      <span data-i18n="docs.switchDemoMotionDesc"></span>
                     </div>
                     <button class="switch-demo" type="button" role="switch" aria-checked="false">
                       <span></span>
@@ -679,8 +677,8 @@
                   </div>
                   <div class="switch-demo-row is-disabled">
                     <div class="switch-demo-copy">
-                      <strong data-i18n="docs.switchDemoLocked">机构同步</strong>
-                      <span data-i18n="docs.switchDemoLockedDesc">由团队管理员统一配置。</span>
+                      <strong data-i18n="docs.switchDemoLocked"></strong>
+                      <span data-i18n="docs.switchDemoLockedDesc"></span>
                     </div>
                     <button class="switch-demo" type="button" role="switch" aria-checked="false" disabled>
                       <span></span>
@@ -688,8 +686,8 @@
                   </div>
                 </div>
                 <div class="switch-demo-actions">
-                  <button type="button" class="btn btn-sm btn-ghost switch-cancel-btn" data-i18n="docs.switchCancel">取消</button>
-                  <button type="button" class="btn btn-sm btn-primary switch-save-btn" data-i18n="docs.switchSave">保存</button>
+                  <button type="button" class="btn btn-sm btn-ghost switch-cancel-btn" data-i18n="docs.switchCancel"></button>
+                  <button type="button" class="btn btn-sm btn-primary switch-save-btn" data-i18n="docs.switchSave"></button>
                 </div>
               </div>
             </div>
@@ -698,17 +696,17 @@
 
         <section class="doc-section" id="components-command">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2 data-i18n="docs.commandTitle">Command Bar</h2>
-            <p data-i18n="docs.commandCopy">桌面端不要只给搜索框，要给命令入口，支持跳页、查论文、开 AI 分析。</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
+            <h2 data-i18n="docs.commandTitle"></h2>
+            <p data-i18n="docs.commandCopy"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.commandRuleOne">搜索、跳转、动作合并在一个入口里。</li>
-                <li data-i18n="docs.commandRuleTwo">空输入也要给推荐动作，不要空白。</li>
-                <li data-i18n="docs.commandRuleThree">支持键盘提示，降低桌面端操作成本。</li>
+                <li data-i18n="docs.commandRuleOne"></li>
+                <li data-i18n="docs.commandRuleTwo"></li>
+                <li data-i18n="docs.commandRuleThree"></li>
               </ul>
             </div>
 
@@ -716,7 +714,7 @@
               <button class="command-trigger" type="button" id="commandOpenButton">
                 <span>
                   <i class="ph ph-magnifying-glass"></i>
-                  <span data-i18n="docs.openCommandBar">Open Command Bar</span>
+                  <span data-i18n="docs.openCommandBar"></span>
                 </span>
                 <kbd>⌘K</kbd>
               </button>
@@ -726,28 +724,28 @@
 
         <section class="doc-section" id="components-breadcrumb">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Breadcrumb</h2>
-            <p data-i18n="docs.breadcrumbDesc">面包屑导航提示用户当前位置，层级清晰、轻量不抢注意力。</p>
+            <p data-i18n="docs.breadcrumbDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.breadcrumbRuleOne">导航提示要轻，不要让辅助控件抢正文的戏。</li>
-                <li data-i18n="docs.breadcrumbRuleTwo">分隔符用细箭头，不用粗竖线。</li>
-                <li data-i18n="docs.breadcrumbRuleThree">当前页用粗体，不做链接。</li>
+                <li data-i18n="docs.breadcrumbRuleOne"></li>
+                <li data-i18n="docs.breadcrumbRuleTwo"></li>
+                <li data-i18n="docs.breadcrumbRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <div class="demo-content">
                 <div class="breadcrumb-demo" aria-label="Breadcrumb">
-                  <a href="#" data-i18n="docs.commonBreadcrumbHome">日报</a>
+                  <a href="#" data-i18n="docs.commonBreadcrumbHome"></a>
                   <i class="ph ph-caret-right"></i>
-                  <a href="#" data-i18n="docs.commonBreadcrumbTopic">Agent</a>
+                  <a href="#" data-i18n="docs.commonBreadcrumbTopic"></a>
                   <i class="ph ph-caret-right"></i>
-                  <strong data-i18n="docs.commonBreadcrumbCurrent">综述工作台</strong>
+                  <strong data-i18n="docs.commonBreadcrumbCurrent"></strong>
                 </div>
               </div>
             </div>
@@ -756,17 +754,17 @@
 
         <section class="doc-section" id="components-tooltip">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Tooltip</h2>
-            <p data-i18n="docs.tooltipDesc">轻量提示气泡，鼠标悬停或聚焦时出现，解释图标或缩略信息。</p>
+            <p data-i18n="docs.tooltipDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.tooltipRuleOne">只放短句解释，不放大段内容。</li>
-                <li data-i18n="docs.tooltipRuleTwo">气泡用轻玻璃底，带细边框。</li>
-                <li data-i18n="docs.tooltipRuleThree">暗黑模式下保持可读，对比度足够。</li>
+                <li data-i18n="docs.tooltipRuleOne"></li>
+                <li data-i18n="docs.tooltipRuleTwo"></li>
+                <li data-i18n="docs.tooltipRuleThree"></li>
               </ul>
             </div>
 
@@ -774,7 +772,7 @@
               <div class="demo-content">
                 <div class="tooltip-demo">
                   <button type="button"><i class="ph ph-info"></i></button>
-                  <div class="tooltip-bubble" data-i18n="docs.commonTooltipCopy">展示引用来源与模型推断的区别。</div>
+                  <div class="tooltip-bubble" data-i18n="docs.commonTooltipCopy"></div>
                 </div>
               </div>
             </div>
@@ -783,26 +781,26 @@
 
         <section class="doc-section" id="components-menu">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Menu</h2>
-            <p data-i18n="docs.menuDesc">下拉菜单承载更多动作，图标+文字清晰分组，危险动作单独标识。</p>
+            <p data-i18n="docs.menuDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.menuRuleOne">菜单项左对齐图标和文字，间距一致。</li>
-                <li data-i18n="docs.menuRuleTwo">危险动作用强调色，放在菜单底部。</li>
-                <li data-i18n="docs.menuRuleThree">悬停态用轻底色，不用强色块。</li>
+                <li data-i18n="docs.menuRuleOne"></li>
+                <li data-i18n="docs.menuRuleTwo"></li>
+                <li data-i18n="docs.menuRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <div class="demo-content">
                 <div class="menu-demo">
-                  <button type="button"><i class="ph ph-copy"></i><span data-i18n="docs.commonMenuCopy">复制摘要链接</span></button>
-                  <button type="button"><i class="ph ph-bell"></i><span data-i18n="docs.commonMenuNotify">关注作者更新</span></button>
-                  <button type="button" class="is-danger"><i class="ph ph-eye-slash"></i><span data-i18n="docs.commonMenuHide">减少这类内容</span></button>
+                  <button type="button"><i class="ph ph-copy"></i><span data-i18n="docs.commonMenuCopy"></span></button>
+                  <button type="button"><i class="ph ph-bell"></i><span data-i18n="docs.commonMenuNotify"></span></button>
+                  <button type="button" class="is-danger"><i class="ph ph-eye-slash"></i><span data-i18n="docs.commonMenuHide"></span></button>
                 </div>
               </div>
             </div>
@@ -811,17 +809,17 @@
 
         <section class="doc-section" id="components-dialog">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Dialog</h2>
-            <p data-i18n="docs.dialogDesc">模态对话框用于确认重要操作，标题、说明、动作按钮层级清晰。</p>
+            <p data-i18n="docs.dialogDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.dialogRuleOne">弹层内部维持白底或深底的清晰层级。</li>
-                <li data-i18n="docs.dialogRuleTwo">主动作在右，次动作在左，按钮顺序一致。</li>
-                <li data-i18n="docs.dialogRuleThree">移动端和暗黑模式下均可读。</li>
+                <li data-i18n="docs.dialogRuleOne"></li>
+                <li data-i18n="docs.dialogRuleTwo"></li>
+                <li data-i18n="docs.dialogRuleThree"></li>
               </ul>
             </div>
 
@@ -829,11 +827,11 @@
               <div class="demo-content">
                 <div class="dialog-stage">
                   <div class="dialog-card-demo" role="dialog" aria-modal="true">
-                    <strong data-i18n="docs.commonDialogTitle">保存这组推荐偏好？</strong>
-                    <p data-i18n="docs.commonDialogCopy">系统会根据这 4 个方向和最近 7 天的阅读行为，重新生成你的明日简报。</p>
+                    <strong data-i18n="docs.commonDialogTitle"></strong>
+                    <p data-i18n="docs.commonDialogCopy"></p>
                     <div class="dialog-actions">
-                      <button class="btn btn-ghost btn-sm" type="button" data-i18n="docs.commonDialogCancel">稍后</button>
-                      <button class="btn btn-primary btn-sm" type="button" data-i18n="docs.commonDialogConfirm">保存并刷新</button>
+                      <button class="btn btn-ghost btn-sm" type="button" data-i18n="docs.commonDialogCancel"></button>
+                      <button class="btn btn-primary btn-sm" type="button" data-i18n="docs.commonDialogConfirm"></button>
                     </div>
                   </div>
                 </div>
@@ -844,17 +842,17 @@
 
         <section class="doc-section" id="components-toast">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Toast</h2>
-            <p data-i18n="docs.toastDesc">轻量反馈条，操作后短暂出现确认结果，不打断用户流程。</p>
+            <p data-i18n="docs.toastDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.toastRuleOne">图标+短句，信息密度适中。</li>
-                <li data-i18n="docs.toastRuleTwo">不同语义用不同图标色，背景统一玻璃态。</li>
-                <li data-i18n="docs.toastRuleThree">自动消失，也支持手动关闭。</li>
+                <li data-i18n="docs.toastRuleOne"></li>
+                <li data-i18n="docs.toastRuleTwo"></li>
+                <li data-i18n="docs.toastRuleThree"></li>
               </ul>
             </div>
 
@@ -863,11 +861,11 @@
                 <div class="toast-stack-demo">
                   <div class="toast-demo is-success">
                     <i class="ph ph-check-circle"></i>
-                    <span data-i18n="docs.commonToastSaved">已加入阅读队列</span>
+                    <span data-i18n="docs.commonToastSaved"></span>
                   </div>
                   <div class="toast-demo is-info">
                     <i class="ph ph-link"></i>
-                    <span data-i18n="docs.commonToastCopied">引用链接已复制</span>
+                    <span data-i18n="docs.commonToastCopied"></span>
                   </div>
                 </div>
               </div>
@@ -877,33 +875,33 @@
 
         <section class="doc-section" id="components-filter-pills">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Filter Pills</h2>
-            <p data-i18n="docs.filterPillsDesc">胶囊形筛选标签，用于快速切换分类、主题或视图。</p>
+            <p data-i18n="docs.filterPillsDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.filterPillsRuleOne">图标+文字，语义一目了然。</li>
-                <li data-i18n="docs.filterPillsRuleTwo">激活态用轻底色+描边，不用强色块。</li>
-                <li data-i18n="docs.filterPillsRuleThree">支持多选和单选两种模式。</li>
+                <li data-i18n="docs.filterPillsRuleOne"></li>
+                <li data-i18n="docs.filterPillsRuleTwo"></li>
+                <li data-i18n="docs.filterPillsRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <div class="demo-content">
                 <div class="filter-cloud" data-i18n-aria-label="docs.kitFilterAria" aria-label="研究方向筛选示例">
-                  <button class="filter-pill is-active" type="button"><i class="ph ph-brain"></i><span data-i18n="docs.kitFilterAi">AI</span></button>
-                  <button class="filter-pill" type="button"><i class="ph ph-dna"></i><span data-i18n="docs.kitFilterBio">Biology</span></button>
-                  <button class="filter-pill is-warm" type="button"><i class="ph ph-lightning"></i><span data-i18n="docs.kitFilterHot">突破</span></button>
-                  <button class="filter-pill is-cool" type="button"><i class="ph ph-waveform"></i><span data-i18n="docs.kitFilterAudio">Speech</span></button>
-                  <button class="filter-pill is-danger" type="button"><i class="ph ph-x"></i><span data-i18n="docs.kitFilterHidden">不感兴趣</span></button>
+                  <button class="filter-pill is-active" type="button"><i class="ph ph-brain"></i><span data-i18n="docs.kitFilterAi"></span></button>
+                  <button class="filter-pill" type="button"><i class="ph ph-dna"></i><span data-i18n="docs.kitFilterBio"></span></button>
+                  <button class="filter-pill is-warm" type="button"><i class="ph ph-lightning"></i><span data-i18n="docs.kitFilterHot"></span></button>
+                  <button class="filter-pill is-cool" type="button"><i class="ph ph-waveform"></i><span data-i18n="docs.kitFilterAudio"></span></button>
+                  <button class="filter-pill is-danger" type="button"><i class="ph ph-x"></i><span data-i18n="docs.kitFilterHidden"></span></button>
                 </div>
                 <div class="segmented-demo" role="group" aria-label="阅读密度">
-                  <button class="is-active" type="button" data-i18n="docs.kitSegmentBrief">简报</button>
-                  <button type="button" data-i18n="docs.kitSegmentDigest">摘要</button>
-                  <button type="button" data-i18n="docs.kitSegmentFull">全文</button>
+                  <button class="is-active" type="button" data-i18n="docs.kitSegmentBrief"></button>
+                  <button type="button" data-i18n="docs.kitSegmentDigest"></button>
+                  <button type="button" data-i18n="docs.kitSegmentFull"></button>
                 </div>
               </div>
             </div>
@@ -912,24 +910,24 @@
 
         <section class="doc-section" id="components-search-input">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Search Input</h2>
-            <p data-i18n="docs.searchInputDesc">带图标的搜索输入框，支持前置图标和后置操作按钮。</p>
+            <p data-i18n="docs.searchInputDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.searchInputRuleOne">搜索图标前置，操作按钮后置。</li>
-                <li data-i18n="docs.searchInputRuleTwo">辅助说明文字放在输入框下方，不占位。</li>
-                <li data-i18n="docs.searchInputRuleThree">支持多字段混合搜索：标题、作者、DOI、标签。</li>
+                <li data-i18n="docs.searchInputRuleOne"></li>
+                <li data-i18n="docs.searchInputRuleTwo"></li>
+                <li data-i18n="docs.searchInputRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <div class="demo-content">
                 <label class="field-demo">
-                  <span data-i18n="docs.kitInputLabelText">关键词</span>
+                  <span data-i18n="docs.kitInputLabelText"></span>
                   <div class="field-shell">
                     <i class="ph ph-magnifying-glass"></i>
                     <input type="text" value="reasoning agent" aria-label="reasoning agent" />
@@ -938,7 +936,7 @@
                 </label>
                 <div class="helper-row">
                   <i class="ph ph-info"></i>
-                  <span data-i18n="docs.kitInputHelp">支持标题、作者、DOI 与领域标签混搜。</span>
+                  <span data-i18n="docs.kitInputHelp"></span>
                 </div>
               </div>
             </div>
@@ -947,27 +945,27 @@
 
         <section class="doc-section" id="components-status-indicators">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Status Indicators</h2>
-            <p data-i18n="docs.statusIndicatorsDesc">多色状态标签，传达同步、成功、警告、错误等语义。</p>
+            <p data-i18n="docs.statusIndicatorsDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.statusIndicatorsRuleOne">图标+文字，语义清晰。</li>
-                <li data-i18n="docs.statusIndicatorsRuleTwo">四种语义色：info、success、warning、danger。</li>
-                <li data-i18n="docs.statusIndicatorsRuleThree">玻璃态底+细边框，不抢正文注意力。</li>
+                <li data-i18n="docs.statusIndicatorsRuleOne"></li>
+                <li data-i18n="docs.statusIndicatorsRuleTwo"></li>
+                <li data-i18n="docs.statusIndicatorsRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <div class="demo-content">
                 <div class="status-stack">
-                  <span class="status-token is-info"><i class="ph ph-info"></i><span data-i18n="docs.kitStatusInfo">已同步 128 篇</span></span>
-                  <span class="status-token is-success"><i class="ph ph-check-circle"></i><span data-i18n="docs.kitStatusSuccess">推荐稳定</span></span>
-                  <span class="status-token is-warning"><i class="ph ph-warning"></i><span data-i18n="docs.kitStatusWarning">引用待复核</span></span>
-                  <span class="status-token is-danger"><i class="ph ph-seal-warning"></i><span data-i18n="docs.kitStatusDanger">来源不足</span></span>
+                  <span class="status-token is-info"><i class="ph ph-info"></i><span data-i18n="docs.kitStatusInfo"></span></span>
+                  <span class="status-token is-success"><i class="ph ph-check-circle"></i><span data-i18n="docs.kitStatusSuccess"></span></span>
+                  <span class="status-token is-warning"><i class="ph ph-warning"></i><span data-i18n="docs.kitStatusWarning"></span></span>
+                  <span class="status-token is-danger"><i class="ph ph-seal-warning"></i><span data-i18n="docs.kitStatusDanger"></span></span>
                 </div>
               </div>
             </div>
@@ -976,17 +974,17 @@
 
         <section class="doc-section" id="components-reading-list">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Reading List</h2>
-            <p data-i18n="docs.readingListDesc">紧凑阅读列表，排名、标题、描述和操作按钮一行搞定。</p>
+            <p data-i18n="docs.readingListDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.readingListRuleOne">排名、标题、描述、操作四列结构清晰。</li>
-                <li data-i18n="docs.readingListRuleTwo">已读项降低对比度，保持信息完整。</li>
-                <li data-i18n="docs.readingListRuleThree">操作按钮右对齐，不干扰正文阅读。</li>
+                <li data-i18n="docs.readingListRuleOne"></li>
+                <li data-i18n="docs.readingListRuleTwo"></li>
+                <li data-i18n="docs.readingListRuleThree"></li>
               </ul>
             </div>
 
@@ -997,7 +995,7 @@
                     <span class="row-rank">01</span>
                     <div>
                       <strong>Tool-Augmented Agents for Literature Review</strong>
-                      <p data-i18n="docs.kitListItemOne">方法贡献清楚，适合加入本周综述。</p>
+                      <p data-i18n="docs.kitListItemOne"></p>
                     </div>
                     <button type="button" data-i18n-aria-label="docs.bookmark" aria-label="收藏"><i class="ph ph-bookmark-simple"></i></button>
                   </div>
@@ -1005,7 +1003,7 @@
                     <span class="row-rank">02</span>
                     <div>
                       <strong>Efficient Long Context Retrieval</strong>
-                      <p data-i18n="docs.kitListItemTwo">已读，保留为引用候选。</p>
+                      <p data-i18n="docs.kitListItemTwo"></p>
                     </div>
                     <button type="button" data-i18n-aria-label="docs.buttonMore" aria-label="更多"><i class="ph ph-dots-three"></i></button>
                   </div>
@@ -1017,17 +1015,17 @@
 
         <section class="doc-section" id="components-metrics">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Metrics</h2>
-            <p data-i18n="docs.metricsDesc">数据摘要卡片，展示关键指标的数值和含义。</p>
+            <p data-i18n="docs.metricsDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.metricsRuleOne">标签在上，数值在下，层级清晰。</li>
-                <li data-i18n="docs.metricsRuleTwo">指标间用细分割线或留白区分。</li>
-                <li data-i18n="docs.metricsRuleThree">数值用大字重，标签用辅助色。</li>
+                <li data-i18n="docs.metricsRuleOne"></li>
+                <li data-i18n="docs.metricsRuleTwo"></li>
+                <li data-i18n="docs.metricsRuleThree"></li>
               </ul>
             </div>
 
@@ -1035,11 +1033,11 @@
               <div class="demo-content">
                 <div class="metric-demo">
                   <div>
-                    <span data-i18n="docs.kitMetricSaved">收藏率</span>
+                    <span data-i18n="docs.kitMetricSaved"></span>
                     <strong>42%</strong>
                   </div>
                   <div>
-                    <span data-i18n="docs.kitMetricRead">读完率</span>
+                    <span data-i18n="docs.kitMetricRead"></span>
                     <strong>68%</strong>
                   </div>
                 </div>
@@ -1050,17 +1048,17 @@
 
         <section class="doc-section" id="components-notice-bar">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">Components</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
             <h2>Notice Bar</h2>
-            <p data-i18n="docs.noticeBarDesc">轻提示条，用于展示系统通知、日报生成等非阻断信息。</p>
+            <p data-i18n="docs.noticeBarDesc"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.noticeBarRuleOne">图标+文字，信息传达高效。</li>
-                <li data-i18n="docs.noticeBarRuleTwo">淡黄底色只用于重点提醒，不做页面底色。</li>
-                <li data-i18n="docs.noticeBarRuleThree">可手动关闭，也可自动消失。</li>
+                <li data-i18n="docs.noticeBarRuleOne"></li>
+                <li data-i18n="docs.noticeBarRuleTwo"></li>
+                <li data-i18n="docs.noticeBarRuleThree"></li>
               </ul>
             </div>
 
@@ -1068,7 +1066,7 @@
               <div class="demo-content">
                 <div class="notice-demo">
                   <i class="ph ph-newspaper-clipping"></i>
-                  <p data-i18n="docs.kitNoticeCopy">今日日报已生成。淡黄只用于重点提醒，不作为页面底色。</p>
+                  <p data-i18n="docs.kitNoticeCopy"></p>
                 </div>
               </div>
             </div>
@@ -1077,24 +1075,24 @@
 
         <section class="doc-section" id="components-sheet">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2 data-i18n="docs.sheetTitleSection">Bottom Sheet</h2>
-            <p data-i18n="docs.sheetCopy">移动端反馈、筛选和更多操作走底部面板，别把卡片长按菜单做得太隐蔽。</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
+            <h2 data-i18n="docs.sheetTitleSection"></h2>
+            <p data-i18n="docs.sheetCopy"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.sheetRuleOne">主动作放上半区，危险动作放底部。</li>
-                <li data-i18n="docs.sheetRuleTwo">能单手点到，不挤压正文阅读。</li>
-                <li data-i18n="docs.sheetRuleThree">关闭动效要干净，不要拖泥带水。</li>
+                <li data-i18n="docs.sheetRuleOne"></li>
+                <li data-i18n="docs.sheetRuleTwo"></li>
+                <li data-i18n="docs.sheetRuleThree"></li>
               </ul>
             </div>
 
             <div class="demo-box">
               <button class="secondary-button" type="button" id="sheetOpenButton">
                 <i class="ph ph-rows"></i>
-                <span data-i18n="docs.openSheet">Open Sheet</span>
+                <span data-i18n="docs.openSheet"></span>
               </button>
             </div>
           </div>
@@ -1102,17 +1100,17 @@
 
         <section class="doc-section" id="components-ai">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2 data-i18n="docs.aiTitleSection">AI Answer Block</h2>
-            <p data-i18n="docs.aiCopy">AI 回复采用回答、证据、动作三层结构，替代大段聊天文本。</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
+            <h2 data-i18n="docs.aiTitleSection"></h2>
+            <p data-i18n="docs.aiCopy"></p>
           </div>
 
           <div class="doc-grid">
             <div class="doc-copy">
               <ul class="doc-list">
-                <li data-i18n="docs.aiRuleOne">主答案先短后长，默认给判断。</li>
-                <li data-i18n="docs.aiRuleTwo">引用片段和模型推断必须分层显示。</li>
-                <li data-i18n="docs.aiRuleThree">回答后面直接给继续分析动作。</li>
+                <li data-i18n="docs.aiRuleOne"></li>
+                <li data-i18n="docs.aiRuleTwo"></li>
+                <li data-i18n="docs.aiRuleThree"></li>
               </ul>
             </div>
 
@@ -1123,19 +1121,17 @@
                     <i class="ph-fill ph-sparkle"></i>
                     AI
                   </span>
-                  <button class="ghost-button" type="button" id="citationToggle" data-i18n="docs.toggleCitation">显示引用</button>
+                  <button class="ghost-button" type="button" id="citationToggle" data-i18n="docs.toggleCitation"></button>
                 </div>
-                <p data-i18n="docs.aiAnswerText">
-                  这篇论文真正的新意在于把 reasoning 的提升规律写成了可以预测的函数。
-                </p>
+                <p data-i18n="docs.aiAnswerText"></p>
                 <div class="citation-list" id="citationList" hidden>
                   <button type="button">[1] Scaling Law</button>
                   <button type="button">[2] Chinchilla</button>
                   <button type="button">[3] Data Quality</button>
                 </div>
                 <div class="ai-actions">
-                  <button class="chip-button is-active" type="button" data-i18n="docs.aiActionCompare">生成对比表</button>
-                  <button class="chip-button" type="button" data-i18n="docs.aiActionQueue">加入分析队列</button>
+                  <button class="chip-button is-active" type="button" data-i18n="docs.aiActionCompare"></button>
+                  <button class="chip-button" type="button" data-i18n="docs.aiActionQueue"></button>
                 </div>
               </article>
             </div>
@@ -1144,9 +1140,9 @@
 
         <section class="doc-section" id="components-email">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.componentsEyebrow">组件</p>
-            <h2 data-i18n="docs.emailTitle">邮件模板</h2>
-            <p data-i18n="docs.emailDesc">日报邮件要像一封清爽的编辑信：先给今日判断，再给论文列表、关键发现和行动入口。</p>
+            <p class="eyebrow" data-i18n="docs.componentsEyebrow"></p>
+            <h2 data-i18n="docs.emailTitle"></h2>
+            <p data-i18n="docs.emailDesc"></p>
           </div>
 
           <div class="email-template-demo">
@@ -1154,47 +1150,47 @@
               <header class="email-header">
                 <div class="email-logo">PD</div>
                 <div>
-                  <strong data-i18n="docs.emailBrand">PaperPost</strong>
-                  <span data-i18n="docs.emailDate">2026 年 7 月 1 日 · 今日简报</span>
+                  <strong data-i18n="docs.emailBrand"></strong>
+                  <span data-i18n="docs.emailDate"></span>
                 </div>
               </header>
               <section class="email-hero">
-                <p data-i18n="docs.emailEyebrow">Daily Research Brief</p>
-                <h3 data-i18n="docs.emailHeadline">今天值得先看的 5 篇论文</h3>
-                <span data-i18n="docs.emailIntro">AI agent、长上下文检索和生命科学建模出现了三个可追踪信号。</span>
+                <p data-i18n="docs.emailEyebrow"></p>
+                <h3 data-i18n="docs.emailHeadline"></h3>
+                <span data-i18n="docs.emailIntro"></span>
               </section>
               <div class="email-body">
                 <article class="email-paper">
                   <span class="email-paper-index">01</span>
                   <div>
                     <strong>Tool-Augmented Agents for Literature Review</strong>
-                    <p data-i18n="docs.emailPaperOne">把工具调用和证据引用放进综述流程，能明显减少遗漏。</p>
+                    <p data-i18n="docs.emailPaperOne"></p>
                   </div>
                 </article>
                 <article class="email-paper">
                   <span class="email-paper-index">02</span>
                   <div>
                     <strong>Scaling Retrieval for Long Context Models</strong>
-                    <p data-i18n="docs.emailPaperTwo">长上下文不只靠窗口长度，检索质量仍然决定阅读效率。</p>
+                    <p data-i18n="docs.emailPaperTwo"></p>
                   </div>
                 </article>
               </div>
               <footer class="email-footer">
-                <button class="btn btn-primary btn-md" type="button"><i class="ph ph-arrow-right"></i><span data-i18n="docs.emailPrimaryAction">打开今日日报</span></button>
-                <button class="btn btn-ghost btn-md" type="button"><i class="ph ph-sliders-horizontal"></i><span data-i18n="docs.emailSecondaryAction">调整推荐</span></button>
+                <button class="btn btn-primary btn-md" type="button"><i class="ph ph-arrow-right"></i><span data-i18n="docs.emailPrimaryAction"></span></button>
+                <button class="btn btn-ghost btn-md" type="button"><i class="ph ph-sliders-horizontal"></i><span data-i18n="docs.emailSecondaryAction"></span></button>
               </footer>
             </div>
 
             <div class="email-notes">
               <div class="email-note">
                 <i class="ph ph-text-t"></i>
-                <strong data-i18n="docs.emailNoteType">邮件字体</strong>
-                <p data-i18n="docs.emailNoteTypeCopy">正文使用系统无衬线，标题保持高字重但不放大到海报尺寸。</p>
+                <strong data-i18n="docs.emailNoteType"></strong>
+                <p data-i18n="docs.emailNoteTypeCopy"></p>
               </div>
               <div class="email-note">
                 <i class="ph ph-palette"></i>
-                <strong data-i18n="docs.emailNoteColor">邮件用色</strong>
-                <p data-i18n="docs.emailNoteColorCopy">白底、浅灰分区、淡黄摘要条和深海青主按钮，保证暗色邮箱和移动端都清楚。</p>
+                <strong data-i18n="docs.emailNoteColor"></strong>
+                <p data-i18n="docs.emailNoteColorCopy"></p>
               </div>
             </div>
           </div>
@@ -1202,9 +1198,9 @@
 
         <section class="doc-section icon-browser-section" id="icon-system">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.iconsEyebrow">图标库</p>
-            <h2 data-i18n="docs.iconsTitle">图标浏览器</h2>
-            <p data-i18n="docs.iconsDesc">PaperPost 采用 Phosphor Icons 作为跨端图标库。搜索图标，点击即可复制组件名。</p>
+            <p class="eyebrow" data-i18n="docs.iconsEyebrow"></p>
+            <h2 data-i18n="docs.iconsTitle"></h2>
+            <p data-i18n="docs.iconsDesc"></p>
           </div>
 
           <div class="icon-browser">
@@ -1218,27 +1214,27 @@
             <div class="icon-grid" id="iconGrid"></div>
             <div class="icon-empty" id="iconEmpty" hidden>
               <i class="ph ph-warning-circle"></i>
-              <span data-i18n="docs.iconNoResults">未找到匹配的图标</span>
+              <span data-i18n="docs.iconNoResults"></span>
             </div>
           </div>
         </section>
 
         <section class="doc-section" id="pages-section">
           <div class="doc-section-head">
-            <p class="eyebrow" data-i18n="docs.pagesEyebrow">页面案例</p>
-            <h2 data-i18n="docs.pagesTitle">完整页面模板</h2>
-            <p data-i18n="docs.pagesSubtitle">点击卡片查看完整页面模拟。覆盖信息流、阅读器、数据面板、注册引导等核心场景。</p>
+            <p class="eyebrow" data-i18n="docs.pagesEyebrow"></p>
+            <h2 data-i18n="docs.pagesTitle"></h2>
+            <p data-i18n="docs.pagesSubtitle"></p>
           </div>
 
           <div class="page-gallery-section">
-            <h3 class="page-gallery-title"><i class="ph ph-device-mobile"></i> <span data-i18n="docs.pagesMobileGroup">移动端</span></h3>
+            <h3 class="page-gallery-title"><i class="ph ph-device-mobile"></i> <span data-i18n="docs.pagesMobileGroup"></span></h3>
             <div class="page-gallery-grid">
               <button class="page-card" type="button" data-page-preview="mobile-feed">
                 <div class="page-card-thumb">
                   <div class="page-card-thumb-inner">
                     <div class="mini-app-header">
                       <div>
-                        <h4 data-i18n="docs.miniFeedTitle">今日简报</h4>
+                        <h4 data-i18n="docs.miniFeedTitle"></h4>
                         <div class="date-text">Oct 24, 2026</div>
                       </div>
                       <div class="mini-app-header-actions">
@@ -1251,7 +1247,7 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature</div>
                         <div class="mini-paper-title">A safer gene switch for cell therapies</div>
-                        <div class="mini-paper-desc" data-i18n="docs.miniFeedDesc1">精确控制治疗开关，提升临床安全性。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniFeedDesc1"></div>
                       </div>
                       <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
                     </div>
@@ -1260,15 +1256,15 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                         <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
-                        <div class="mini-paper-desc" data-i18n="docs.miniFeedDesc2">模型推理能力的提升规律变得可估。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniFeedDesc2"></div>
                       </div>
                       <div class="mini-bookmark"><i class="ph ph-bookmark-simple"></i></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageFeedTitle">Daily Papers</div>
-                  <div class="page-card-desc" data-i18n="docs.pageFeedDesc">首页信息流</div>
+                  <div class="page-card-name" data-i18n="docs.pageFeedTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageFeedDesc"></div>
                 </div>
               </button>
 
@@ -1285,11 +1281,11 @@
                       </div>
                     </div>
                     <div class="mini-key-finding">
-                      <div class="mini-key-finding-label"><i class="ph-fill ph-key"></i> <span data-i18n="docs.miniReaderKeyFinding">Key Finding</span></div>
+                      <div class="mini-key-finding-label"><i class="ph-fill ph-key"></i> <span data-i18n="docs.miniReaderKeyFinding"></span></div>
                       <p>The reasoning ability of models improves predictably with more compute and better data.</p>
                     </div>
                     <div class="mini-plain-english">
-                      <strong data-i18n="docs.miniReaderPlainEnglish">In Plain English</strong>
+                      <strong data-i18n="docs.miniReaderPlainEnglish"></strong>
                       <ul>
                         <li>Bigger models reason better.</li>
                         <li>The relationship is predictable.</li>
@@ -1297,14 +1293,14 @@
                       </ul>
                     </div>
                     <div class="mini-cta-row">
-                      <div class="mini-btn-outline" data-i18n="docs.miniReaderReadOriginal">Read Original</div>
-                      <div class="mini-btn-primary" data-i18n="docs.miniReaderNextPaper">Next Paper →</div>
+                      <div class="mini-btn-outline" data-i18n="docs.miniReaderReadOriginal"></div>
+                      <div class="mini-btn-primary" data-i18n="docs.miniReaderNextPaper"></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageReaderTitle">Paper Reader</div>
-                  <div class="page-card-desc" data-i18n="docs.pageReaderDesc">论文详情页</div>
+                  <div class="page-card-name" data-i18n="docs.pageReaderTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageReaderDesc"></div>
                 </div>
               </button>
 
@@ -1313,8 +1309,8 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-app-header">
                       <div>
-                        <h4 data-i18n="docs.miniDashboardTitle">数据面板</h4>
-                        <div class="date-text" data-i18n="docs.miniDashboardSubtitle">总览</div>
+                        <h4 data-i18n="docs.miniDashboardTitle"></h4>
+                        <div class="date-text" data-i18n="docs.miniDashboardSubtitle"></div>
                       </div>
                       <div class="mini-app-header-actions">
                         <div class="mini-icon-btn"><i class="ph ph-arrows-clockwise"></i></div>
@@ -1324,34 +1320,34 @@
                       <div class="mini-stat-card">
                         <div class="stat-icon"><i class="ph ph-file-text"></i></div>
                         <div class="stat-value">78</div>
-                        <div class="stat-label" data-i18n="docs.miniDashboardPapers">论文数量</div>
+                        <div class="stat-label" data-i18n="docs.miniDashboardPapers"></div>
                       </div>
                       <div class="mini-stat-card">
                         <div class="stat-icon"><i class="ph ph-calendar"></i></div>
                         <div class="stat-value">12</div>
-                        <div class="stat-label" data-i18n="docs.miniDashboardDateRange">日期范围</div>
+                        <div class="stat-label" data-i18n="docs.miniDashboardDateRange"></div>
                       </div>
                     </div>
                     <div class="mini-topics-list">
-                      <h5 data-i18n="docs.miniDashboardKeywords">关键词统计</h5>
+                      <h5 data-i18n="docs.miniDashboardKeywords"></h5>
                       <div class="mini-topic-item">
                         <span>physics.optics</span>
-                        <span class="topic-count" data-i18n="docs.miniDashboardCount1">78 次</span>
+                        <span class="topic-count" data-i18n="docs.miniDashboardCount1"></span>
                       </div>
                       <div class="mini-topic-item">
                         <span>optical</span>
-                        <span class="topic-count" data-i18n="docs.miniDashboardCount2">17 次</span>
+                        <span class="topic-count" data-i18n="docs.miniDashboardCount2"></span>
                       </div>
                       <div class="mini-topic-item">
                         <span>physics.app-ph</span>
-                        <span class="topic-count" data-i18n="docs.miniDashboardCount3">8 次</span>
+                        <span class="topic-count" data-i18n="docs.miniDashboardCount3"></span>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageDashboardTitle">Data Dashboard</div>
-                  <div class="page-card-desc" data-i18n="docs.pageDashboardDesc">数据概览</div>
+                  <div class="page-card-name" data-i18n="docs.pageDashboardTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageDashboardDesc"></div>
                 </div>
               </button>
 
@@ -1360,7 +1356,7 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-app-header">
                       <div>
-                        <h4 data-i18n="docs.miniSavedTitle">收藏</h4>
+                        <h4 data-i18n="docs.miniSavedTitle"></h4>
                       </div>
                       <div class="mini-app-header-actions">
                         <div class="mini-icon-btn"><i class="ph ph-funnel"></i></div>
@@ -1371,7 +1367,7 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Physical Review</div>
                         <div class="mini-paper-title">A Langevin model-based magneto-optic response</div>
-                        <div class="mini-paper-desc" data-i18n="docs.miniSavedDesc1">本文为溶液中超顺磁性纳米颗粒的磁光表征提供了理论框架。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniSavedDesc1"></div>
                       </div>
                       <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
                     </div>
@@ -1380,30 +1376,30 @@
                       <div class="mini-paper-body">
                         <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>Nature</div>
                         <div class="mini-paper-title">A laser with instability reaching $4×10^-17$</div>
-                        <div class="mini-paper-desc" data-i18n="docs.miniSavedDesc2">实现了10厘米长的超稳硅腔，在5K温度下达到极低频率不稳定度。</div>
+                        <div class="mini-paper-desc" data-i18n="docs.miniSavedDesc2"></div>
                       </div>
                       <div class="mini-bookmark"><i class="ph-fill ph-star" style="color: var(--amber-500);"></i></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageSavedTitle">Saved Papers</div>
-                  <div class="page-card-desc" data-i18n="docs.pageSavedDesc">收藏夹</div>
+                  <div class="page-card-name" data-i18n="docs.pageSavedTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageSavedDesc"></div>
                 </div>
               </button>
             </div>
           </div>
 
           <div class="page-gallery-section">
-            <h3 class="page-gallery-title"><i class="ph ph-desktop"></i> <span data-i18n="docs.pagesDesktopGroup">桌面端</span></h3>
+            <h3 class="page-gallery-title"><i class="ph ph-desktop"></i> <span data-i18n="docs.pagesDesktopGroup"></span></h3>
             <div class="page-gallery-grid">
               <button class="page-card" type="button" data-page-preview="desktop-feed">
                 <div class="page-card-thumb is-desktop">
                   <div class="page-card-thumb-inner">
                     <div class="mini-desktop-shell">
                       <div class="mini-desktop-sidebar">
-                        <h5 data-i18n="docs.miniDesktopLibrary">Library</h5>
-                        <div class="mini-desktop-nav-item is-active" data-i18n="docs.miniDesktopToday">今日简报</div>
+                        <h5 data-i18n="docs.miniDesktopLibrary"></h5>
+                        <div class="mini-desktop-nav-item is-active" data-i18n="docs.miniDesktopToday"></div>
                         <div class="mini-desktop-nav-item">AI / LLM</div>
                         <div class="mini-desktop-nav-item">Physics</div>
                         <div class="mini-desktop-nav-item">Bio Medicine</div>
@@ -1414,21 +1410,21 @@
                           <div class="mini-paper-body">
                             <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                             <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
-                            <div class="mini-paper-desc" data-i18n="docs.miniDesktopFeedDesc">模型推理能力提升规律变得可预测，改变训练预算规划方式。</div>
+                            <div class="mini-paper-desc" data-i18n="docs.miniDesktopFeedDesc"></div>
                           </div>
                           <div class="mini-bookmark"><i class="ph ph-star"></i></div>
                         </div>
                       </div>
                       <div class="mini-desktop-detail">
-                        <h5 data-i18n="docs.miniDesktopWhyMatters">Why this matters</h5>
-                        <p data-i18n="docs.miniDesktopWhyMattersDesc">关键发现、相关论文、下一步动作都在右栏。</p>
+                        <h5 data-i18n="docs.miniDesktopWhyMatters"></h5>
+                        <p data-i18n="docs.miniDesktopWhyMattersDesc"></p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageDesktopFeedTitle">Desktop Feed</div>
-                  <div class="page-card-desc" data-i18n="docs.pageDesktopFeedDesc">三栏信息流</div>
+                  <div class="page-card-name" data-i18n="docs.pageDesktopFeedTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageDesktopFeedDesc"></div>
                 </div>
               </button>
 
@@ -1437,35 +1433,35 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-split-auth">
                       <div class="mini-split-left">
-                        <h3 data-i18n="docs.miniAuthHeroTitle">把论文推荐系统，调成你的研究口味。</h3>
-                        <p data-i18n="docs.miniAuthHeroDesc">登录后同步收藏、阅读进度、关键词偏好和推荐反馈。桌面端高效整理，移动端轻松阅读。</p>
+                        <h3 data-i18n="docs.miniAuthHeroTitle"></h3>
+                        <p data-i18n="docs.miniAuthHeroDesc"></p>
                         <div class="mini-split-card">
                           <div class="mini-split-card-icon"><i class="ph ph-newspaper"></i></div>
                           <div class="mini-split-card-text">
-                            <strong data-i18n="docs.miniAuthCardTitle">Today Briefing</strong>
+                            <strong data-i18n="docs.miniAuthCardTitle"></strong>
                             <span>5 top papers, summarized for your taste.</span>
                           </div>
                         </div>
                       </div>
                       <div class="mini-split-right">
-                        <h4 data-i18n="docs.miniAuthLoginTitle">登录 PaperPost</h4>
-                        <p data-i18n="docs.miniAuthLoginSubtitle">继续你的收藏、推荐画像和阅读进度。</p>
+                        <h4 data-i18n="docs.miniAuthLoginTitle"></h4>
+                        <p data-i18n="docs.miniAuthLoginSubtitle"></p>
                         <div class="mini-input-group">
-                          <label data-i18n="docs.miniAuthEmail">邮箱</label>
+                          <label data-i18n="docs.miniAuthEmail"></label>
                           <div class="mini-input"></div>
                         </div>
                         <div class="mini-input-group">
-                          <label data-i18n="docs.miniAuthPassword">密码</label>
+                          <label data-i18n="docs.miniAuthPassword"></label>
                           <div class="mini-input"></div>
                         </div>
-                        <div class="mini-auth-btn" data-i18n="docs.miniAuthLoginButton">登录</div>
+                        <div class="mini-auth-btn" data-i18n="docs.miniAuthLoginButton"></div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageWebAuthTitle">Split Auth</div>
-                  <div class="page-card-desc" data-i18n="docs.pageWebAuthDesc">Web 登录页</div>
+                  <div class="page-card-name" data-i18n="docs.pageWebAuthTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageWebAuthDesc"></div>
                 </div>
               </button>
 
@@ -1481,15 +1477,15 @@
                       </div>
                       <div style="flex: 1; display: flex; overflow: hidden;">
                         <div style="width: 70px; background: var(--surface); border-right: 1px solid var(--line); padding: 6px; font-size: 7px;">
-                          <div style="font-weight: 600; margin-bottom: 5px; color: var(--ink-muted);" data-i18n="docs.miniMacosChannels">研究频道</div>
-                          <div style="padding: 4px 5px; background: var(--brand-soft); color: var(--brand); border-radius: 4px; margin-bottom: 3px; font-weight: 500;" data-i18n="docs.miniMacosToday">今日简报</div>
+                          <div style="font-weight: 600; margin-bottom: 5px; color: var(--ink-muted);" data-i18n="docs.miniMacosChannels"></div>
+                          <div style="padding: 4px 5px; background: var(--brand-soft); color: var(--brand); border-radius: 4px; margin-bottom: 3px; font-weight: 500;" data-i18n="docs.miniMacosToday"></div>
                           <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px; margin-bottom: 3px;">AI / LLM</div>
                           <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px; margin-bottom: 3px;">Physics</div>
-                          <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px;" data-i18n="docs.miniMacosSaved">收藏专题</div>
+                          <div style="padding: 4px 5px; color: var(--ink-soft); border-radius: 4px;" data-i18n="docs.miniMacosSaved"></div>
                         </div>
                         <div style="flex: 1; padding: 8px; overflow: hidden; border-right: 1px solid var(--line);">
-                          <div style="font-size: 10px; font-weight: 700; margin-bottom: 2px;" data-i18n="docs.miniMacosDaily">Daily Papers</div>
-                          <div style="font-size: 6px; color: var(--ink-muted); margin-bottom: 6px;" data-i18n="docs.miniMacosForYou">为你精选</div>
+                          <div style="font-size: 10px; font-weight: 700; margin-bottom: 2px;" data-i18n="docs.miniMacosDaily"></div>
+                          <div style="font-size: 6px; color: var(--ink-muted); margin-bottom: 6px;" data-i18n="docs.miniMacosForYou"></div>
                           <div style="margin-bottom: 5px;">
                             <div class="mini-paper-card" style="padding: 5px; border: 1px solid var(--line-soft); border-radius: 5px; background: var(--paper);">
                               <div class="mini-rank" style="background: var(--ink); color: var(--paper); font-size: 7px;">★</div>
@@ -1509,13 +1505,13 @@
                           </div>
                         </div>
                         <div style="width: 80px; padding: 8px; font-size: 7px;">
-                          <div style="font-weight: 600; margin-bottom: 5px;" data-i18n="docs.miniMacosWhyMatters">Why this matters</div>
+                          <div style="font-weight: 600; margin-bottom: 5px;" data-i18n="docs.miniMacosWhyMatters"></div>
                           <div style="background: var(--surface); border: 1px solid var(--line-soft); border-radius: 4px; padding: 5px; margin-bottom: 5px;">
-                            <div style="font-size: 6px; font-weight: 600; color: var(--ink); margin-bottom: 3px;"><i class="ph-fill ph-key" style="font-size: 7px;"></i> <span data-i18n="docs.miniMacosKeyFinding">Key Finding</span></div>
-                            <p style="font-size: 6px; margin: 0; color: var(--ink-soft);" data-i18n="docs.miniMacosKeyFindingDesc">推理能力随算力可预测提升。</p>
+                            <div style="font-size: 6px; font-weight: 600; color: var(--ink); margin-bottom: 3px;"><i class="ph-fill ph-key" style="font-size: 7px;"></i> <span data-i18n="docs.miniMacosKeyFinding"></span></div>
+                            <p style="font-size: 6px; margin: 0; color: var(--ink-soft);" data-i18n="docs.miniMacosKeyFindingDesc"></p>
                           </div>
                           <div style="background: var(--ink); color: var(--paper); padding: 4px 6px; border-radius: 4px; font-size: 6px; display: flex; align-items: center; gap: 3px;">
-                            <i class="ph-fill ph-sparkle"></i> <span data-i18n="docs.miniMacosListen">听论文</span>
+                            <i class="ph-fill ph-sparkle"></i> <span data-i18n="docs.miniMacosListen"></span>
                           </div>
                         </div>
                       </div>
@@ -1523,37 +1519,37 @@
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageMacosTitle">macOS App</div>
-                  <div class="page-card-desc" data-i18n="docs.pageMacosDesc">桌面客户端</div>
+                  <div class="page-card-name" data-i18n="docs.pageMacosTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageMacosDesc"></div>
                 </div>
               </button>
             </div>
           </div>
 
           <div class="page-gallery-section">
-            <h3 class="page-gallery-title"><i class="ph ph-user-plus"></i> <span data-i18n="docs.pagesOnboardingGroup">注册与引导</span></h3>
+            <h3 class="page-gallery-title"><i class="ph ph-user-plus"></i> <span data-i18n="docs.pagesOnboardingGroup"></span></h3>
             <div class="page-gallery-grid">
               <button class="page-card" type="button" data-page-preview="onboarding-welcome">
                 <div class="page-card-thumb">
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-auth-logo" style="margin: 0 0 var(--space-md);">S</div>
-                      <div class="mini-onboarding-title" data-i18n="docs.miniWelcomeTitle">让论文像信息流一样好读，但仍然可靠</div>
-                      <div class="mini-onboarding-desc" data-i18n="docs.miniWelcomeDesc">每天 5 到 12 篇高质量论文，先给你白话关键结论，再给原文、作者和可验证来源。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniWelcomeTitle"></div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniWelcomeDesc"></div>
                       <div class="mini-paper-card" style="border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-sm); margin-bottom: var(--space-md);">
                         <div class="mini-paper-body">
-                          <div class="mini-paper-source"><span class="mini-paper-source-dot"></span><span data-i18n="docs.miniWelcomeSource">今日简报</span></div>
+                          <div class="mini-paper-source"><span class="mini-paper-source-dot"></span><span data-i18n="docs.miniWelcomeSource"></span></div>
                           <div class="mini-paper-title">A new scaling law for reasoning in large language models</div>
-                          <div class="mini-paper-desc" data-i18n="docs.miniWelcomePaperDesc">More → reasoning. agent 和摘要的质量也在提升。</div>
+                          <div class="mini-paper-desc" data-i18n="docs.miniWelcomePaperDesc"></div>
                         </div>
                       </div>
-                      <div class="mini-auth-btn" data-i18n="docs.miniWelcomeButton">开始个性化推荐</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniWelcomeButton"></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageWelcomeTitle">Welcome</div>
-                  <div class="page-card-desc" data-i18n="docs.pageWelcomeDesc">欢迎页</div>
+                  <div class="page-card-name" data-i18n="docs.pageWelcomeTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageWelcomeDesc"></div>
                 </div>
               </button>
 
@@ -1562,26 +1558,26 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container">
                       <div class="mini-auth-logo">S</div>
-                      <div class="mini-auth-title" data-i18n="docs.miniLoginTitle">欢迎回来</div>
-                      <div class="mini-auth-subtitle" data-i18n="docs.miniLoginSubtitle">继续你的今日论文简报、收藏夹和研读队列。</div>
+                      <div class="mini-auth-title" data-i18n="docs.miniLoginTitle"></div>
+                      <div class="mini-auth-subtitle" data-i18n="docs.miniLoginSubtitle"></div>
                       <div class="mini-input-group">
-                        <label data-i18n="docs.miniLoginEmail">邮箱</label>
+                        <label data-i18n="docs.miniLoginEmail"></label>
                         <div class="mini-input"></div>
                       </div>
                       <div class="mini-input-group">
-                        <label data-i18n="docs.miniLoginPassword">密码</label>
+                        <label data-i18n="docs.miniLoginPassword"></label>
                         <div class="mini-input"></div>
                       </div>
-                      <div class="mini-auth-btn" data-i18n="docs.miniLoginButton">登录</div>
-                      <div class="mini-auth-divider"><span data-i18n="docs.miniLoginOr">或</span></div>
-                      <div class="mini-social-btn"><i class="ph ph-apple-logo"></i> <span data-i18n="docs.miniLoginApple">使用 Apple 继续</span></div>
-                      <div class="mini-social-btn"><i class="ph ph-google-logo"></i> <span data-i18n="docs.miniLoginGoogle">使用 Google 继续</span></div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniLoginButton"></div>
+                      <div class="mini-auth-divider"><span data-i18n="docs.miniLoginOr"></span></div>
+                      <div class="mini-social-btn"><i class="ph ph-apple-logo"></i> <span data-i18n="docs.miniLoginApple"></span></div>
+                      <div class="mini-social-btn"><i class="ph ph-google-logo"></i> <span data-i18n="docs.miniLoginGoogle"></span></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageLoginTitle">Login</div>
-                  <div class="page-card-desc" data-i18n="docs.pageLoginDesc">登录页</div>
+                  <div class="page-card-name" data-i18n="docs.pageLoginTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageLoginDesc"></div>
                 </div>
               </button>
 
@@ -1590,27 +1586,27 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-auth-logo" style="margin: 0 0 var(--space-sm);">S</div>
-                      <div class="mini-onboarding-title" style="font-size: 13px;" data-i18n="docs.miniRegisterTitle">创建你的研究口味</div>
-                      <div class="mini-onboarding-desc" style="font-size: 9px; margin-bottom: var(--space-sm);" data-i18n="docs.miniRegisterDesc">我们只问必要的信息。</div>
+                      <div class="mini-onboarding-title" style="font-size: 13px;" data-i18n="docs.miniRegisterTitle"></div>
+                      <div class="mini-onboarding-desc" style="font-size: 9px; margin-bottom: var(--space-sm);" data-i18n="docs.miniRegisterDesc"></div>
                       <div class="mini-input-group" style="margin-bottom: 6px;">
-                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterNickname">昵称</label>
+                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterNickname"></label>
                         <div class="mini-input" style="height: 22px;"></div>
                       </div>
                       <div class="mini-input-group" style="margin-bottom: 6px;">
-                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterEmail">邮箱</label>
+                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterEmail"></label>
                         <div class="mini-input" style="height: 22px;"></div>
                       </div>
                       <div class="mini-input-group" style="margin-bottom: 6px;">
-                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterPassword">密码</label>
+                        <label style="font-size: 8px;" data-i18n="docs.miniRegisterPassword"></label>
                         <div class="mini-input" style="height: 22px;"></div>
                       </div>
-                      <div class="mini-auth-btn" style="height: 28px; font-size: 10px;" data-i18n="docs.miniRegisterButton">创建账号</div>
+                      <div class="mini-auth-btn" style="height: 28px; font-size: 10px;" data-i18n="docs.miniRegisterButton"></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageRegisterTitle">Register</div>
-                  <div class="page-card-desc" data-i18n="docs.pageRegisterDesc">注册页</div>
+                  <div class="page-card-name" data-i18n="docs.pageRegisterTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageRegisterDesc"></div>
                 </div>
               </button>
 
@@ -1619,8 +1615,8 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">1 / 3</div>
-                      <div class="mini-onboarding-title" data-i18n="docs.miniInterestsTitle">先选几个你关心的方向</div>
-                      <div class="mini-onboarding-desc" data-i18n="docs.miniInterestsDesc">不用选很细，后续系统会继续调整。保留"不感兴趣"继续调整。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniInterestsTitle"></div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniInterestsDesc"></div>
                       <div class="mini-interest-tags">
                         <div class="mini-interest-tag is-active">LLM</div>
                         <div class="mini-interest-tag is-active">Agents</div>
@@ -1631,13 +1627,13 @@
                         <div class="mini-interest-tag">Physics</div>
                         <div class="mini-interest-tag">Climate</div>
                       </div>
-                      <div class="mini-auth-btn" data-i18n="docs.miniInterestsContinue">继续</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniInterestsContinue"></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageInterestsTitle">Pick Interests</div>
-                  <div class="page-card-desc" data-i18n="docs.pageInterestsDesc">兴趣选择</div>
+                  <div class="page-card-name" data-i18n="docs.pageInterestsTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageInterestsDesc"></div>
                 </div>
               </button>
 
@@ -1646,36 +1642,36 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">2 / 3</div>
-                      <div class="mini-onboarding-title" data-i18n="docs.miniNotificationsTitle">让提醒像助手，不是打扰。</div>
-                      <div class="mini-onboarding-desc" data-i18n="docs.miniNotificationsDesc">只在真正有价值时提醒：今日简报、关注作者更新、关键突破推送。关掉得很容易。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniNotificationsTitle"></div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniNotificationsDesc"></div>
                       <div class="mini-toggle-row">
                         <div class="mini-toggle-info">
-                          <strong data-i18n="docs.miniNotificationsDaily">每日简报</strong>
-                          <span data-i18n="docs.miniNotificationsDailyDesc">每天早 8 点，当日 5 篇精选 + 摘要。</span>
+                          <strong data-i18n="docs.miniNotificationsDaily"></strong>
+                          <span data-i18n="docs.miniNotificationsDailyDesc"></span>
                         </div>
                         <div class="mini-toggle is-on"></div>
                       </div>
                       <div class="mini-toggle-row">
                         <div class="mini-toggle-info">
-                          <strong data-i18n="docs.miniNotificationsTrend">趋势提醒</strong>
-                          <span data-i18n="docs.miniNotificationsTrendDesc">当某方向出现重要突破时提醒。</span>
+                          <strong data-i18n="docs.miniNotificationsTrend"></strong>
+                          <span data-i18n="docs.miniNotificationsTrendDesc"></span>
                         </div>
                         <div class="mini-toggle is-on"></div>
                       </div>
                       <div class="mini-toggle-row">
                         <div class="mini-toggle-info">
-                          <strong data-i18n="docs.miniNotificationsAuthor">作者动态</strong>
-                          <span data-i18n="docs.miniNotificationsAuthorDesc">关注的作者发新论文时提醒。</span>
+                          <strong data-i18n="docs.miniNotificationsAuthor"></strong>
+                          <span data-i18n="docs.miniNotificationsAuthorDesc"></span>
                         </div>
                         <div class="mini-toggle"></div>
                       </div>
-                      <div class="mini-auth-btn" data-i18n="docs.miniNotificationsSave">保存提醒偏好</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniNotificationsSave"></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageNotificationsTitle">Notifications</div>
-                  <div class="page-card-desc" data-i18n="docs.pageNotificationsDesc">通知设置</div>
+                  <div class="page-card-name" data-i18n="docs.pageNotificationsTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageNotificationsDesc"></div>
                 </div>
               </button>
 
@@ -1684,25 +1680,25 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">2 / 3</div>
-                      <div class="mini-onboarding-title" style="font-size: 12px;" data-i18n="docs.miniSurveyTitle">快速校准推荐</div>
-                      <div class="mini-onboarding-desc" style="font-size: 8px; margin-bottom: var(--space-sm);" data-i18n="docs.miniSurveyDesc">快速标记你的研究兴趣方向。</div>
+                      <div class="mini-onboarding-title" style="font-size: 12px;" data-i18n="docs.miniSurveyTitle"></div>
+                      <div class="mini-onboarding-desc" style="font-size: 8px; margin-bottom: var(--space-sm);" data-i18n="docs.miniSurveyDesc"></div>
                       <div style="background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 8px; margin-bottom: 8px;">
                         <div class="mini-paper-source" style="font-size: 8px; margin-bottom: 3px;"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                         <div class="mini-paper-title" style="font-size: 9px; margin-bottom: 3px;">Training language agents with memory</div>
-                        <div class="mini-paper-desc" style="font-size: 8px;" data-i18n="docs.miniSurveyPaperDesc">像研究员一样持续阅读文献。</div>
+                        <div class="mini-paper-desc" style="font-size: 8px;" data-i18n="docs.miniSurveyPaperDesc"></div>
                       </div>
                       <div style="display: flex; gap: 4px; margin-bottom: 8px;">
-                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--line); border-radius: 4px; font-size: 7px; color: var(--ink-muted);" data-i18n="docs.miniSurveyDislike">不感兴趣</div>
-                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: var(--brand); background: var(--brand-soft);" data-i18n="docs.miniSurveySave">收藏</div>
-                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: white; background: var(--brand);" data-i18n="docs.miniSurveyMore">更多类似</div>
+                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--line); border-radius: 4px; font-size: 7px; color: var(--ink-muted);" data-i18n="docs.miniSurveyDislike"></div>
+                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: var(--brand); background: var(--brand-soft);" data-i18n="docs.miniSurveySave"></div>
+                        <div style="flex: 1; text-align: center; padding: 4px; border: 1px solid var(--brand); border-radius: 4px; font-size: 7px; color: white; background: var(--brand);" data-i18n="docs.miniSurveyMore"></div>
                       </div>
-                      <div class="mini-auth-btn" style="height: 26px; font-size: 9px;" data-i18n="docs.miniSurveyButton">进入今日简报</div>
+                      <div class="mini-auth-btn" style="height: 26px; font-size: 9px;" data-i18n="docs.miniSurveyButton"></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageSurveyTitle">Quick Survey</div>
-                  <div class="page-card-desc" data-i18n="docs.pageSurveyDesc">快速校准</div>
+                  <div class="page-card-name" data-i18n="docs.pageSurveyTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageSurveyDesc"></div>
                 </div>
               </button>
 
@@ -1711,29 +1707,29 @@
                   <div class="page-card-thumb-inner">
                     <div class="mini-auth-container" style="text-align: left;">
                       <div class="mini-step-indicator">3 / 3</div>
-                      <div class="mini-onboarding-title" data-i18n="docs.miniBriefingTitle">为你生成的第一版日报</div>
-                      <div class="mini-onboarding-desc" data-i18n="docs.miniBriefingDesc">基于 4 个兴趣方向和 3 次投票校准，先给你一个可感受的基础。</div>
+                      <div class="mini-onboarding-title" data-i18n="docs.miniBriefingTitle"></div>
+                      <div class="mini-onboarding-desc" data-i18n="docs.miniBriefingDesc"></div>
                       <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
                         <div class="mini-paper-body">
                           <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                           <div class="mini-paper-title">Training language agents to browse papers with persistent memory</div>
-                          <div class="mini-paper-desc" data-i18n="docs.miniBriefingDesc1">像研究员一样持续阅读文献，不是每次都从头来。</div>
+                          <div class="mini-paper-desc" data-i18n="docs.miniBriefingDesc1"></div>
                         </div>
                       </div>
                       <div class="mini-paper-card" style="padding: var(--space-xs) 0; border: none;">
                         <div class="mini-paper-body">
                           <div class="mini-paper-source"><span class="mini-paper-source-dot"></span>ArXiv AI</div>
                           <div class="mini-paper-title">Tool-using agents improve scientific literature review</div>
-                          <div class="mini-paper-desc" data-i18n="docs.miniBriefingDesc2">工具调用型 agent 显著提升综述质量。</div>
+                          <div class="mini-paper-desc" data-i18n="docs.miniBriefingDesc2"></div>
                         </div>
                       </div>
-                      <div class="mini-auth-btn" data-i18n="docs.miniBriefingButton">开启今日阅读</div>
+                      <div class="mini-auth-btn" data-i18n="docs.miniBriefingButton"></div>
                     </div>
                   </div>
                 </div>
                 <div class="page-card-info">
-                  <div class="page-card-name" data-i18n="docs.pageFirstBriefingTitle">First Briefing</div>
-                  <div class="page-card-desc" data-i18n="docs.pageFirstBriefingDesc">首版日报</div>
+                  <div class="page-card-name" data-i18n="docs.pageFirstBriefingTitle"></div>
+                  <div class="page-card-desc" data-i18n="docs.pageFirstBriefingDesc"></div>
                 </div>
               </button>
             </div>
@@ -1752,15 +1748,15 @@
         <div class="command-results" id="commandResults">
           <button type="button" data-command-target="#components-paper-card">
             <i class="ph ph-file-text"></i>
-            <span data-i18n="docs.commandGoPaperCard">Go to Paper Card</span>
+            <span data-i18n="docs.commandGoPaperCard"></span>
           </button>
           <button type="button" data-command-target="#components-ai">
             <i class="ph-fill ph-sparkle"></i>
-            <span data-i18n="docs.commandOpenAiAnswer">Open AI Answer Block</span>
+            <span data-i18n="docs.commandOpenAiAnswer"></span>
           </button>
           <button type="button" data-command-target="#pages-copilot">
             <i class="ph ph-chat-circle"></i>
-            <span data-i18n="docs.commandJumpCopilot">Jump to Research Copilot</span>
+            <span data-i18n="docs.commandJumpCopilot"></span>
           </button>
         </div>
       </div>
@@ -1769,22 +1765,22 @@
     <div class="overlay hidden" id="sheetOverlay">
       <div class="sheet-dialog">
         <div class="sheet-handle"></div>
-        <strong data-i18n="docs.sheetTitle">论文操作</strong>
+        <strong data-i18n="docs.sheetTitle"></strong>
         <button type="button">
           <i class="ph-fill ph-bookmark-simple"></i>
-          <span data-i18n="docs.sheetActionSave">收藏论文</span>
+          <span data-i18n="docs.sheetActionSave"></span>
         </button>
         <button type="button">
           <i class="ph ph-arrows-clockwise"></i>
-          <span data-i18n="docs.sheetActionMore">更多类似</span>
+          <span data-i18n="docs.sheetActionMore"></span>
         </button>
         <button type="button">
           <i class="ph ph-eye-slash"></i>
-          <span data-i18n="docs.sheetActionHide">不感兴趣</span>
+          <span data-i18n="docs.sheetActionHide"></span>
         </button>
         <button class="ghost-button" type="button" id="sheetCloseButton">
           <i class="ph ph-x"></i>
-          <span data-i18n="docs.sheetClose">关闭</span>
+          <span data-i18n="docs.sheetClose"></span>
         </button>
       </div>
     </div>
@@ -1793,8 +1789,8 @@
       <div class="page-preview-panel" id="pagePreviewPanel">
         <div class="page-preview-header">
           <div class="page-preview-title">
-            <strong id="pagePreviewTitle" data-i18n="docs.pagePreviewTitle">页面预览</strong>
-            <span id="pagePreviewSubtitle" data-i18n="docs.pagePreviewSubtitle">点击空白处关闭</span>
+            <strong id="pagePreviewTitle" data-i18n="docs.pagePreviewTitle"></strong>
+            <span id="pagePreviewSubtitle" data-i18n="docs.pagePreviewSubtitle"></span>
           </div>
           <button class="page-preview-close" id="pagePreviewClose" type="button" data-i18n-aria-label="docs.pagePreviewClose" aria-label="关闭预览">
             <i class="ph ph-x"></i>
