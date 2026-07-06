@@ -88,6 +88,10 @@
         background: rgb(255 255 255 / 42%);
       }
 
+      .brand-wordmark-en {
+        margin-top: 0;
+      }
+
       .brand-hero-mark {
         position: absolute;
         right: clamp(26px, 5vw, 58px);
@@ -167,25 +171,6 @@
         flex-wrap: wrap;
         gap: 10px;
         margin-top: 28px;
-      }
-
-      .brand-toc a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 34px;
-        padding: 0 15px;
-        border-radius: 999px;
-        background: rgb(255 255 255 / 94%);
-        color: #264653;
-        font-size: var(--font-body-sm-size);
-        font-weight: 700;
-        box-shadow: 0 10px 28px rgb(8 25 31 / 12%);
-      }
-
-      .brand-toc a:hover {
-        transform: translateY(-1px);
-        background: #fff;
       }
 
       .brand-section {
@@ -392,32 +377,23 @@
 
       .graphic-panel {
         position: relative;
-        min-height: 210px;
+        min-height: 320px;
         overflow: hidden;
         border: 1px solid var(--line-soft);
         border-radius: 16px;
         background:
-          radial-gradient(circle at 78% 30%, rgb(168 221 220 / 22%), transparent 24%),
+          radial-gradient(ellipse 70% 50% at 50% 40%, rgb(168 221 220 / 14%), transparent 70%),
           linear-gradient(180deg, #153f4a, #264653);
-      }
-
-      .graphic-panel::before {
-        content: "";
-        position: absolute;
-        right: -7%;
-        bottom: -76%;
-        width: 82%;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        background: linear-gradient(145deg, rgb(168 221 220 / 72%), rgb(38 70 83 / 20) 62%);
+        display: grid;
+        place-items: center;
       }
 
       .graphic-panel img {
-        position: absolute;
-        right: 36px;
-        top: 34px;
-        width: 72px;
-        height: 72px;
+        display: block;
+        width: min(70%, 260px);
+        height: auto;
+        opacity: 0.85;
+        z-index: 1;
       }
 
       .graphic-note h3 {
@@ -511,8 +487,9 @@
     <header class="topbar">
       <div class="topbar-inner">
         <a class="brand" href="../index.html" aria-label="FrontPost Design">
-          <svg class="brand-mark" width="28" height="28" viewBox="0 0 1024 1024" fill="none" aria-hidden="true">
-            <path d="M512 168 C535 348 574 450 856 512 C574 574 535 676 512 856 C489 676 450 574 168 512 C450 450 489 348 512 168 Z" fill="currentColor"/>
+          <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="4" fill="var(--paper)" />
+            <path d="M16 4 C17 11 18 14 28 16 C18 18 17 21 16 28 C15 21 14 18 4 16 C14 14 15 11 16 4 Z" fill="var(--brand)" />
           </svg>
           <span class="brand-name">FrontPost Design</span>
         </a>
@@ -554,7 +531,6 @@
           <img src="frontpost-star-white.svg" alt="" />
         </div>
         <div class="brand-hero-copy">
-          <p class="brand-hero-kicker" data-i18n="brand.heroKicker"></p>
           <h1 class="brand-wordmark-en">FrontPost</h1>
           <div class="brand-wordmark-zh">前沿邮报</div>
           <p class="brand-hero-summary" data-i18n="brand.heroSummary"></p>
@@ -569,11 +545,11 @@
             </div>
           </div>
           <nav class="brand-toc" data-i18n-aria-label="brand.tocAria" aria-label="Brand sections">
-            <a href="#logo-system" data-i18n="brand.navLogo"></a>
-            <a href="#usage-rules" data-i18n="brand.navRules"></a>
-            <a href="#typography" data-i18n="brand.navTypography"></a>
-            <a href="#graphic-language" data-i18n="brand.navGraphic"></a>
-            <a href="#downloads" data-i18n="brand.navDownloads"></a>
+            <a class="btn btn-secondary" href="#logo-system"><i class="ph ph-arrow-right"></i><span data-i18n="brand.navLogo"></span></a>
+            <a class="btn btn-secondary" href="#usage-rules"><i class="ph ph-arrow-right"></i><span data-i18n="brand.navRules"></span></a>
+            <a class="btn btn-secondary" href="#typography"><i class="ph ph-arrow-right"></i><span data-i18n="brand.navTypography"></span></a>
+            <a class="btn btn-secondary" href="#graphic-language"><i class="ph ph-arrow-right"></i><span data-i18n="brand.navGraphic"></span></a>
+            <a class="btn btn-secondary" href="#downloads"><i class="ph ph-arrow-right"></i><span data-i18n="brand.navDownloads"></span></a>
           </nav>
         </div>
       </section>
@@ -685,7 +661,7 @@
         </div>
         <div class="two-column-grid">
           <div class="graphic-panel" aria-hidden="true">
-            <img src="frontpost-star-white.svg" alt="" />
+            <img src="../brand/png/starrising.png" alt="" />
           </div>
           <article class="brand-card graphic-note">
             <h3 data-i18n="brand.graphicRulesTitle"></h3>

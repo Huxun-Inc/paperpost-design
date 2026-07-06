@@ -470,7 +470,17 @@ img {
   height: 28px;
   display: block;
   flex: 0 0 28px;
-  color: var(--brand);
+  border-radius: 4px;
+}
+
+[data-theme="dark"] .brand-mark path {
+  fill: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .brand-mark path {
+    fill: #fff;
+  }
 }
 
 .brand-name {
@@ -803,17 +813,6 @@ img {
   overflow: hidden;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 55% at 50% 40%, rgba(168, 221, 220, 0.08) 0%, transparent 70%),
-              url('../brand/png/starrising.png') center 30% / min(90vw, 420px) auto no-repeat;
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 0;
-  animation: starRise 1.2s var(--ease-out) forwards;
-}
-
 .hero .container {
   display: flex;
   flex-direction: column;
@@ -841,10 +840,6 @@ img {
   50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
 }
 
-@keyframes starRise {
-  0% { transform: scale(0.92) translateY(12px); opacity: 0.3; }
-  100% { transform: scale(1) translateY(0); opacity: 0.6; }
-}
 
 .hero-tag {
   display: inline-flex;
