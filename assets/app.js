@@ -505,20 +505,36 @@
 
     const languageSelect = document.getElementById('languageSelect');
     const savedLanguage = localStorage.getItem('FrontPost-language');
+    const isNestedPage = /^\/(?:%E4%BB%93%E5%BA%93|仓库|brand)\//.test(window.location.pathname);
+    const localeBasePath = isNestedPage ? '../locales/{{lng}}/common.json' : 'locales/{{lng}}/common.json';
+    const isBrandPage = document.body.classList.contains('brand-page');
+    const inlineI18nResources = window.FRONTPOST_I18N_RESOURCES || null;
+    const i18nOptions = {
+      fallbackLng: 'zh',
+      lng: savedLanguage || 'zh',
+      interpolation: {
+        escapeValue: false
+      }
+    };
+
+    if (inlineI18nResources) {
+      i18nOptions.resources = inlineI18nResources;
+    } else {
+      i18nOptions.backend = {
+        loadPath: localeBasePath
+      };
+    }
+
+    if (!inlineI18nResources && typeof i18nextHttpBackend !== 'undefined') {
+      i18next.use(i18nextHttpBackend);
+    }
+
+    if (typeof i18nextBrowserLanguageDetector !== 'undefined') {
+      i18next.use(i18nextBrowserLanguageDetector);
+    }
 
     i18next
-      .use(i18nextHttpBackend)
-      .use(i18nextBrowserLanguageDetector)
-      .init({
-        fallbackLng: 'zh',
-        lng: savedLanguage || 'zh',
-        backend: {
-          loadPath: 'locales/{{lng}}/common.json'
-        },
-        interpolation: {
-          escapeValue: false
-        }
-      }, function(err, t) {
+      .init(i18nOptions, function(err, t) {
         updateContent();
         if (languageSelect) {
           languageSelect.value = i18next.language || 'zh';
@@ -550,12 +566,14 @@
         el.setAttribute('title', i18next.t(key, { year: currentYear }));
       });
 
-      const pageTitle = i18next.t('landing.pageTitle', { fallbackValue: document.title });
+      const pageTitleKey = isBrandPage ? 'brand.pageTitle' : 'landing.pageTitle';
+      const pageTitle = i18next.t(pageTitleKey, { fallbackValue: document.title });
       if (pageTitle !== document.title) document.title = pageTitle;
 
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
-        const descValue = i18next.t('landing.pageDescription', { fallbackValue: metaDesc.getAttribute('content') });
+        const metaKey = isBrandPage ? 'brand.pageDescription' : 'landing.pageDescription';
+        const descValue = i18next.t(metaKey, { fallbackValue: metaDesc.getAttribute('content') });
         metaDesc.setAttribute('content', descValue);
       }
     }
