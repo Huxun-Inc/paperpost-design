@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#17282E" media="(prefers-color-scheme: dark)" />
     <title>FrontPost Design — 前沿邮报设计系统</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23264653%22/><text x=%2250%22 y=%2268%22 font-family=%22sans-serif%22 font-size=%2260%22 font-weight=%22800%22 text-anchor=%22middle%22 fill=%22%23F7F7F5%22>P</text></svg>" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%224%22 fill=%22%23F7F7F5%22/><path fill=%22%23264653%22 d=%22M16 4 C17 11 18 14 28 16 C18 18 17 21 16 28 C15 21 14 18 4 16 C14 14 15 11 16 4 Z%22/></svg>" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,7 +21,9 @@
     <header class="navbar">
       <div class="navbar-inner">
         <a class="brand" href="index.html" aria-label="FrontPost Design">
-          <div class="brand-mark">P</div>
+          <svg class="brand-mark" width="28" height="28" viewBox="0 0 1024 1024" fill="none" aria-hidden="true">
+            <path d="M512 168 C535 348 574 450 856 512 C574 574 535 676 512 856 C489 676 450 574 168 512 C450 450 489 348 512 168 Z" fill="currentColor"/>
+          </svg>
           <span class="brand-name">FrontPost Design</span>
         </a>
 
@@ -70,6 +72,7 @@
 
     <main id="main">
       <section class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
         <div class="container">
           <div class="hero-copy">
             <h1 class="hero-title">
@@ -189,7 +192,9 @@
         <div class="footer-inner">
           <div class="footer-brand">
             <div class="brand">
-              <div class="brand-mark">P</div>
+              <svg class="brand-mark" width="28" height="28" viewBox="0 0 1024 1024" fill="none" aria-hidden="true">
+                <path d="M512 168 C535 348 574 450 856 512 C574 574 535 676 512 856 C489 676 450 574 168 512 C450 450 489 348 512 168 Z" fill="currentColor"/>
+              </svg>
               <span class="brand-name">FrontPost Design</span>
             </div>
             <p data-i18n="landing.footerDesc"></p>
