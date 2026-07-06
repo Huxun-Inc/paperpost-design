@@ -56,7 +56,6 @@
   "font": {
     "display": [
       "Noto Sans SC",
-      "PingFang SC",
       "Inter",
       "system-ui",
       "sans-serif"
@@ -65,7 +64,6 @@
       "-apple-system",
       "BlinkMacSystemFont",
       "Noto Sans SC",
-      "PingFang SC",
       "Inter",
       "system-ui",
       "sans-serif"

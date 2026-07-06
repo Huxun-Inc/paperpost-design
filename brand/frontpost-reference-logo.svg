@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FrontPost / 前沿邮报 logo geometry reference.
+  This is an engineering/reference SVG, not the final trademark master artwork.
+  Final commercial logo should be approved in Figma/brand asset workflow.
+-->
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FrontPost four-point star reference mark</title>
+  <desc id="desc">An 8-grid reference construction for the FrontPost four-point frontier star mark.</desc>
+  <defs>
+    <style>
+      :root {
+        --paper: #ffffff;
+        --ink: #1f3238;
+        --teal: #264653;
+        --line: #ededea;
+        --ice: #a8dddc;
+      }
+      .tile { fill: var(--paper); }
+      .mark { fill: var(--teal); }
+      .guide { stroke: var(--line); stroke-width: 2; vector-effect: non-scaling-stroke; }
+      .axis { stroke: var(--ice); stroke-width: 3; stroke-dasharray: 12 12; vector-effect: non-scaling-stroke; }
+    </style>
+  </defs>
+
+  <!-- 8-grid tile: 1024 / 8 = 128 -->
+  <rect class="tile" x="0" y="0" width="1024" height="1024" rx="256"/>
+
+  <!-- Optional construction grid. Hide this group for production exports. -->
+  <g id="construction-grid" opacity="0.48">
+    <path class="guide" d="M128 0V1024M256 0V1024M384 0V1024M512 0V1024M640 0V1024M768 0V1024M896 0V1024"/>
+    <path class="guide" d="M0 128H1024M0 256H1024M0 384H1024M0 512H1024M0 640H1024M0 768H1024M0 896H1024"/>
+    <path class="axis" d="M512 128V896M128 512H896"/>
+  </g>
+
+  <!--
+    Star geometry:
+    Center: 512,512
+    Outer vertical radius: 344 (approx. 5.38/8 total mark height)
+    Outer horizontal radius: 344
+    Core diagonal control radius: 70
+    Primary axes: 0, 90, 180, 270 degrees.
+    Edge slopes approximate 38-42 degrees relative to the horizontal axes.
+  -->
+  <path
+    id="frontpost-star"
+    class="mark"
+    d="
+      M512 168
+      C535 348 574 450 856 512
+      C574 574 535 676 512 856
+      C489 676 450 574 168 512
+      C450 450 489 348 512 168
+      Z
+    "
+  />
+</svg>

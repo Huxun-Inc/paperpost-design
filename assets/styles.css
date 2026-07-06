@@ -24,8 +24,8 @@
   color-scheme: light;
   font-size: 16px;
 
-  --font-display: 'Noto Sans SC', 'PingFang SC', 'Inter', system-ui, sans-serif;
-  --font-ui: -apple-system, BlinkMacSystemFont, 'Noto Sans SC', 'PingFang SC', 'Inter', system-ui, sans-serif;
+  --font-display: 'Noto Sans SC', 'Inter', system-ui, sans-serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'Noto Sans SC', 'Inter', system-ui, sans-serif;
   --font-mono: 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace;
 
   --paper: #F7F7F5;
