@@ -6,32 +6,20 @@
 -->
 <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">FrontPost four-point star reference mark</title>
-  <desc id="desc">An 8-grid reference construction for the FrontPost four-point frontier star mark.</desc>
+  <desc id="desc">A clean FrontPost four-point frontier star mark on a paper-white rounded tile.</desc>
   <defs>
     <style>
       :root {
         --paper: #ffffff;
         --ink: #1f3238;
         --teal: #264653;
-        --line: #ededea;
-        --ice: #a8dddc;
       }
       .tile { fill: var(--paper); }
       .mark { fill: var(--teal); }
-      .guide { stroke: var(--line); stroke-width: 2; vector-effect: non-scaling-stroke; }
-      .axis { stroke: var(--ice); stroke-width: 3; stroke-dasharray: 12 12; vector-effect: non-scaling-stroke; }
     </style>
   </defs>
 
-  <!-- 8-grid tile: 1024 / 8 = 128 -->
   <rect class="tile" x="0" y="0" width="1024" height="1024" rx="256"/>
-
-  <!-- Optional construction grid. Hide this group for production exports. -->
-  <g id="construction-grid" opacity="0.48">
-    <path class="guide" d="M128 0V1024M256 0V1024M384 0V1024M512 0V1024M640 0V1024M768 0V1024M896 0V1024"/>
-    <path class="guide" d="M0 128H1024M0 256H1024M0 384H1024M0 512H1024M0 640H1024M0 768H1024M0 896H1024"/>
-    <path class="axis" d="M512 128V896M128 512H896"/>
-  </g>
 
   <!--
     Star geometry:

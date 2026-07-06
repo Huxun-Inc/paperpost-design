@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="FrontPost / 前沿邮报品牌设计方案与资产规范。" />
+    <meta name="theme-color" content="#F7F7F5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#17282E" media="(prefers-color-scheme: dark)" />
+    <title>FrontPost Brand Design — 前沿邮报品牌设计</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Noto+Sans+SC:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet" href="../assets/styles.css" />
+    <style>
+      :root {
+        --brand-logo-en: "Newsreader", "Source Serif 4", Georgia, serif;
+        --brand-logo-zh: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+      }
+
+      body[data-page="docs"].brand-page {
+        --navbar-height: 48px;
+      }
+
+      .brand-page .docs-main {
+        width: min(100% - 48px, 1280px);
+        margin: 0 auto;
+        padding: 24px 0 64px;
+      }
+
+      .brand-nav-link {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2xs);
+        padding: 6px var(--space-sm);
+        border-radius: var(--radius-md);
+        color: var(--ink-muted);
+        font-size: var(--font-body-sm-size);
+        font-weight: 500;
+        transition: all 150ms var(--ease-out);
+      }
+
+      .brand-nav-link:hover {
+        background: var(--surface-hover);
+        color: var(--ink);
+      }
+
+      .brand-hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 520px;
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius-xl);
+        background:
+          radial-gradient(circle at 82% 16%, rgb(168 221 220 / 16%), transparent 9%),
+          linear-gradient(180deg, #153f4a, #264653);
+        color: #fff;
+        padding: 40px;
+      }
+
+      .brand-hero-copy {
+        position: relative;
+        z-index: 2;
+        max-width: 620px;
+      }
+
+      .brand-hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 18px;
+        color: rgb(255 255 255 / 76%);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .brand-hero-kicker::before {
+        content: "";
+        width: 24px;
+        height: 1px;
+        background: rgb(255 255 255 / 36%);
+      }
+
+      .brand-logo-lockup {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand-mark-hero {
+        width: 88px;
+        height: 88px;
+        flex: 0 0 auto;
+        margin-top: 8px;
+      }
+
+      .brand-mark-hero img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .brand-wordmark-en {
+        margin: 0;
+        font-family: var(--brand-logo-en);
+        font-size: clamp(54px, 8vw, 104px);
+        line-height: 0.92;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .brand-wordmark-zh {
+        margin-top: 14px;
+        color: rgb(255 255 255 / 80%);
+        font-family: var(--brand-logo-zh);
+        font-size: clamp(30px, 3vw, 42px);
+        line-height: 1.1;
+        font-weight: 600;
+      }
+
+      .brand-hero p {
+        max-width: 520px;
+        margin-top: 20px;
+        color: rgb(255 255 255 / 78%);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .brand-orbit {
+        position: absolute;
+        right: -11%;
+        bottom: -30%;
+        width: 84%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background:
+          linear-gradient(150deg, rgb(168 221 220 / 74%), rgb(38 70 83 / 24) 57%, rgb(31 50 56 / 26));
+        box-shadow: inset 0 0 36px rgb(255 255 255 / 16);
+      }
+
+      .brand-star-fixed {
+        position: absolute;
+        right: 52px;
+        top: 54px;
+        width: 86px;
+        height: 86px;
+        z-index: 1;
+      }
+
+      .brand-star-fixed img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .brand-toc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .brand-toc a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 34px;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: var(--surface);
+        color: var(--ink-muted);
+        font-size: var(--font-body-sm-size);
+        font-weight: 600;
+      }
+
+      .brand-toc a:hover {
+        border-color: var(--brand);
+        color: var(--brand);
+        background: var(--brand-soft);
+      }
+
+      .brand-section {
+        margin-top: 22px;
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius-xl);
+        background: var(--paper);
+        padding: 28px;
+      }
+
+      .brand-section-head {
+        max-width: 760px;
+        margin-bottom: 18px;
+      }
+
+      .brand-section-head h2 {
+        margin-bottom: 10px;
+        font-size: clamp(28px, 3vw, 40px);
+      }
+
+      .brand-section-head p {
+        color: var(--ink-muted);
+        line-height: 1.75;
+      }
+
+      .equal-logo-grid,
+      .spec-grid,
+      .download-grid,
+      .application-grid,
+      .governance-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .equal-logo-grid,
+      .application-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .spec-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .download-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .governance-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .brand-card {
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius-lg);
+        background: var(--surface);
+        padding: 20px;
+      }
+
+      .brand-card.centered {
+        text-align: center;
+      }
+
+      .brand-card h3,
+      .brand-card strong {
+        color: var(--ink);
+      }
+
+      .brand-card p,
+      .brand-card li {
+        color: var(--ink-muted);
+        line-height: 1.7;
+      }
+
+      .brand-card ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .lockup-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        min-height: 170px;
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius-lg);
+        background: var(--page);
+        padding: 24px;
+      }
+
+      .lockup-preview.dark {
+        background: var(--teal);
+      }
+
+      .lockup-preview img {
+        width: 74px;
+        height: 74px;
+      }
+
+      .lockup-en,
+      .lockup-zh {
+        margin: 0;
+      }
+
+      .lockup-en {
+        font-family: var(--brand-logo-en);
+        font-size: clamp(42px, 5vw, 64px);
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .lockup-zh {
+        font-family: var(--brand-logo-zh);
+        font-size: clamp(36px, 4vw, 54px);
+        font-weight: 600;
+      }
+
+      .lockup-preview.dark .lockup-en,
+      .lockup-preview.dark .lockup-zh {
+        color: #fff;
+      }
+
+      .rule-table {
+        display: grid;
+        gap: 10px;
+      }
+
+      .rule-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        border-top: 1px solid var(--line-soft);
+        padding-top: 10px;
+      }
+
+      .rule-row b {
+        color: var(--ink);
+      }
+
+      .type-stack {
+        display: grid;
+        gap: 14px;
+      }
+
+      .type-sample {
+        border-top: 1px solid var(--line-soft);
+        padding-top: 14px;
+      }
+
+      .type-sample strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--gray);
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      .type-sample-en {
+        font-family: var(--brand-logo-en);
+        font-size: 46px;
+        font-weight: 500;
+      }
+
+      .type-sample-zh {
+        font-family: var(--brand-logo-zh);
+        font-size: 42px;
+        font-weight: 600;
+      }
+
+      .type-sample-ui {
+        font-family: var(--font-ui);
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      .asset-preview {
+        display: grid;
+        place-items: center;
+        min-height: 172px;
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius-lg);
+        background: var(--page);
+        padding: 20px;
+      }
+
+      .asset-preview.dark {
+        background: var(--teal);
+      }
+
+      .asset-preview img {
+        max-width: 100%;
+        max-height: 128px;
+        display: block;
+      }
+
+      .asset-meta {
+        margin-top: 14px;
+        display: grid;
+        gap: 10px;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .asset-name {
+        color: var(--ink);
+        font-size: var(--font-body-sm-size);
+        font-weight: 700;
+        word-break: break-word;
+      }
+
+      .asset-actions {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .mini-phone {
+        overflow: hidden;
+        border: 9px solid var(--ink);
+        border-radius: 34px;
+        background: var(--paper);
+        box-shadow: 0 28px 70px rgb(31 50 56 / 14%);
+      }
+
+      .mini-phone-head {
+        position: relative;
+        min-height: 240px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, #153f4a, #264653);
+        color: #fff;
+        padding: 24px;
+      }
+
+      .mini-phone-head.light {
+        background: var(--paper);
+        color: var(--ink);
+      }
+
+      .mini-phone-head .orbit {
+        position: absolute;
+        right: -22%;
+        bottom: -46%;
+        width: 92%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: linear-gradient(150deg, rgb(168 221 220 / 76%), rgb(38 70 83 / 18) 60%, rgb(31 50 56 / 22));
+      }
+
+      .mini-phone-head.light .orbit {
+        background: linear-gradient(150deg, rgb(38 70 83 / 10%), rgb(38 70 83 / 02) 60%, rgb(38 70 83 / 08));
+      }
+
+      .mini-phone-head .brand-line {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .mini-phone-head .brand-line .name {
+        font-family: var(--brand-logo-en);
+        font-size: 44px;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+      }
+
+      .mini-phone-head .brand-line img {
+        width: 56px;
+        height: 56px;
+      }
+
+      .mini-phone-head .subtitle {
+        position: relative;
+        z-index: 1;
+        margin-top: 22px;
+        color: inherit;
+        opacity: 0.8;
+      }
+
+      .mini-phone-body {
+        display: grid;
+        gap: 10px;
+        padding: 16px;
+      }
+
+      .mini-phone-card {
+        border: 1px solid var(--line-soft);
+        border-radius: 16px;
+        padding: 14px;
+        background: var(--paper);
+      }
+
+      .mini-phone-card strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .naming-box {
+        border-left: 3px solid var(--brand);
+        background: var(--brand-soft);
+        padding: 16px;
+      }
+
+      .naming-box p:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 1080px) {
+        .equal-logo-grid,
+        .application-grid,
+        .spec-grid,
+        .download-grid,
+        .governance-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .brand-page .docs-main,
+        .topbar-inner {
+          width: min(100% - 20px, 1280px);
+        }
+
+        .brand-hero,
+        .brand-section {
+          padding: 22px;
+        }
+
+        .brand-logo-lockup,
+        .equal-logo-grid,
+        .application-grid,
+        .spec-grid,
+        .download-grid,
+        .governance-grid,
+        .logo-row,
+        .lockup-preview {
+          grid-template-columns: 1fr;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .brand-mark-hero {
+          width: 72px;
+          height: 72px;
+        }
+
+        .brand-star-fixed {
+          right: 24px;
+          top: 24px;
+          width: 60px;
+          height: 60px;
+        }
+
+        .mini-phone-head .brand-line .name {
+          font-size: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body data-page="docs" class="brand-page">
+    <a class="skip-link" href="#brandMain">Skip to content</a>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../index.html" aria-label="FrontPost Design 首页">
+          <div class="brand-mark">P</div>
+          <span class="brand-name">FrontPost Design</span>
+        </a>
+
+        <div class="toolbar">
+          <a class="brand-nav-link" href="../docs.html#components-paper-card">
+            <i class="ph ph-squares-four"></i>
+            <span>组件页面</span>
+          </a>
+          <button class="toolbar-button settings-toggle" id="settingsToggle" type="button" aria-expanded="false" aria-controls="toolbarSettings">
+            <i class="ph ph-gear-six"></i>
+            <span>设置</span>
+          </button>
+          <div class="toolbar-settings" id="toolbarSettings">
+            <label class="toolbar-control">
+              <span>语言</span>
+              <select id="languageSelect" aria-label="语言">
+                <option value="zh">中文</option>
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+              </select>
+            </label>
+            <div class="toolbar-control">
+              <span>字号</span>
+              <div class="font-size-buttons" role="group" aria-label="字号">
+                <button type="button" class="font-size-btn" data-font-size="small" aria-label="小号字体"><span class="fs-icon-sm">A</span></button>
+                <button type="button" class="font-size-btn is-active" data-font-size="medium" aria-label="中号字体"><span class="fs-icon-md">A</span></button>
+                <button type="button" class="font-size-btn" data-font-size="large" aria-label="大号字体"><span class="fs-icon-lg">A</span></button>
+              </div>
+            </div>
+            <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="切换主题">
+              <i class="ph ph-sun" data-theme-icon="sun"></i>
+              <i class="ph-fill ph-moon" data-theme-icon="moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="docs-main" id="brandMain">
+      <section class="doc-hero">
+        <div class="brand-hero">
+          <div class="brand-star-fixed" aria-hidden="true">
+            <img src="../brand/png/light/frontpost-logo-light-256.png" alt="" />
+          </div>
+          <div class="brand-orbit" aria-hidden="true"></div>
+          <div class="brand-hero-copy">
+            <p class="brand-hero-kicker">Brand Design / 品牌设计</p>
+            <div class="brand-logo-lockup">
+              <div>
+                <h1 class="brand-wordmark-en">FrontPost</h1>
+                <div class="brand-wordmark-zh">前沿邮报</div>
+              </div>
+            </div>
+            <p>
+              FrontPost 是一个面向论文、研报、趋势与项目情报的 AI 前沿邮报产品。品牌核心不是“论文工具”，而是“每天为你定位真正值得关注的前沿”。
+            </p>
+            <div class="naming-box">
+              <p><strong>主图形：</strong>四芒星代表 frontier marker、定位、发现与 AI insight。</p>
+              <p><strong>品牌结构：</strong>英文主标与中文主标地位均等，分场景独立使用，不在同一主标中混排。</p>
+            </div>
+            <div class="brand-toc">
+              <a href="#logo-system">Logo System</a>
+              <a href="#usage-rules">Usage Rules</a>
+              <a href="#typography">Typography</a>
+              <a href="#graphic-language">Graphic Language</a>
+              <a href="#applications">Applications</a>
+              <a href="#downloads">Downloads</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="brand-section" id="logo-system">
+        <div class="brand-section-head">
+          <p class="eyebrow">01 / Logo System</p>
+          <h2>双主标系统</h2>
+          <p>英文与中文是两个地位一致的主标系统。共同的图形资产是四芒星，但字标不做“英文主 + 中文副”或“中文主 + 英文副”的脚注式组合。</p>
+        </div>
+        <div class="equal-logo-grid">
+          <article class="brand-card">
+            <div class="lockup-preview">
+              <img src="../brand/png/light/frontpost-logo-light-256.png" alt="FrontPost 英文图形标" />
+              <div class="lockup-en">FrontPost</div>
+            </div>
+            <h3>Pure English</h3>
+            <p>用于国际传播、产品英文界面、下载页、英文宣传物料与海外社媒头像。</p>
+          </article>
+          <article class="brand-card">
+            <div class="lockup-preview">
+              <img src="../brand/png/light/frontpost-logo-light-256.png" alt="前沿邮报中文图形标" />
+              <div class="lockup-zh">前沿邮报</div>
+            </div>
+            <h3>纯中文主标</h3>
+            <p>用于中文产品首页、品牌传播页、公众号头图、中文海报和内容卡封面。</p>
+          </article>
+          <article class="brand-card">
+            <div class="lockup-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-256.png" alt="FrontPost 深色模式图形标" />
+              <div class="lockup-en">FrontPost</div>
+            </div>
+            <h3>Dark Mode</h3>
+            <p>深海青底下使用反白图形标和英文主标，适用于 App 顶部、启动页和今日简报头图。</p>
+          </article>
+          <article class="brand-card">
+            <div class="lockup-preview">
+              <img src="../brand/png/light/frontpost-logo-light-64.png" alt="FrontPost 小尺寸图标" />
+              <div>
+                <div class="lockup-en" style="font-size: 30px;">FrontPost</div>
+                <div class="lockup-zh" style="font-size: 26px; color: var(--gray);">前沿邮报</div>
+              </div>
+            </div>
+            <h3>Do Not Mix</h3>
+            <p>同一主标里不混排 `FrontPost 前沿邮报`。跨语言关系通过页面标题、正文或页脚说明建立，而不是塞进一个锁定标里。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="brand-section" id="usage-rules">
+        <div class="brand-section-head">
+          <p class="eyebrow">02 / Usage Rules</p>
+          <h2>图形与应用规则</h2>
+          <p>四芒星已经固定为无辅助线版本。工程参考 SVG 用于复现几何关系；正常使用时只展示纯净标志，不展示网格、轴线和角度标记。</p>
+        </div>
+        <div class="spec-grid">
+          <article class="brand-card">
+            <h3>Geometry</h3>
+            <div class="rule-table">
+              <div class="rule-row"><b>Canvas</b><span>8 x 8 grid reference</span></div>
+              <div class="rule-row"><b>Safe space</b><span>1x minimum</span></div>
+              <div class="rule-row"><b>Star width</b><span>approx. 6/8</span></div>
+              <div class="rule-row"><b>Tile radius</b><span>2/8 for app icon</span></div>
+            </div>
+          </article>
+          <article class="brand-card">
+            <h3>Allowed</h3>
+            <div class="rule-table">
+              <div class="rule-row"><b>Light</b><span>paper white + deep sea teal star</span></div>
+              <div class="rule-row"><b>Dark</b><span>deep sea teal + paper white star</span></div>
+              <div class="rule-row"><b>Small size</b><span>16 / 32 / 48 / 64 / 128 px</span></div>
+              <div class="rule-row"><b>Use case</b><span>app icon, nav, avatar, badge</span></div>
+            </div>
+          </article>
+          <article class="brand-card">
+            <h3>Forbidden</h3>
+            <div class="rule-table">
+              <div class="rule-row"><b>No glow</b><span>标志本体不带发光</span></div>
+              <div class="rule-row"><b>No mixed lockup</b><span>不混排中英文主标</span></div>
+              <div class="rule-row"><b>No extra rays</b><span>不扩展成多芒星</span></div>
+              <div class="rule-row"><b>No helper lines</b><span>网格与轴线不进入成品</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="brand-section" id="typography">
+        <div class="brand-section-head">
+          <p class="eyebrow">03 / Typography</p>
+          <h2>品牌字标字体与网页正文字体分离</h2>
+          <p>品牌字标专用字体只用于 Logo、Hero 标题、品牌抬头与品牌海报。网页正文、文档和组件说明一律使用系统字体或 `Noto Sans SC`，不把品牌 serif 字体扩散到页面内容中。</p>
+        </div>
+        <div class="spec-grid">
+          <article class="brand-card">
+            <div class="type-stack">
+              <div class="type-sample">
+                <strong>Brand English logotype</strong>
+                <div class="type-sample-en">FrontPost</div>
+                <p>`Newsreader`，可商用开源字体，SIL Open Font License。只用于品牌英文标识。</p>
+              </div>
+            </div>
+          </article>
+          <article class="brand-card">
+            <div class="type-stack">
+              <div class="type-sample">
+                <strong>品牌中文字标</strong>
+                <div class="type-sample-zh">前沿邮报</div>
+                <p>`Noto Serif SC / Source Han Serif SC`，可商用开源字体。只用于品牌中文字标与品牌海报标题。</p>
+              </div>
+            </div>
+          </article>
+          <article class="brand-card">
+            <div class="type-stack">
+              <div class="type-sample">
+                <strong>Web UI and body</strong>
+                <div class="type-sample-ui">网页正文、导航、说明、下载按钮统一用系统默认或 Noto Sans SC。</div>
+                <p>品牌感来自 Logo 和主视觉，不来自把正文全部换成 serif。这样阅读更稳，也更符合组件页的产品感。</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="brand-section" id="graphic-language">
+        <div class="brand-section-head">
+          <p class="eyebrow">04 / Graphic Language</p>
+          <h2>前沿星轨主视觉</h2>
+          <p>主视觉不需要额外的炫光。品牌语义由四芒星、深海青背景和一条柔和的前沿弧线组成，表达“在信息地平线上定位今天真正重要的信号”。</p>
+        </div>
+        <div class="spec-grid">
+          <article class="brand-card">
+            <h3>Symbol</h3>
+            <p>四芒星是唯一核心符号，代表 north star、frontier marker、insight point。它是稳定的，不是会发散的烟花。</p>
+          </article>
+          <article class="brand-card">
+            <h3>Orbit</h3>
+            <p>弧形地平线只属于 Hero、启动页和大卡片背景。它是环境元素，不与 Logo 合并，不进入 App icon。</p>
+          </article>
+          <article class="brand-card">
+            <h3>Visual tone</h3>
+            <p>整体克制、深色、偏夜航。允许细小星点，但不做满天银河，不做 purple AI gradient。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="brand-section" id="applications">
+        <div class="brand-section-head">
+          <p class="eyebrow">05 / Product Application</p>
+          <h2>产品中的真实样子</h2>
+          <p>这部分只展示品牌落在 FrontPost 首页中的两个核心场景：深色主视觉首页和浅色阅读/列表环境。星星固定在右上方，不加背后亮光。</p>
+        </div>
+        <div class="application-grid">
+          <article class="brand-card centered">
+            <div class="mini-phone">
+              <div class="mini-phone-head">
+                <div class="orbit"></div>
+                <div class="brand-line">
+                  <div class="name">FrontPost</div>
+                  <img src="../brand/png/dark/frontpost-logo-dark-64.png" alt="FrontPost 深色图标" />
+                </div>
+                <div class="subtitle">Today&apos;s Frontier Brief</div>
+              </div>
+              <div class="mini-phone-body">
+                <div class="mini-phone-card">
+                  <strong>Research signal</strong>
+                  <p>Models, agents, infrastructure and sharp frontier shifts.</p>
+                </div>
+                <div class="mini-phone-card">
+                  <strong>Report summary</strong>
+                  <p>Condensed market and strategy insights in daily format.</p>
+                </div>
+              </div>
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">Dark Product Header</div>
+            </div>
+          </article>
+          <article class="brand-card centered">
+            <div class="mini-phone">
+              <div class="mini-phone-head light">
+                <div class="orbit"></div>
+                <div class="brand-line">
+                  <div class="name">FrontPost</div>
+                  <img src="../brand/png/light/frontpost-logo-light-64.png" alt="FrontPost 白底图标" />
+                </div>
+                <div class="subtitle">Frontier feed and saved brief collection</div>
+              </div>
+              <div class="mini-phone-body">
+                <div class="mini-phone-card">
+                  <strong>Paper digest</strong>
+                  <p>One card, one judgment, one reason to continue.</p>
+                </div>
+                <div class="mini-phone-card">
+                  <strong>Trend watch</strong>
+                  <p>Keep the star as a tiny orientation cue in light UI.</p>
+                </div>
+              </div>
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">Light Product Surface</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="brand-section" id="downloads">
+        <div class="brand-section-head">
+          <p class="eyebrow">06 / Downloads</p>
+          <h2>设计图与导出资产</h2>
+          <p>所有设计图、SVG 和常用 PNG 尺寸都集中在这里。每个预览都居中展示，下面给出文件名和下载按钮。</p>
+        </div>
+
+        <div class="download-grid">
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/frontpost-reference-logo.svg" alt="FrontPost 白底 SVG" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-reference-logo.svg</div>
+              <div class="asset-actions">
+                <a class="btn btn-primary" href="../brand/frontpost-reference-logo.svg" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/frontpost-logo-dark.svg" alt="FrontPost 深色 SVG" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark.svg</div>
+              <div class="asset-actions">
+                <a class="btn btn-primary" href="../brand/frontpost-logo-dark.svg" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-1024.png" alt="FrontPost 白底 PNG 1024" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-1024.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-primary" href="../brand/png/light/frontpost-logo-light-1024.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-1024.png" alt="FrontPost 深色 PNG 1024" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-1024.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-primary" href="../brand/png/dark/frontpost-logo-dark-1024.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-512.png" alt="FrontPost 白底 PNG 512" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-512.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/light/frontpost-logo-light-512.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-512.png" alt="FrontPost 深色 PNG 512" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-512.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/dark/frontpost-logo-dark-512.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-256.png" alt="FrontPost 白底 PNG 256" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-256.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/light/frontpost-logo-light-256.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-256.png" alt="FrontPost 深色 PNG 256" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-256.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/dark/frontpost-logo-dark-256.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-128.png" alt="FrontPost 白底 PNG 128" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-128.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/light/frontpost-logo-light-128.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-128.png" alt="FrontPost 深色 PNG 128" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-128.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/dark/frontpost-logo-dark-128.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-64.png" alt="FrontPost 白底 PNG 64" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-64.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/light/frontpost-logo-light-64.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-64.png" alt="FrontPost 深色 PNG 64" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-64.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/dark/frontpost-logo-dark-64.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-48.png" alt="FrontPost 白底 PNG 48" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-48.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/light/frontpost-logo-light-48.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-48.png" alt="FrontPost 深色 PNG 48" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-48.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/dark/frontpost-logo-dark-48.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-32.png" alt="FrontPost 白底 PNG 32" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-32.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/light/frontpost-logo-light-32.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-32.png" alt="FrontPost 深色 PNG 32" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-32.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/dark/frontpost-logo-dark-32.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview">
+              <img src="../brand/png/light/frontpost-logo-light-16.png" alt="FrontPost 白底 PNG 16" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-light-16.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/light/frontpost-logo-light-16.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="brand-card centered">
+            <div class="asset-preview dark">
+              <img src="../brand/png/dark/frontpost-logo-dark-16.png" alt="FrontPost 深色 PNG 16" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-name">frontpost-logo-dark-16.png</div>
+              <div class="asset-actions">
+                <a class="btn btn-secondary" href="../brand/png/dark/frontpost-logo-dark-16.png" download><i class="ph ph-download-simple"></i><span>下载</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="brand-section">
+        <div class="brand-section-head">
+          <p class="eyebrow">07 / Governance</p>
+          <h2>使用说明</h2>
+        </div>
+        <div class="governance-grid">
+          <article class="brand-card">
+            <h3>Asset governance</h3>
+            <p>当前 `SVG` 为工程参考和资产导出基础，网页正文遵守系统字体方案，Logo 字体只用于品牌标识与品牌标题。</p>
+          </article>
+          <article class="brand-card">
+            <h3>Recommended workflow</h3>
+            <p>对外发布、宣传物料与 App 首屏统一使用当前白底/深色底资产；若需要继续升级商标母版，再进入 Figma 精修与法务校验流程。</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.16.8/dist/umd/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@2.5.2/i18nextHttpBackend.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="../assets/global-knowledge-lottie/canvaskit.js"></script>
+    <script src="../assets/phosphor-icons.js"></script>
+    <script src="../assets/app.js"></script>
+  </body>
+</html>

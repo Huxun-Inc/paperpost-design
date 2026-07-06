@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  FrontPost / 前沿邮报 dark logo reference.
+  Engineering/reference SVG, not final trademark master artwork.
+-->
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FrontPost dark four-point star reference mark</title>
+  <desc id="desc">A clean FrontPost four-point frontier star mark on a deep-sea teal rounded tile.</desc>
+  <defs>
+    <style>
+      :root {
+        --paper: #ffffff;
+        --teal: #264653;
+      }
+      .tile { fill: var(--teal); }
+      .mark { fill: var(--paper); }
+    </style>
+  </defs>
+
+  <rect class="tile" x="0" y="0" width="1024" height="1024" rx="256"/>
+  <path
+    id="frontpost-star"
+    class="mark"
+    d="
+      M512 168
+      C535 348 574 450 856 512
+      C574 574 535 676 512 856
+      C489 676 450 574 168 512
+      C450 450 489 348 512 168
+      Z
+    "
+  />
+</svg>
