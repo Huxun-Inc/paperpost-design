@@ -199,34 +199,34 @@ html[data-font-size="large"] {
 [data-theme="dark"] {
   color-scheme: dark;
 
-  --paper: #0B1315;
-  --paper-warm: #101C20;
-  --surface: #142328;
-  --surface-muted: #1B2F35;
-  --surface-hover: #243D44;
-  --surface-active: #2D4D55;
+  --paper: #111318;
+  --paper-warm: #151820;
+  --surface: #1A1D24;
+  --surface-muted: #22262E;
+  --surface-hover: #2A2F38;
+  --surface-active: #333842;
 
-  --neutral-950: #070C0E;
-  --neutral-900: #0B1315;
-  --neutral-850: #101C20;
-  --neutral-800: #142328;
-  --neutral-700: #1B2F35;
-  --neutral-600: #243D44;
-  --neutral-500: #2D4D55;
-  --neutral-400: #3C636C;
-  --neutral-300: #5A838D;
-  --neutral-200: #7FA8B1;
-  --neutral-100: #A8C8CF;
-  --neutral-50: #D4E5E8;
+  --neutral-950: #0A0C10;
+  --neutral-900: #111318;
+  --neutral-850: #151820;
+  --neutral-800: #1A1D24;
+  --neutral-700: #22262E;
+  --neutral-600: #2A2F38;
+  --neutral-500: #333842;
+  --neutral-400: #4A5060;
+  --neutral-300: #6A7080;
+  --neutral-200: #8A90A0;
+  --neutral-100: #B0B5C0;
+  --neutral-50: #D5D8DE;
 
-  --ink: #E8EDEC;
-  --ink-soft: #C0CBC6;
-  --ink-muted: #889892;
-  --ink-faint: #5E706A;
+  --ink: #E8E9ED;
+  --ink-soft: #C0C2C8;
+  --ink-muted: #7A7E88;
+  --ink-faint: #52565E;
 
-  --line: rgba(168, 200, 207, 0.16);
-  --line-soft: rgba(168, 200, 207, 0.09);
-  --line-strong: rgba(168, 200, 207, 0.28);
+  --line: rgba(200, 205, 215, 0.16);
+  --line-soft: rgba(200, 205, 215, 0.09);
+  --line-strong: rgba(200, 205, 215, 0.28);
 
   --brand: #A8DDDC;
   --brand-press: #CDEDEC;
@@ -253,23 +253,23 @@ html[data-font-size="large"] {
   --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 8px 16px -4px rgba(0, 0, 0, 0.4);
   --shadow-xl: 0 32px 64px -12px rgba(0, 0, 0, 0.7), 0 16px 32px -8px rgba(0, 0, 0, 0.5);
 
-  --glass-bg: rgba(20, 35, 40, 0.62);
-  --glass-bg-strong: rgba(20, 35, 40, 0.82);
-  --glass-border: rgba(168, 200, 207, 0.12);
+  --glass-bg: rgba(26, 29, 36, 0.62);
+  --glass-bg-strong: rgba(26, 29, 36, 0.82);
+  --glass-border: rgba(200, 205, 215, 0.12);
   --glass-blur: 20px;
-  --page-gradient-top: #080E10;
-  --grid-line-major: rgba(212, 229, 232, 0.05);
-  --grid-line-minor: rgba(212, 229, 232, 0.03);
-  --panel-tint-top: rgba(27, 47, 53, 0.92);
-  --panel-tint-bottom: rgba(16, 28, 32, 0.78);
-  --pill-base: rgba(20, 35, 40, 0.88);
+  --page-gradient-top: #0E1015;
+  --grid-line-major: rgba(213, 216, 222, 0.05);
+  --grid-line-minor: rgba(213, 216, 222, 0.03);
+  --panel-tint-top: rgba(34, 38, 46, 0.92);
+  --panel-tint-bottom: rgba(21, 24, 32, 0.78);
+  --pill-base: rgba(26, 29, 36, 0.88);
   --warm-surface: rgba(215, 180, 93, 0.11);
   --warm-surface-strong: rgba(215, 180, 93, 0.16);
   --warm-border: rgba(215, 180, 93, 0.22);
-  --mission-glow: rgba(212, 229, 232, 0.06);
+  --mission-glow: rgba(213, 216, 222, 0.06);
 
-  --neu-light: #1A2830;
-  --neu-dark: #060A0C;
+  --neu-light: #1E2128;
+  --neu-dark: #080A0E;
   --neu-shadow: 6px 6px 12px var(--neu-dark), -6px -6px 12px var(--neu-light);
   --neu-shadow-sm: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light);
   --neu-shadow-inset: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light);
@@ -281,34 +281,34 @@ html[data-font-size="large"] {
   :root:not([data-theme]) {
     color-scheme: dark;
 
-    --paper: #0B1315;
-    --paper-warm: #101C20;
-    --surface: #142328;
-    --surface-muted: #1B2F35;
-    --surface-hover: #243D44;
-    --surface-active: #2D4D55;
+    --paper: #111318;
+    --paper-warm: #151820;
+    --surface: #1A1D24;
+    --surface-muted: #22262E;
+    --surface-hover: #2A2F38;
+    --surface-active: #333842;
 
-    --neutral-950: #070C0E;
-    --neutral-900: #0B1315;
-    --neutral-850: #101C20;
-    --neutral-800: #142328;
-    --neutral-700: #1B2F35;
-    --neutral-600: #243D44;
-    --neutral-500: #2D4D55;
-    --neutral-400: #3C636C;
-    --neutral-300: #5A838D;
-    --neutral-200: #7FA8B1;
-    --neutral-100: #A8C8CF;
-    --neutral-50: #D4E5E8;
+    --neutral-950: #0A0C10;
+    --neutral-900: #111318;
+    --neutral-850: #151820;
+    --neutral-800: #1A1D24;
+    --neutral-700: #22262E;
+    --neutral-600: #2A2F38;
+    --neutral-500: #333842;
+    --neutral-400: #4A5060;
+    --neutral-300: #6A7080;
+    --neutral-200: #8A90A0;
+    --neutral-100: #B0B5C0;
+    --neutral-50: #D5D8DE;
 
-    --ink: #E8EDEC;
-    --ink-soft: #C0CBC6;
-    --ink-muted: #889892;
-    --ink-faint: #5E706A;
+    --ink: #E8E9ED;
+    --ink-soft: #C0C2C8;
+    --ink-muted: #7A7E88;
+    --ink-faint: #52565E;
 
-    --line: rgba(168, 200, 207, 0.16);
-    --line-soft: rgba(168, 200, 207, 0.09);
-    --line-strong: rgba(168, 200, 207, 0.28);
+    --line: rgba(200, 205, 215, 0.16);
+    --line-soft: rgba(200, 205, 215, 0.09);
+    --line-strong: rgba(200, 205, 215, 0.28);
 
     --brand: #A8DDDC;
     --brand-press: #CDEDEC;
@@ -335,23 +335,23 @@ html[data-font-size="large"] {
     --shadow-lg: 0 20px 40px -8px rgba(0, 0, 0, 0.6), 0 8px 16px -4px rgba(0, 0, 0, 0.4);
     --shadow-xl: 0 32px 64px -12px rgba(0, 0, 0, 0.7), 0 16px 32px -8px rgba(0, 0, 0, 0.5);
 
-    --glass-bg: rgba(20, 35, 40, 0.62);
-    --glass-bg-strong: rgba(20, 35, 40, 0.82);
-    --glass-border: rgba(168, 200, 207, 0.12);
+    --glass-bg: rgba(26, 29, 36, 0.62);
+    --glass-bg-strong: rgba(26, 29, 36, 0.82);
+    --glass-border: rgba(200, 205, 215, 0.12);
     --glass-blur: 20px;
-    --page-gradient-top: #080E10;
-    --grid-line-major: rgba(212, 229, 232, 0.05);
-    --grid-line-minor: rgba(212, 229, 232, 0.03);
-    --panel-tint-top: rgba(27, 47, 53, 0.92);
-    --panel-tint-bottom: rgba(16, 28, 32, 0.78);
-    --pill-base: rgba(20, 35, 40, 0.88);
+    --page-gradient-top: #0E1015;
+    --grid-line-major: rgba(213, 216, 222, 0.05);
+    --grid-line-minor: rgba(213, 216, 222, 0.03);
+    --panel-tint-top: rgba(34, 38, 46, 0.92);
+    --panel-tint-bottom: rgba(21, 24, 32, 0.78);
+    --pill-base: rgba(26, 29, 36, 0.88);
     --warm-surface: rgba(215, 180, 93, 0.11);
     --warm-surface-strong: rgba(215, 180, 93, 0.16);
     --warm-border: rgba(215, 180, 93, 0.22);
-    --mission-glow: rgba(212, 229, 232, 0.06);
+    --mission-glow: rgba(213, 216, 222, 0.06);
 
-    --neu-light: #1A2830;
-    --neu-dark: #060A0C;
+    --neu-light: #1E2128;
+    --neu-dark: #080A0E;
     --neu-shadow: 6px 6px 12px var(--neu-dark), -6px -6px 12px var(--neu-light);
     --neu-shadow-sm: 4px 4px 8px var(--neu-dark), -4px -4px 8px var(--neu-light);
     --neu-shadow-inset: inset 4px 4px 8px var(--neu-dark), inset -4px -4px 8px var(--neu-light);
