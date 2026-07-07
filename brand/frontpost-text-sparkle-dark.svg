@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="280" viewBox="0 0 800 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">FrontPost text logo with sparkle on dark</title>
+  <desc id="desc">The word FrontPost in white with a small sparkle star near the upper right of the text, on a deep sea teal background.</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500&amp;display=swap');
+      .tile { fill: #264653; }
+      .text { fill: #ffffff; font-family: 'Newsreader', Georgia, serif; font-size: 130px; font-weight: 500; letter-spacing: -0.02em; }
+      .star { fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect class="tile" x="0" y="0" width="800" height="280" rx="32"/>
+
+  <text class="text" x="48" y="195">FrontPost</text>
+
+  <g class="star" transform="translate(620, 38) scale(0.09)">
+    <path d="M512 168 C535 348 574 450 856 512 C574 574 535 676 512 856 C489 676 450 574 168 512 C450 450 489 348 512 168 Z"/>
+  </g>
+</svg>
