@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="900" height="300" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">FrontPost Chinese complete lockup light</title>
-  <desc id="desc">Deep sea teal four-point star next to 前沿邮报 wordmark on white tile, horizontally centered.</desc>
+  <desc id="desc">Deep sea teal four-point star to the left of the 前沿邮报 wordmark; both are vertically centered and the complete mark is horizontally centered on a white tile.</desc>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500&amp;display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&amp;display=swap');
     .tile { fill: #ffffff; }
-    .text { fill: #264653; font-family: 'Noto Serif SC', 'Source Han Serif SC', serif; font-size: 76px; font-weight: 600; }
+    .text { fill: #264653; font-family: 'Noto Serif SC', 'Source Han Serif SC', serif; font-size: 76px; font-weight: 600; letter-spacing: -0.02em; dominant-baseline: central; }
     .star { fill: #264653; }
   </style>
   <rect class="tile" x="0" y="0" width="900" height="300"/>
-  <g class="star" transform="translate(190, 150) scale(0.13)">
-    <path d="M512 168 C535 348 574 450 856 512 C574 574 535 676 512 856 C489 676 450 574 168 512 C450 450 489 348 512 168 Z"/>
+  <g transform="translate(450 150)">
+    <g class="star" transform="translate(-174 0) scale(0.13) translate(-512 -512)">
+      <path d="M512 168 C535 348 574 450 856 512 C574 574 535 676 512 856 C489 676 450 574 168 512 C450 450 489 348 512 168 Z"/>
+    </g>
+    <text class="text" x="-96" y="0">前沿邮报</text>
   </g>
-  <text class="text" x="290" y="199">前沿邮报</text>
 </svg>
