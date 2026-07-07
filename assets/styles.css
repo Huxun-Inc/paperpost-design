@@ -1121,33 +1121,32 @@ img {
   padding: var(--space-lg);
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
-  background:
-    linear-gradient(180deg, var(--panel-tint-top), var(--panel-tint-bottom)),
-    var(--surface);
+  background: var(--glass-bg-strong);
   box-shadow: var(--shadow-xs);
-  backdrop-filter: blur(16px) saturate(145%);
-  -webkit-backdrop-filter: blur(16px) saturate(145%);
-  transition: border-color 200ms var(--ease-out), box-shadow 200ms var(--ease-out), transform 200ms var(--ease-out);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  transition: all 200ms var(--ease-out);
 }
 
 .mission-evidence-item:hover {
   border-color: var(--line-strong);
-  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.08);
 }
 
 .mission-evidence-item > i {
   position: relative;
   z-index: 1;
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: var(--space-md);
   border-radius: var(--radius-md);
   background: var(--brand-soft);
   color: var(--brand);
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .mission-evidence-value {
@@ -1159,7 +1158,7 @@ img {
   font-size: clamp(24px, 3vw, 34px);
   line-height: 1;
   font-weight: 900;
-  color: var(--brand-press);
+  color: var(--ink);
   letter-spacing: 0;
 }
 
@@ -1167,9 +1166,9 @@ img {
   position: relative;
   z-index: 1;
   display: block;
-  font-size: var(--font-caption-size);
+  font-size: var(--font-body-sm-size);
   line-height: 1.65;
-  color: var(--ink-muted);
+  color: var(--ink-soft);
 }
 
 .mission-desc-evidence {
@@ -3697,7 +3696,7 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-xl);
-  margin-top: var(--space-lg);
+  margin-top: var(--space-sm);
 }
 
 .ink-level-column {
