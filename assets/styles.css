@@ -3148,7 +3148,16 @@ img {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 6px;
+}
+
+[data-nav-group] > summary > i {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+[data-nav-group] > summary > span {
+  flex: 1;
 }
 
 [data-nav-group] > summary::-webkit-details-marker {
@@ -3156,7 +3165,9 @@ img {
 }
 
 [data-nav-item] {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   padding: 8px var(--space-sm) 8px var(--space-md);
   font-size: var(--font-body-sm-size);
   color: var(--ink-soft);
@@ -3165,6 +3176,16 @@ img {
   margin-bottom: 4px;
   background: transparent;
   position: relative;
+}
+
+[data-nav-item] > i {
+  font-size: 15px;
+  opacity: 0.65;
+  flex-shrink: 0;
+}
+
+[data-nav-item] > span {
+  flex: 1;
 }
 
 [data-nav-item]:hover {
