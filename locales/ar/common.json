@@ -446,6 +446,8 @@
   "docs.typeCaption": "Caption",
   "docs.inkLevelsLabel": "مستويات الحبر",
   "docs.inkLevelsTitle": "تسلسل النص",
+  "docs.inkLightMode": "الوضع الفاتح",
+  "docs.inkDarkMode": "الوضع الداكن",
   "docs.inkPrimary": "الحبر الأساسي",
   "docs.inkPrimaryDesc": "العناوين النص الأساسي والمعلومات الأساسية",
   "docs.inkSecondary": "الحبر الثانوي",

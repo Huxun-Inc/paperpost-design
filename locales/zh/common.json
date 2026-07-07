@@ -446,6 +446,8 @@
   "docs.typeCaption": "Caption",
   "docs.inkLevelsLabel": "文字层级",
   "docs.inkLevelsTitle": "字体深浅级别规范",
+  "docs.inkLightMode": "亮色模式",
+  "docs.inkDarkMode": "暗色模式",
   "docs.inkPrimary": "主文字 Primary",
   "docs.inkPrimaryDesc": "标题、正文、关键信息",
   "docs.inkSecondary": "次文字 Secondary",

@@ -445,6 +445,8 @@
   "docs.typeCaption": "Caption",
   "docs.inkLevelsLabel": "Ink Levels",
   "docs.inkLevelsTitle": "Typography Ink Hierarchy",
+  "docs.inkLightMode": "Light Mode",
+  "docs.inkDarkMode": "Dark Mode",
   "docs.inkPrimary": "Primary Ink",
   "docs.inkPrimaryDesc": "Headlines, body text, key information",
   "docs.inkSecondary": "Secondary Ink",
