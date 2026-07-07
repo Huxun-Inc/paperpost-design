@@ -265,12 +265,7 @@
         overflow: hidden;
         border: 1px solid var(--line-soft);
         border-radius: 14px;
-        background: var(--page);
-        padding: clamp(16px, 3vw, 26px);
-      }
-
-      .lockup-preview.dark {
-        background: #264653;
+        padding: 0;
       }
 
       .lockup-preview img {
@@ -279,47 +274,7 @@
         flex: 0 0 auto;
       }
 
-      .lockup-en,
-      .lockup-zh {
-        margin: 0;
-        min-width: 0;
-        color: var(--ink);
-        white-space: nowrap;
-      }
 
-      .lockup-en {
-        font-family: var(--brand-logo-en);
-        font-size: clamp(34px, 3.2vw, 48px);
-        font-weight: 500;
-        line-height: 0.98;
-        letter-spacing: -0.02em;
-      }
-
-      .lockup-zh {
-        font-family: var(--brand-logo-zh);
-        font-size: clamp(32px, 3.4vw, 48px);
-        font-weight: 600;
-        line-height: 1.16;
-      }
-
-      .lockup-preview.dark .lockup-en,
-      .lockup-preview.dark .lockup-zh {
-        color: #fff;
-      }
-
-      .compact-lockup {
-        display: grid;
-        gap: 8px;
-      }
-
-      .compact-lockup .lockup-en {
-        font-size: clamp(26px, 3vw, 34px);
-      }
-
-      .compact-lockup .lockup-zh {
-        color: var(--ink-muted);
-        font-size: clamp(22px, 2.5vw, 28px);
-      }
 
       .rule-table {
         display: grid;
@@ -578,7 +533,7 @@
             <p data-i18n="brand.lockupEnLightCopy"></p>
           </article>
           <article class="brand-card">
-            <div class="lockup-preview dark">
+            <div class="lockup-preview">
               <img src="frontpost-lockup-en-dark.svg" alt="" style="width: 100%; max-width: 380px; height: auto;" />
             </div>
             <h3 data-i18n="brand.lockupEnDarkTitle"></h3>
@@ -592,7 +547,7 @@
             <p data-i18n="brand.lockupZhLightCopy"></p>
           </article>
           <article class="brand-card">
-            <div class="lockup-preview dark">
+            <div class="lockup-preview">
               <img src="frontpost-lockup-zh-dark.svg" alt="" style="width: 100%; max-width: 380px; height: auto;" />
             </div>
             <h3 data-i18n="brand.lockupZhDarkTitle"></h3>
@@ -606,7 +561,7 @@
             <p data-i18n="brand.simplifiedLightCopy"></p>
           </article>
           <article class="brand-card">
-            <div class="lockup-preview dark">
+            <div class="lockup-preview">
               <img src="frontpost-simplified-dark.svg" alt="" style="width: 100%; max-width: 380px; height: auto;" />
             </div>
             <h3 data-i18n="brand.simplifiedDarkTitle"></h3>
