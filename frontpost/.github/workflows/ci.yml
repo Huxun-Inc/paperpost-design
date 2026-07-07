@@ -1,0 +1,18 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: pnpm, cache-dependency-path: frontpost/pnpm-lock.yaml }
+      - run: pnpm install --frozen-lockfile
+        working-directory: frontpost
+      - run: pnpm lint && pnpm typecheck && pnpm test && pnpm build
+        working-directory: frontpost
