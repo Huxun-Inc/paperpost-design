@@ -3710,6 +3710,7 @@ img {
   font-size: var(--font-body-sm-size);
   font-weight: 600;
   color: var(--ink);
+  margin-top: var(--space-sm);
   margin-bottom: var(--space-xs);
 }
 
