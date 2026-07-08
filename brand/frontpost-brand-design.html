@@ -404,6 +404,77 @@
         min-width: 104px;
       }
 
+      .download-group-title {
+        margin: 0 0 14px;
+        color: var(--ink);
+        font-size: 20px;
+        line-height: 1.35;
+      }
+
+      .download-group-title-spaced {
+        margin-top: 30px;
+      }
+
+      .neumorphic-logo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .neumorphic-logo-card {
+        min-width: 0;
+        border: 1px solid var(--line-soft);
+        border-radius: 16px;
+        background: var(--surface);
+        padding: 18px;
+      }
+
+      .neumorphic-logo-preview {
+        display: grid;
+        place-items: center;
+        min-height: 360px;
+        border: 1px solid var(--line-soft);
+        border-radius: 14px;
+        background:
+          linear-gradient(45deg, color-mix(in srgb, var(--ink) 6%, transparent) 25%, transparent 25%),
+          linear-gradient(-45deg, color-mix(in srgb, var(--ink) 6%, transparent) 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, color-mix(in srgb, var(--ink) 6%, transparent) 75%),
+          linear-gradient(-45deg, transparent 75%, color-mix(in srgb, var(--ink) 6%, transparent) 75%),
+          var(--page);
+        background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+        background-size: 24px 24px;
+        padding: clamp(18px, 4vw, 32px);
+      }
+
+      .neumorphic-logo-preview img {
+        display: block;
+        width: min(100%, 320px);
+        height: auto;
+      }
+
+      .neumorphic-logo-card h3 {
+        margin: 16px 0 8px;
+        color: var(--ink);
+        font-size: 18px;
+      }
+
+      .neumorphic-logo-card p {
+        margin: 0;
+        color: var(--ink-muted);
+        line-height: 1.72;
+      }
+
+      .neumorphic-size-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .neumorphic-size-list .btn {
+        min-width: 76px;
+      }
+
       @media (max-width: 1080px) {
         .download-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -430,7 +501,8 @@
         .brand-principles,
         .equal-logo-grid,
         .two-column-grid,
-        .download-grid {
+        .download-grid,
+        .neumorphic-logo-grid {
           grid-template-columns: 1fr;
         }
 
@@ -652,6 +724,7 @@
           <p data-i18n="brand.downloadsIntro"></p>
         </div>
 
+        <h3 class="download-group-title" data-i18n="brand.downloadsStandardTitle"></h3>
         <div class="download-grid">
           <article class="brand-card centered">
             <div class="asset-preview">
@@ -890,6 +963,45 @@
               <div class="asset-actions">
                 <a class="btn btn-primary btn-md" href="png/dark/frontpost-logo-dark-16.png" download><i class="ph ph-download-simple"></i><span data-i18n="brand.downloadButton"></span></a>
               </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="download-group-title download-group-title-spaced" data-i18n="brand.downloadsNeumorphicTitle"></h3>
+        <div class="neumorphic-logo-grid">
+          <article class="neumorphic-logo-card">
+            <div class="neumorphic-logo-preview">
+              <img src="png/neumorphic/dark/frontpost-neumorphic-dark-1024.png" alt="" />
+            </div>
+            <h3 data-i18n="brand.neumorphicDarkTitle"></h3>
+            <p data-i18n="brand.neumorphicDarkCopy"></p>
+            <div class="neumorphic-size-list">
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-1024.png" download>1024</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-512.png" download>512</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-256.png" download>256</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-128.png" download>128</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-64.png" download>64</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-48.png" download>48</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-32.png" download>32</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/dark/frontpost-neumorphic-dark-16.png" download>16</a>
+            </div>
+          </article>
+
+          <article class="neumorphic-logo-card">
+            <div class="neumorphic-logo-preview">
+              <img src="png/neumorphic/light/frontpost-neumorphic-light-1024.png" alt="" />
+            </div>
+            <h3 data-i18n="brand.neumorphicLightTitle"></h3>
+            <p data-i18n="brand.neumorphicLightCopy"></p>
+            <div class="neumorphic-size-list">
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-1024.png" download>1024</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-512.png" download>512</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-256.png" download>256</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-128.png" download>128</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-64.png" download>64</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-48.png" download>48</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-32.png" download>32</a>
+              <a class="btn btn-primary btn-md" href="png/neumorphic/light/frontpost-neumorphic-light-16.png" download>16</a>
             </div>
           </article>
         </div>
