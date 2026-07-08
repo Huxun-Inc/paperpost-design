@@ -857,9 +857,9 @@
   "brand.standardLogoDarkTitle": "深色有底 Logo",
   "brand.standardLogoDarkCopy": "深海青圆角底 + 纸白四芒星，提供 SVG 与常用 PNG 尺寸。",
   "brand.downloadsNeumorphicTitle": "拟态版 PNG 资产",
-  "brand.neumorphicDarkTitle": "拟态深色版",
-  "brand.neumorphicDarkCopy": "深海青圆角透明底，适合 App 图标、启动页和少数高质感深色品牌场景。",
-  "brand.neumorphicLightTitle": "拟态浅色版",
-  "brand.neumorphicLightCopy": "纸白圆角透明底，适合 App 图标、浅色启动页和少数高质感品牌展示。",
+  "brand.neumorphicDarkTitle": "拟态深色底 Logo",
+  "brand.neumorphicDarkCopy": "深海青圆角透明底 + 纸白拟态四芒星，适合 App 图标、启动页和少数高质感深色品牌场景。",
+  "brand.neumorphicLightTitle": "拟态浅色底 Logo",
+  "brand.neumorphicLightCopy": "纸白圆角透明底 + 深海青拟态四芒星，适合 App 图标、浅色启动页和少数高质感品牌展示。",
   "brand.downloadButton": "下载"
 }

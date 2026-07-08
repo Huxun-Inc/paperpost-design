@@ -856,9 +856,9 @@
   "brand.standardLogoDarkTitle": "Dark Tile Logo",
   "brand.standardLogoDarkCopy": "Deep sea teal rounded tile with paper-white star, available as SVG and common PNG sizes.",
   "brand.downloadsNeumorphicTitle": "Neumorphic PNG Assets",
-  "brand.neumorphicDarkTitle": "Neumorphic Dark",
-  "brand.neumorphicDarkCopy": "Deep sea teal rounded transparent tile for app icons, splash screens, and selected premium dark brand moments.",
-  "brand.neumorphicLightTitle": "Neumorphic Light",
-  "brand.neumorphicLightCopy": "Paper-white rounded transparent tile for app icons, light splash screens, and selected premium brand displays.",
+  "brand.neumorphicDarkTitle": "Neumorphic Dark Tile Logo",
+  "brand.neumorphicDarkCopy": "Deep sea teal rounded transparent tile with a paper-white neumorphic star for app icons, splash screens, and selected premium dark brand moments.",
+  "brand.neumorphicLightTitle": "Neumorphic Light Tile Logo",
+  "brand.neumorphicLightCopy": "Paper-white rounded transparent tile with a deep sea teal neumorphic star for app icons, light splash screens, and selected premium brand displays.",
   "brand.downloadButton": "Download"
 }
