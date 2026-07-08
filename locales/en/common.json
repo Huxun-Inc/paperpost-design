@@ -845,6 +845,12 @@
   "brand.graphicBrandValue3": "Calm, restrained, and warm — like a trusted research companion.",
   "brand.downloadsIndex": "05 / Downloads",
   "brand.downloadsTitle": "Design Files and Exported Assets",
-  "brand.downloadsIntro": "All design files, SVGs, and common PNG sizes are gathered here. Each preview is centered, with the filename and a download button below.",
+  "brand.downloadsIntro": "Standard assets preserve the core brand system. Files whose names include neumorphic are the skeuomorphic variants, intended for app icons, splash screens, and a small number of premium brand moments.",
+  "brand.downloadsStandardTitle": "Standard Assets",
+  "brand.downloadsNeumorphicTitle": "Neumorphic PNG Assets",
+  "brand.neumorphicDarkTitle": "Neumorphic Dark",
+  "brand.neumorphicDarkCopy": "Deep sea teal rounded transparent tile for app icons, splash screens, and selected premium dark brand moments.",
+  "brand.neumorphicLightTitle": "Neumorphic Light",
+  "brand.neumorphicLightCopy": "Paper-white rounded transparent tile for app icons, light splash screens, and selected premium brand displays.",
   "brand.downloadButton": "Download"
 }

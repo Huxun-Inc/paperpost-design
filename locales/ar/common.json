@@ -846,6 +846,12 @@
   "brand.graphicBrandValue3": "هادئ، محكوم، ودافئ — كمساعد بحثي موثوق.",
   "brand.downloadsIndex": "05 / التنزيلات",
   "brand.downloadsTitle": "ملفات التصميم والأصول المصدرة",
-  "brand.downloadsIntro": "توجد هنا جميع ملفات التصميم وملفات SVG وأحجام PNG الشائعة. كل معاينة في الوسط، وتحتها اسم الملف وزر التنزيل.",
+  "brand.downloadsIntro": "تحافظ الأصول القياسية على نظام العلامة الأساسي. الملفات التي يتضمن اسمها neumorphic هي النسخ المجسمة، وتستخدم لأيقونات التطبيق وشاشات البدء وعدد محدود من لحظات العلامة عالية الجودة.",
+  "brand.downloadsStandardTitle": "الأصول القياسية",
+  "brand.downloadsNeumorphicTitle": "أصول PNG المجسمة",
+  "brand.neumorphicDarkTitle": "نسخة مجسمة داكنة",
+  "brand.neumorphicDarkCopy": "لوحة شفافة مستديرة بلون أزرق مخضر عميق، مناسبة لأيقونات التطبيق وشاشات البدء وبعض لحظات العلامة الداكنة عالية الجودة.",
+  "brand.neumorphicLightTitle": "نسخة مجسمة فاتحة",
+  "brand.neumorphicLightCopy": "لوحة شفافة مستديرة بيضاء ورقية، مناسبة لأيقونات التطبيق وشاشات البدء الفاتحة وبعض عروض العلامة عالية الجودة.",
   "brand.downloadButton": "تنزيل"
 }
