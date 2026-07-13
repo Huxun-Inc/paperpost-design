@@ -507,25 +507,18 @@
     const savedLanguage = localStorage.getItem('FrontPost-language');
     const isNestedPage = /^\/[^/]*\/brand\//.test(window.location.pathname) || /^\/brand\//.test(window.location.pathname);
     const localeBasePath = isNestedPage ? '../locales/{{lng}}/common.json' : 'locales/{{lng}}/common.json';
-    const isBrandPage = document.body.classList.contains('brand-page');
-    const inlineI18nResources = window.FRONTPOST_I18N_RESOURCES || null;
     const i18nOptions = {
       fallbackLng: 'zh',
       lng: savedLanguage || 'zh',
+      backend: {
+        loadPath: localeBasePath
+      },
       interpolation: {
         escapeValue: false
       }
     };
 
-    if (inlineI18nResources) {
-      i18nOptions.resources = inlineI18nResources;
-    } else {
-      i18nOptions.backend = {
-        loadPath: localeBasePath
-      };
-    }
-
-    if (!inlineI18nResources && typeof i18nextHttpBackend !== 'undefined') {
+    if (typeof i18nextHttpBackend !== 'undefined') {
       i18next.use(i18nextHttpBackend);
     }
 
